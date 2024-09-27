@@ -1,0 +1,27 @@
+{
+  "user" : {
+    "name" : "",
+    "surname" : "",
+    "username" : "",
+    "detail" : {
+      "identityNumber" : "",
+      "email" : "",
+      "phoneNumber" : "",
+      "rank" : "",
+      "profilePicture" : "",
+      "supervisor" : {
+        "name" : "",
+        "surname" : ""
+      }
+    },
+    "pushToken" : "",
+    "userLevelId" :"",
+    "userLevelName" : "",
+    "id" : ""
+  },
+  "tokenDetails" : {
+    "accessToken" : "",
+    "refreshToken" : ""
+  },
+  "authorities" : []
+}

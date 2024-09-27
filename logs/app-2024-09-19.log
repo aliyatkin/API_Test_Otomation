@@ -1,0 +1,4 @@
+2024-09-19 09:37:02.455 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-19 09:37:02.462 [main] INFO  com.apiTests.requests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-19 09:37:24.744 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-19 09:37:24.744 [main] INFO  com.apiTests.requests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json

@@ -1,0 +1,1262 @@
+2024-09-27 07:59:14.203 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
+2024-09-27 07:59:14.203 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:14.212 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:14.703 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"wrongPassword\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 404,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "null"
+    },
+    "id" : "52aa57dd-66c4-4634-8170-d402331f6271",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  52aa57dd-66c4-4634-8170-d402331f6271
+
+2024-09-27 07:59:15.232 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:15.232 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-27 07:59:16.588 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "61" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "wrongPassword"
+    }
+  }
+
+2024-09-27 07:59:16.592 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "61" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "wrongPassword"
+    }
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"wrongPassword\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 404,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "null"
+    },
+    "id" : "52aa57dd-66c4-4634-8170-d402331f6271",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+2024-09-27 07:59:16.602 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
+
+  {
+    "statusCode" : 404,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "null"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "61" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "wrongPassword"
+    }
+  }
+
+ for action:
+
+  {
+    "statusCode" : 404,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "null"
+  }
+
+ from expectation:
+
+  52aa57dd-66c4-4634-8170-d402331f6271
+
+2024-09-27 07:59:16.697 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: null
+2024-09-27 07:59:16.698 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 404
+2024-09-27 07:59:16.783 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
+2024-09-27 07:59:16.785 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
+2024-09-27 07:59:17.036 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
+2024-09-27 07:59:17.036 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:17.037 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:17.062 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:17.062 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-27 07:59:17.062 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 404,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "null"
+    },
+    "id" : "5acd9c13-ae1f-4b04-bf0a-0c899cd602c2",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  5acd9c13-ae1f-4b04-bf0a-0c899cd602c2
+
+2024-09-27 07:59:17.136 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "48" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : ""
+    }
+  }
+
+2024-09-27 07:59:17.140 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "48" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : ""
+    }
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 404,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "null"
+    },
+    "id" : "5acd9c13-ae1f-4b04-bf0a-0c899cd602c2",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+2024-09-27 07:59:17.145 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: null
+2024-09-27 07:59:17.145 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 404
+2024-09-27 07:59:17.149 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
+2024-09-27 07:59:17.155 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
+
+  {
+    "statusCode" : 404,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "null"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "48" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : ""
+    }
+  }
+
+ for action:
+
+  {
+    "statusCode" : 404,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "null"
+  }
+
+ from expectation:
+
+  5acd9c13-ae1f-4b04-bf0a-0c899cd602c2
+
+2024-09-27 07:59:17.155 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
+2024-09-27 07:59:17.403 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:17.404 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:17.404 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
+2024-09-27 07:59:17.435 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"aselsan\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\r\n  \"user\": {\r\n    \"name\": \"Sistem Yöneticisi\",\r\n    \"surname\": \"ASELSAN\",\r\n    \"username\": \"aselsan\",\r\n    \"detail\": {\r\n      \"identityNumber\": null,\r\n      \"email\": null,\r\n      \"phoneNumber\": null,\r\n      \"rank\": null,\r\n      \"profilePicture\": null,\r\n      \"supervisor\": {\r\n        \"name\": null,\r\n        \"surname\": null\r\n      }\r\n    },\r\n    \"pushToken\": null,\r\n    \"userLevelId\": 5,\r\n    \"userLevelName\": \"Aselsan\",\r\n    \"id\": 10\r\n  },\r\n  \"tokenDetails\": {\r\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ\",\r\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ\"\r\n  },\r\n  \"authorities\": [\r\n    \"right.detection.createdetection\",\r\n    \"right.detection.map\",\r\n    \"right.detection.detail\",\r\n    \"right.detection.detail.read\",\r\n    \"right.detection.detail.update\",\r\n    \"right.detection.filter\",\r\n    \"right.detection.sort\",\r\n    \"right.detection.sosmessage\",\r\n    \"right.task.filter\",\r\n    \"right.task.sort\",\r\n    \"right.task.detail\",\r\n    \"right.task.detail.read\",\r\n    \"right.task.detail.starttask\",\r\n    \"right.sensor.list\",\r\n    \"right.sensor.map\",\r\n    \"right.sensor.livestream\",\r\n    \"right.sensor.filter\",\r\n    \"right.sensor.sort\",\r\n    \"right.profile.read\",\r\n    \"right.profile.usergroups.authorization\",\r\n    \"right.detection\",\r\n    \"right.task\",\r\n    \"right.sensor\",\r\n    \"right.profile\",\r\n    \"right.pushnotification\",\r\n    \"right.detection.incominglist\",\r\n    \"right.task.outgoinglist\",\r\n    \"right.detection.outgoinglist\",\r\n    \"right.task.incominglist\",\r\n    \"right.task.attachments.list\",\r\n    \"right.alarm\",\r\n    \"right.alarm.list\",\r\n    \"right.alarm.map\",\r\n    \"right.alarm.filter\"\r\n  ]\r\n}"
+    },
+    "id" : "71ac2b6f-de15-4a45-acf7-e5b52eb46f63",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  71ac2b6f-de15-4a45-acf7-e5b52eb46f63
+
+2024-09-27 07:59:17.449 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:17.450 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-27 07:59:17.487 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "55" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "aselsan"
+    }
+  }
+
+2024-09-27 07:59:17.490 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "55" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "aselsan"
+    }
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"aselsan\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\r\n  \"user\": {\r\n    \"name\": \"Sistem Yöneticisi\",\r\n    \"surname\": \"ASELSAN\",\r\n    \"username\": \"aselsan\",\r\n    \"detail\": {\r\n      \"identityNumber\": null,\r\n      \"email\": null,\r\n      \"phoneNumber\": null,\r\n      \"rank\": null,\r\n      \"profilePicture\": null,\r\n      \"supervisor\": {\r\n        \"name\": null,\r\n        \"surname\": null\r\n      }\r\n    },\r\n    \"pushToken\": null,\r\n    \"userLevelId\": 5,\r\n    \"userLevelName\": \"Aselsan\",\r\n    \"id\": 10\r\n  },\r\n  \"tokenDetails\": {\r\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ\",\r\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ\"\r\n  },\r\n  \"authorities\": [\r\n    \"right.detection.createdetection\",\r\n    \"right.detection.map\",\r\n    \"right.detection.detail\",\r\n    \"right.detection.detail.read\",\r\n    \"right.detection.detail.update\",\r\n    \"right.detection.filter\",\r\n    \"right.detection.sort\",\r\n    \"right.detection.sosmessage\",\r\n    \"right.task.filter\",\r\n    \"right.task.sort\",\r\n    \"right.task.detail\",\r\n    \"right.task.detail.read\",\r\n    \"right.task.detail.starttask\",\r\n    \"right.sensor.list\",\r\n    \"right.sensor.map\",\r\n    \"right.sensor.livestream\",\r\n    \"right.sensor.filter\",\r\n    \"right.sensor.sort\",\r\n    \"right.profile.read\",\r\n    \"right.profile.usergroups.authorization\",\r\n    \"right.detection\",\r\n    \"right.task\",\r\n    \"right.sensor\",\r\n    \"right.profile\",\r\n    \"right.pushnotification\",\r\n    \"right.detection.incominglist\",\r\n    \"right.task.outgoinglist\",\r\n    \"right.detection.outgoinglist\",\r\n    \"right.task.incominglist\",\r\n    \"right.task.attachments.list\",\r\n    \"right.alarm\",\r\n    \"right.alarm.list\",\r\n    \"right.alarm.map\",\r\n    \"right.alarm.filter\"\r\n  ]\r\n}"
+    },
+    "id" : "71ac2b6f-de15-4a45-acf7-e5b52eb46f63",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+2024-09-27 07:59:17.503 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: {
+  "user": {
+    "name": "Sistem Yöneticisi",
+    "surname": "ASELSAN",
+    "username": "aselsan",
+    "detail": {
+      "identityNumber": null,
+      "email": null,
+      "phoneNumber": null,
+      "rank": null,
+      "profilePicture": null,
+      "supervisor": {
+        "name": null,
+        "surname": null
+      }
+    },
+    "pushToken": null,
+    "userLevelId": 5,
+    "userLevelName": "Aselsan",
+    "id": 10
+  },
+  "tokenDetails": {
+    "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ",
+    "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ"
+  },
+  "authorities": [
+    "right.detection.createdetection",
+    "right.detection.map",
+    "right.detection.detail",
+    "right.detection.detail.read",
+    "right.detection.detail.update",
+    "right.detection.filter",
+    "right.detection.sort",
+    "right.detection.sosmessage",
+    "right.task.filter",
+    "right.task.sort",
+    "right.task.detail",
+    "right.task.detail.read",
+    "right.task.detail.starttask",
+    "right.sensor.list",
+    "right.sensor.map",
+    "right.sensor.livestream",
+    "right.sensor.filter",
+    "right.sensor.sort",
+    "right.profile.read",
+    "right.profile.usergroups.authorization",
+    "right.detection",
+    "right.task",
+    "right.sensor",
+    "right.profile",
+    "right.pushnotification",
+    "right.detection.incominglist",
+    "right.task.outgoinglist",
+    "right.detection.outgoinglist",
+    "right.task.incominglist",
+    "right.task.attachments.list",
+    "right.alarm",
+    "right.alarm.list",
+    "right.alarm.map",
+    "right.alarm.filter"
+  ]
+}
+2024-09-27 07:59:17.503 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 200
+2024-09-27 07:59:17.508 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "{\r\n  \"user\": {\r\n    \"name\": \"Sistem Yöneticisi\",\r\n    \"surname\": \"ASELSAN\",\r\n    \"username\": \"aselsan\",\r\n    \"detail\": {\r\n      \"identityNumber\": null,\r\n      \"email\": null,\r\n      \"phoneNumber\": null,\r\n      \"rank\": null,\r\n      \"profilePicture\": null,\r\n      \"supervisor\": {\r\n        \"name\": null,\r\n        \"surname\": null\r\n      }\r\n    },\r\n    \"pushToken\": null,\r\n    \"userLevelId\": 5,\r\n    \"userLevelName\": \"Aselsan\",\r\n    \"id\": 10\r\n  },\r\n  \"tokenDetails\": {\r\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ\",\r\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ\"\r\n  },\r\n  \"authorities\": [\r\n    \"right.detection.createdetection\",\r\n    \"right.detection.map\",\r\n    \"right.detection.detail\",\r\n    \"right.detection.detail.read\",\r\n    \"right.detection.detail.update\",\r\n    \"right.detection.filter\",\r\n    \"right.detection.sort\",\r\n    \"right.detection.sosmessage\",\r\n    \"right.task.filter\",\r\n    \"right.task.sort\",\r\n    \"right.task.detail\",\r\n    \"right.task.detail.read\",\r\n    \"right.task.detail.starttask\",\r\n    \"right.sensor.list\",\r\n    \"right.sensor.map\",\r\n    \"right.sensor.livestream\",\r\n    \"right.sensor.filter\",\r\n    \"right.sensor.sort\",\r\n    \"right.profile.read\",\r\n    \"right.profile.usergroups.authorization\",\r\n    \"right.detection\",\r\n    \"right.task\",\r\n    \"right.sensor\",\r\n    \"right.profile\",\r\n    \"right.pushnotification\",\r\n    \"right.detection.incominglist\",\r\n    \"right.task.outgoinglist\",\r\n    \"right.detection.outgoinglist\",\r\n    \"right.task.incominglist\",\r\n    \"right.task.attachments.list\",\r\n    \"right.alarm\",\r\n    \"right.alarm.list\",\r\n    \"right.alarm.map\",\r\n    \"right.alarm.filter\"\r\n  ]\r\n}"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "55" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "aselsan"
+    }
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "{\r\n  \"user\": {\r\n    \"name\": \"Sistem Yöneticisi\",\r\n    \"surname\": \"ASELSAN\",\r\n    \"username\": \"aselsan\",\r\n    \"detail\": {\r\n      \"identityNumber\": null,\r\n      \"email\": null,\r\n      \"phoneNumber\": null,\r\n      \"rank\": null,\r\n      \"profilePicture\": null,\r\n      \"supervisor\": {\r\n        \"name\": null,\r\n        \"surname\": null\r\n      }\r\n    },\r\n    \"pushToken\": null,\r\n    \"userLevelId\": 5,\r\n    \"userLevelName\": \"Aselsan\",\r\n    \"id\": 10\r\n  },\r\n  \"tokenDetails\": {\r\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ\",\r\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ\"\r\n  },\r\n  \"authorities\": [\r\n    \"right.detection.createdetection\",\r\n    \"right.detection.map\",\r\n    \"right.detection.detail\",\r\n    \"right.detection.detail.read\",\r\n    \"right.detection.detail.update\",\r\n    \"right.detection.filter\",\r\n    \"right.detection.sort\",\r\n    \"right.detection.sosmessage\",\r\n    \"right.task.filter\",\r\n    \"right.task.sort\",\r\n    \"right.task.detail\",\r\n    \"right.task.detail.read\",\r\n    \"right.task.detail.starttask\",\r\n    \"right.sensor.list\",\r\n    \"right.sensor.map\",\r\n    \"right.sensor.livestream\",\r\n    \"right.sensor.filter\",\r\n    \"right.sensor.sort\",\r\n    \"right.profile.read\",\r\n    \"right.profile.usergroups.authorization\",\r\n    \"right.detection\",\r\n    \"right.task\",\r\n    \"right.sensor\",\r\n    \"right.profile\",\r\n    \"right.pushnotification\",\r\n    \"right.detection.incominglist\",\r\n    \"right.task.outgoinglist\",\r\n    \"right.detection.outgoinglist\",\r\n    \"right.task.incominglist\",\r\n    \"right.task.attachments.list\",\r\n    \"right.alarm\",\r\n    \"right.alarm.list\",\r\n    \"right.alarm.map\",\r\n    \"right.alarm.filter\"\r\n  ]\r\n}"
+  }
+
+ from expectation:
+
+  71ac2b6f-de15-4a45-acf7-e5b52eb46f63
+
+2024-09-27 07:59:17.516 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
+2024-09-27 07:59:17.518 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 07:59:17.518 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
+2024-09-27 07:59:17.535 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The Access Token has been saved: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ
+2024-09-27 07:59:17.553 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
+2024-09-27 08:00:00.040 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 08:00:00.041 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-27 08:00:06.559 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: User is unauthorized
+2024-09-27 08:00:06.559 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 401
+2024-09-27 08:00:06.559 [main] ERROR com.apiTests.requests.serviceRequests.user_controller.LoginTests - Unexpected content type: text/plain;charset=UTF-8
+2024-09-27 08:00:06.560 [main] ERROR com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response body: User is unauthorized
+2024-09-27 08:00:06.560 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
+2024-09-27 08:00:06.632 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 08:00:06.633 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-27 08:00:07.618 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: User is unauthorized
+2024-09-27 08:00:07.619 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 401
+2024-09-27 08:00:07.619 [main] ERROR com.apiTests.requests.serviceRequests.user_controller.LoginTests - Unexpected content type: text/plain;charset=UTF-8
+2024-09-27 08:00:07.619 [main] ERROR com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response body: User is unauthorized
+2024-09-27 08:00:07.619 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and empty password
+2024-09-27 08:00:07.622 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 08:00:07.622 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-27 08:00:30.053 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: {"user":{"name":"Sistem Yöneticisi","surname":"ASELSAN","username":"aselsan","detail":{"identityNumber":null,"email":null,"phoneNumber":null,"rank":null,"profilePicture":null,"supervisor":{"name":null,"surname":null}},"pushToken":null,"userLevelId":5,"userLevelName":"Aselsan","id":10},"tokenDetails":{"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiJjYWY1ZTkyMS04OTkzLTRjMzctODI0Ny1hYmRjNzdiZjRhODQiLCJleHAiOjE3Mjc0MTM4MTgsImlhdCI6MTcyNzQxMzIxOCwianRpIjoiZWMzMDc2MzEtMmUwNy00MzI5LTk0NTgtZjU4Y2ZlM2RjOTg2In0.xqq8RIMU-Op8c0z31y5KmCPRUHtbK7EGaC67xwAUADQItoX-ZoLnt8F1Ue9eKtQBs9_0n6SBB6fk91KnDn1aCA","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3NDQ5MjE4LCJpYXQiOjE3Mjc0MTMyMTgsImp0aSI6ImNhZjVlOTIxLTg5OTMtNGMzNy04MjQ3LWFiZGM3N2JmNGE4NCJ9.1M7yVb7XJ__uxSL0uwvvZqwEu9bg-_rqULg99m06vvJvvn1yj5b0RHVipcOvhcLq3Rsafa3P3fKjwYnDjlT17w"},"authorities":["right.detection.createdetection","right.detection.map","right.detection.detail","right.detection.detail.read","right.detection.detail.update","right.detection.filter","right.detection.sort","right.detection.sosmessage","right.task.filter","right.task.sort","right.task.detail","right.task.detail.read","right.task.detail.starttask","right.sensor.list","right.sensor.map","right.sensor.livestream","right.sensor.filter","right.sensor.sort","right.profile.read","right.profile.usergroups.authorization","right.detection","right.task","right.sensor","right.profile","right.pushnotification","right.detection.incominglist","right.task.outgoinglist","right.detection.outgoinglist","right.task.incominglist","right.task.attachments.list","right.alarm","right.alarm.list","right.alarm.map","right.alarm.filter"]}
+2024-09-27 08:00:30.053 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 200
+2024-09-27 08:00:30.200 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
+2024-09-27 08:00:30.201 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 08:00:30.206 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
+2024-09-27 08:00:30.208 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The Access Token has been saved: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiJjYWY1ZTkyMS04OTkzLTRjMzctODI0Ny1hYmRjNzdiZjRhODQiLCJleHAiOjE3Mjc0MTM4MTgsImlhdCI6MTcyNzQxMzIxOCwianRpIjoiZWMzMDc2MzEtMmUwNy00MzI5LTk0NTgtZjU4Y2ZlM2RjOTg2In0.xqq8RIMU-Op8c0z31y5KmCPRUHtbK7EGaC67xwAUADQItoX-ZoLnt8F1Ue9eKtQBs9_0n6SBB6fk91KnDn1aCA
+2024-09-27 08:00:30.226 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 08:00:30.226 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-27 08:00:41.528 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: {"user":{"name":"Sistem Yöneticisi","surname":"ASELSAN","username":"aselsan","detail":{"identityNumber":null,"email":null,"phoneNumber":null,"rank":null,"profilePicture":null,"supervisor":{"name":null,"surname":null}},"pushToken":null,"userLevelId":5,"userLevelName":"Aselsan","id":10},"tokenDetails":{"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiI2NDA4ZTRlOC05MWY1LTRmNDktYmY1OS0zNDI5MGYyMjY5MmYiLCJleHAiOjE3Mjc0MTM4NDAsImlhdCI6MTcyNzQxMzI0MCwianRpIjoiZmQwNGRhNWUtNjAwZC00OWQzLWEwZjYtNjljYmFmNGM0ZTc0In0.KTl2DJ-8bLjF7SjSwK5t7OgJ_oLM84IsHylnQTepA3ojoabIEuOxA5sbEO5yaQDuU7b88O0in66iGvS4Gg25GQ","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3NDQ5MjQwLCJpYXQiOjE3Mjc0MTMyNDAsImp0aSI6IjY0MDhlNGU4LTkxZjUtNGY0OS1iZjU5LTM0MjkwZjIyNjkyZiJ9.s4cGkWCgQkOu5uecmLxPiE_BlqXABiUKPuyBjn-vQ2pZ3nBDol7GIU7Whektq0lchvRFnF1dx9_37gWItAmlKQ"},"authorities":["right.detection.createdetection","right.detection.map","right.detection.detail","right.detection.detail.read","right.detection.detail.update","right.detection.filter","right.detection.sort","right.detection.sosmessage","right.task.filter","right.task.sort","right.task.detail","right.task.detail.read","right.task.detail.starttask","right.sensor.list","right.sensor.map","right.sensor.livestream","right.sensor.filter","right.sensor.sort","right.profile.read","right.profile.usergroups.authorization","right.detection","right.task","right.sensor","right.profile","right.pushnotification","right.detection.incominglist","right.task.outgoinglist","right.detection.outgoinglist","right.task.incominglist","right.task.attachments.list","right.alarm","right.alarm.list","right.alarm.map","right.alarm.filter"]}
+2024-09-27 08:00:41.529 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 200
+2024-09-27 08:00:41.534 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
+2024-09-27 08:00:41.534 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 08:00:41.535 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
+2024-09-27 08:00:41.537 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The Access Token has been saved: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiI2NDA4ZTRlOC05MWY1LTRmNDktYmY1OS0zNDI5MGYyMjY5MmYiLCJleHAiOjE3Mjc0MTM4NDAsImlhdCI6MTcyNzQxMzI0MCwianRpIjoiZmQwNGRhNWUtNjAwZC00OWQzLWEwZjYtNjljYmFmNGM0ZTc0In0.KTl2DJ-8bLjF7SjSwK5t7OgJ_oLM84IsHylnQTepA3ojoabIEuOxA5sbEO5yaQDuU7b88O0in66iGvS4Gg25GQ
+2024-09-27 13:43:48.652 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
+2024-09-27 13:43:48.652 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:48.657 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:49.147 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"wrongPassword\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 404,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "null"
+    },
+    "id" : "88ca9140-44d3-4c32-8e57-b28ae458de03",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  88ca9140-44d3-4c32-8e57-b28ae458de03
+
+2024-09-27 13:43:49.670 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:49.671 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-27 13:43:51.219 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "61" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "wrongPassword"
+    }
+  }
+
+2024-09-27 13:43:51.225 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "61" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "wrongPassword"
+    }
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"wrongPassword\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 404,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "null"
+    },
+    "id" : "88ca9140-44d3-4c32-8e57-b28ae458de03",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+2024-09-27 13:43:51.240 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
+
+  {
+    "statusCode" : 404,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "null"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "61" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "wrongPassword"
+    }
+  }
+
+ for action:
+
+  {
+    "statusCode" : 404,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "null"
+  }
+
+ from expectation:
+
+  88ca9140-44d3-4c32-8e57-b28ae458de03
+
+2024-09-27 13:43:51.318 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: null
+2024-09-27 13:43:51.318 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 404
+2024-09-27 13:43:51.386 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
+2024-09-27 13:43:51.387 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
+2024-09-27 13:43:51.728 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
+2024-09-27 13:43:51.728 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:51.729 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:51.749 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 404,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "null"
+    },
+    "id" : "d049901b-fdee-44d0-ab8f-bc5b016df257",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  d049901b-fdee-44d0-ab8f-bc5b016df257
+
+2024-09-27 13:43:51.758 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:51.759 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-27 13:43:51.800 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "48" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : ""
+    }
+  }
+
+2024-09-27 13:43:51.802 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "48" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : ""
+    }
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 404,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "null"
+    },
+    "id" : "d049901b-fdee-44d0-ab8f-bc5b016df257",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+2024-09-27 13:43:51.806 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
+
+  {
+    "statusCode" : 404,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "null"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "48" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : ""
+    }
+  }
+
+ for action:
+
+  {
+    "statusCode" : 404,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "null"
+  }
+
+ from expectation:
+
+  d049901b-fdee-44d0-ab8f-bc5b016df257
+
+2024-09-27 13:43:51.813 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: null
+2024-09-27 13:43:51.813 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 404
+2024-09-27 13:43:51.818 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
+2024-09-27 13:43:51.819 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
+2024-09-27 13:43:52.108 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
+2024-09-27 13:43:52.109 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:52.109 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:52.139 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 creating expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"aselsan\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\r\n  \"user\": {\r\n    \"name\": \"Sistem Yöneticisi\",\r\n    \"surname\": \"ASELSAN\",\r\n    \"username\": \"aselsan\",\r\n    \"detail\": {\r\n      \"identityNumber\": null,\r\n      \"email\": null,\r\n      \"phoneNumber\": null,\r\n      \"rank\": null,\r\n      \"profilePicture\": null,\r\n      \"supervisor\": {\r\n        \"name\": null,\r\n        \"surname\": null\r\n      }\r\n    },\r\n    \"pushToken\": null,\r\n    \"userLevelId\": 5,\r\n    \"userLevelName\": \"Aselsan\",\r\n    \"id\": 10\r\n  },\r\n  \"tokenDetails\": {\r\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ\",\r\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ\"\r\n  },\r\n  \"authorities\": [\r\n    \"right.detection.createdetection\",\r\n    \"right.detection.map\",\r\n    \"right.detection.detail\",\r\n    \"right.detection.detail.read\",\r\n    \"right.detection.detail.update\",\r\n    \"right.detection.filter\",\r\n    \"right.detection.sort\",\r\n    \"right.detection.sosmessage\",\r\n    \"right.task.filter\",\r\n    \"right.task.sort\",\r\n    \"right.task.detail\",\r\n    \"right.task.detail.read\",\r\n    \"right.task.detail.starttask\",\r\n    \"right.sensor.list\",\r\n    \"right.sensor.map\",\r\n    \"right.sensor.livestream\",\r\n    \"right.sensor.filter\",\r\n    \"right.sensor.sort\",\r\n    \"right.profile.read\",\r\n    \"right.profile.usergroups.authorization\",\r\n    \"right.detection\",\r\n    \"right.task\",\r\n    \"right.sensor\",\r\n    \"right.profile\",\r\n    \"right.pushnotification\",\r\n    \"right.detection.incominglist\",\r\n    \"right.task.outgoinglist\",\r\n    \"right.detection.outgoinglist\",\r\n    \"right.task.incominglist\",\r\n    \"right.task.attachments.list\",\r\n    \"right.alarm\",\r\n    \"right.alarm.list\",\r\n    \"right.alarm.map\",\r\n    \"right.alarm.filter\"\r\n  ]\r\n}"
+    },
+    "id" : "6da2d66b-f326-4ab8-a61e-fb291a47b7b8",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+ with id:
+
+  6da2d66b-f326-4ab8-a61e-fb291a47b7b8
+
+2024-09-27 13:43:52.145 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:52.145 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-27 13:43:52.171 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "55" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "aselsan"
+    }
+  }
+
+2024-09-27 13:43:52.176 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "55" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "aselsan"
+    }
+  }
+
+ matched expectation:
+
+  {
+    "httpRequest" : {
+      "method" : "POST",
+      "path" : "/v1/login",
+      "queryStringParameters" : {
+        "basic" : [ "true" ]
+      },
+      "headers" : {
+        "Content-Type" : [ "application/json" ],
+        "Accept-Language" : [ "en" ]
+      },
+      "body" : "{\r\n  \"username\": \"aselsan\",\r\n  \"password\": \"aselsan\"\r\n}"
+    },
+    "httpResponse" : {
+      "statusCode" : 200,
+      "headers" : {
+        "Content-Type" : [ "application/json" ]
+      },
+      "body" : "{\r\n  \"user\": {\r\n    \"name\": \"Sistem Yöneticisi\",\r\n    \"surname\": \"ASELSAN\",\r\n    \"username\": \"aselsan\",\r\n    \"detail\": {\r\n      \"identityNumber\": null,\r\n      \"email\": null,\r\n      \"phoneNumber\": null,\r\n      \"rank\": null,\r\n      \"profilePicture\": null,\r\n      \"supervisor\": {\r\n        \"name\": null,\r\n        \"surname\": null\r\n      }\r\n    },\r\n    \"pushToken\": null,\r\n    \"userLevelId\": 5,\r\n    \"userLevelName\": \"Aselsan\",\r\n    \"id\": 10\r\n  },\r\n  \"tokenDetails\": {\r\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ\",\r\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ\"\r\n  },\r\n  \"authorities\": [\r\n    \"right.detection.createdetection\",\r\n    \"right.detection.map\",\r\n    \"right.detection.detail\",\r\n    \"right.detection.detail.read\",\r\n    \"right.detection.detail.update\",\r\n    \"right.detection.filter\",\r\n    \"right.detection.sort\",\r\n    \"right.detection.sosmessage\",\r\n    \"right.task.filter\",\r\n    \"right.task.sort\",\r\n    \"right.task.detail\",\r\n    \"right.task.detail.read\",\r\n    \"right.task.detail.starttask\",\r\n    \"right.sensor.list\",\r\n    \"right.sensor.map\",\r\n    \"right.sensor.livestream\",\r\n    \"right.sensor.filter\",\r\n    \"right.sensor.sort\",\r\n    \"right.profile.read\",\r\n    \"right.profile.usergroups.authorization\",\r\n    \"right.detection\",\r\n    \"right.task\",\r\n    \"right.sensor\",\r\n    \"right.profile\",\r\n    \"right.pushnotification\",\r\n    \"right.detection.incominglist\",\r\n    \"right.task.outgoinglist\",\r\n    \"right.detection.outgoinglist\",\r\n    \"right.task.incominglist\",\r\n    \"right.task.attachments.list\",\r\n    \"right.alarm\",\r\n    \"right.alarm.list\",\r\n    \"right.alarm.map\",\r\n    \"right.alarm.filter\"\r\n  ]\r\n}"
+    },
+    "id" : "6da2d66b-f326-4ab8-a61e-fb291a47b7b8",
+    "priority" : 0,
+    "timeToLive" : {
+      "unlimited" : true
+    },
+    "times" : {
+      "unlimited" : true
+    }
+  }
+
+2024-09-27 13:43:52.179 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "{\r\n  \"user\": {\r\n    \"name\": \"Sistem Yöneticisi\",\r\n    \"surname\": \"ASELSAN\",\r\n    \"username\": \"aselsan\",\r\n    \"detail\": {\r\n      \"identityNumber\": null,\r\n      \"email\": null,\r\n      \"phoneNumber\": null,\r\n      \"rank\": null,\r\n      \"profilePicture\": null,\r\n      \"supervisor\": {\r\n        \"name\": null,\r\n        \"surname\": null\r\n      }\r\n    },\r\n    \"pushToken\": null,\r\n    \"userLevelId\": 5,\r\n    \"userLevelName\": \"Aselsan\",\r\n    \"id\": 10\r\n  },\r\n  \"tokenDetails\": {\r\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ\",\r\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ\"\r\n  },\r\n  \"authorities\": [\r\n    \"right.detection.createdetection\",\r\n    \"right.detection.map\",\r\n    \"right.detection.detail\",\r\n    \"right.detection.detail.read\",\r\n    \"right.detection.detail.update\",\r\n    \"right.detection.filter\",\r\n    \"right.detection.sort\",\r\n    \"right.detection.sosmessage\",\r\n    \"right.task.filter\",\r\n    \"right.task.sort\",\r\n    \"right.task.detail\",\r\n    \"right.task.detail.read\",\r\n    \"right.task.detail.starttask\",\r\n    \"right.sensor.list\",\r\n    \"right.sensor.map\",\r\n    \"right.sensor.livestream\",\r\n    \"right.sensor.filter\",\r\n    \"right.sensor.sort\",\r\n    \"right.profile.read\",\r\n    \"right.profile.usergroups.authorization\",\r\n    \"right.detection\",\r\n    \"right.task\",\r\n    \"right.sensor\",\r\n    \"right.profile\",\r\n    \"right.pushnotification\",\r\n    \"right.detection.incominglist\",\r\n    \"right.task.outgoinglist\",\r\n    \"right.detection.outgoinglist\",\r\n    \"right.task.incominglist\",\r\n    \"right.task.attachments.list\",\r\n    \"right.alarm\",\r\n    \"right.alarm.list\",\r\n    \"right.alarm.map\",\r\n    \"right.alarm.filter\"\r\n  ]\r\n}"
+  }
+
+ for request:
+
+  {
+    "method" : "POST",
+    "path" : "/v1/login",
+    "queryStringParameters" : {
+      "basic" : [ "true" ]
+    },
+    "headers" : {
+      "content-length" : [ "55" ],
+      "User-Agent" : [ "Apache-HttpClient/4.5.13 (Java/22.0.2)" ],
+      "Host" : [ "localhost:1080" ],
+      "Content-Type" : [ "application/json" ],
+      "Connection" : [ "Keep-Alive" ],
+      "Accept-Language" : [ "en" ],
+      "Accept-Encoding" : [ "gzip,deflate" ],
+      "Accept" : [ "*/*" ]
+    },
+    "keepAlive" : true,
+    "secure" : false,
+    "body" : {
+      "username" : "aselsan",
+      "password" : "aselsan"
+    }
+  }
+
+ for action:
+
+  {
+    "statusCode" : 200,
+    "headers" : {
+      "Content-Type" : [ "application/json" ]
+    },
+    "body" : "{\r\n  \"user\": {\r\n    \"name\": \"Sistem Yöneticisi\",\r\n    \"surname\": \"ASELSAN\",\r\n    \"username\": \"aselsan\",\r\n    \"detail\": {\r\n      \"identityNumber\": null,\r\n      \"email\": null,\r\n      \"phoneNumber\": null,\r\n      \"rank\": null,\r\n      \"profilePicture\": null,\r\n      \"supervisor\": {\r\n        \"name\": null,\r\n        \"surname\": null\r\n      }\r\n    },\r\n    \"pushToken\": null,\r\n    \"userLevelId\": 5,\r\n    \"userLevelName\": \"Aselsan\",\r\n    \"id\": 10\r\n  },\r\n  \"tokenDetails\": {\r\n    \"accessToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ\",\r\n    \"refreshToken\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ\"\r\n  },\r\n  \"authorities\": [\r\n    \"right.detection.createdetection\",\r\n    \"right.detection.map\",\r\n    \"right.detection.detail\",\r\n    \"right.detection.detail.read\",\r\n    \"right.detection.detail.update\",\r\n    \"right.detection.filter\",\r\n    \"right.detection.sort\",\r\n    \"right.detection.sosmessage\",\r\n    \"right.task.filter\",\r\n    \"right.task.sort\",\r\n    \"right.task.detail\",\r\n    \"right.task.detail.read\",\r\n    \"right.task.detail.starttask\",\r\n    \"right.sensor.list\",\r\n    \"right.sensor.map\",\r\n    \"right.sensor.livestream\",\r\n    \"right.sensor.filter\",\r\n    \"right.sensor.sort\",\r\n    \"right.profile.read\",\r\n    \"right.profile.usergroups.authorization\",\r\n    \"right.detection\",\r\n    \"right.task\",\r\n    \"right.sensor\",\r\n    \"right.profile\",\r\n    \"right.pushnotification\",\r\n    \"right.detection.incominglist\",\r\n    \"right.task.outgoinglist\",\r\n    \"right.detection.outgoinglist\",\r\n    \"right.task.incominglist\",\r\n    \"right.task.attachments.list\",\r\n    \"right.alarm\",\r\n    \"right.alarm.list\",\r\n    \"right.alarm.map\",\r\n    \"right.alarm.filter\"\r\n  ]\r\n}"
+  }
+
+ from expectation:
+
+  6da2d66b-f326-4ab8-a61e-fb291a47b7b8
+
+2024-09-27 13:43:52.194 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: {
+  "user": {
+    "name": "Sistem Yöneticisi",
+    "surname": "ASELSAN",
+    "username": "aselsan",
+    "detail": {
+      "identityNumber": null,
+      "email": null,
+      "phoneNumber": null,
+      "rank": null,
+      "profilePicture": null,
+      "supervisor": {
+        "name": null,
+        "surname": null
+      }
+    },
+    "pushToken": null,
+    "userLevelId": 5,
+    "userLevelName": "Aselsan",
+    "id": 10
+  },
+  "tokenDetails": {
+    "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ",
+    "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ"
+  },
+  "authorities": [
+    "right.detection.createdetection",
+    "right.detection.map",
+    "right.detection.detail",
+    "right.detection.detail.read",
+    "right.detection.detail.update",
+    "right.detection.filter",
+    "right.detection.sort",
+    "right.detection.sosmessage",
+    "right.task.filter",
+    "right.task.sort",
+    "right.task.detail",
+    "right.task.detail.read",
+    "right.task.detail.starttask",
+    "right.sensor.list",
+    "right.sensor.map",
+    "right.sensor.livestream",
+    "right.sensor.filter",
+    "right.sensor.sort",
+    "right.profile.read",
+    "right.profile.usergroups.authorization",
+    "right.detection",
+    "right.task",
+    "right.sensor",
+    "right.profile",
+    "right.pushnotification",
+    "right.detection.incominglist",
+    "right.task.outgoinglist",
+    "right.detection.outgoinglist",
+    "right.task.incominglist",
+    "right.task.attachments.list",
+    "right.alarm",
+    "right.alarm.list",
+    "right.alarm.map",
+    "right.alarm.filter"
+  ]
+}
+2024-09-27 13:43:52.194 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 200
+2024-09-27 13:43:52.201 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
+2024-09-27 13:43:52.202 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:43:52.203 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
+2024-09-27 13:43:52.205 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The Access Token has been saved: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ
+2024-09-27 13:43:52.206 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
+2024-09-27 13:44:01.898 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:44:01.904 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-27 13:44:03.682 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: User is unauthorized
+2024-09-27 13:44:03.682 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 401
+2024-09-27 13:44:03.683 [main] ERROR com.apiTests.requests.serviceRequests.user_controller.LoginTests - Unexpected content type: text/plain;charset=UTF-8
+2024-09-27 13:44:03.684 [main] ERROR com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response body: User is unauthorized
+2024-09-27 13:44:03.684 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
+2024-09-27 13:44:03.763 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:44:03.763 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-27 13:44:04.080 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: User is unauthorized
+2024-09-27 13:44:04.080 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 401
+2024-09-27 13:44:04.081 [main] ERROR com.apiTests.requests.serviceRequests.user_controller.LoginTests - Unexpected content type: text/plain;charset=UTF-8
+2024-09-27 13:44:04.081 [main] ERROR com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response body: User is unauthorized
+2024-09-27 13:44:04.081 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and empty password
+2024-09-27 13:44:04.096 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:44:04.096 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-27 13:44:04.943 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: {"user":{"name":"Sistem Yöneticisi","surname":"ASELSAN","username":"aselsan","detail":{"identityNumber":null,"email":null,"phoneNumber":null,"rank":null,"profilePicture":null,"supervisor":{"name":null,"surname":null}},"pushToken":null,"userLevelId":5,"userLevelName":"Aselsan","id":10},"tokenDetails":{"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiJhMTJlMWM3MC0xNmQ5LTRmMjQtYTg3Mi1lYzVhYjZjZmM1YmIiLCJleHAiOjE3Mjc0MzQ0NDQsImlhdCI6MTcyNzQzMzg0NCwianRpIjoiMWUyM2U1ZGUtZmI4OC00YzQ4LTg4ZmUtNjZhYWJlNjg1ODNiIn0.ZRvmTCcNxkE0jd2cOQJ4nZCnxD6ajaa7FIM9M4Z06oMgbFx9r_0Wypeyga4ArVox2MR7-4m8WwBrzWf4vKo-Iw","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3NDY5ODQ0LCJpYXQiOjE3Mjc0MzM4NDQsImp0aSI6ImExMmUxYzcwLTE2ZDktNGYyNC1hODcyLWVjNWFiNmNmYzViYiJ9.JV5R251cG05uGBNHPwmO7Dc1uUB4mKq-d1wVefbJy6VRAsZiMN2Wuk0N3xW_bDhEhMIaJL9zRldGmXP8B_pQoA"},"authorities":["right.detection.createdetection","right.detection.map","right.detection.detail","right.detection.detail.read","right.detection.detail.update","right.detection.filter","right.detection.sort","right.detection.sosmessage","right.task.filter","right.task.sort","right.task.detail","right.task.detail.read","right.task.detail.starttask","right.sensor.list","right.sensor.map","right.sensor.livestream","right.sensor.filter","right.sensor.sort","right.profile.read","right.profile.usergroups.authorization","right.detection","right.task","right.sensor","right.profile","right.pushnotification","right.detection.incominglist","right.task.outgoinglist","right.detection.outgoinglist","right.task.incominglist","right.task.attachments.list","right.alarm","right.alarm.list","right.alarm.map","right.alarm.filter"]}
+2024-09-27 13:44:04.944 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 200
+2024-09-27 13:44:05.080 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
+2024-09-27 13:44:05.081 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:44:05.085 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
+2024-09-27 13:44:05.087 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The Access Token has been saved: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiJhMTJlMWM3MC0xNmQ5LTRmMjQtYTg3Mi1lYzVhYjZjZmM1YmIiLCJleHAiOjE3Mjc0MzQ0NDQsImlhdCI6MTcyNzQzMzg0NCwianRpIjoiMWUyM2U1ZGUtZmI4OC00YzQ4LTg4ZmUtNjZhYWJlNjg1ODNiIn0.ZRvmTCcNxkE0jd2cOQJ4nZCnxD6ajaa7FIM9M4Z06oMgbFx9r_0Wypeyga4ArVox2MR7-4m8WwBrzWf4vKo-Iw
+2024-09-27 13:44:05.098 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:44:05.098 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-27 13:44:05.452 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: {"user":{"name":"Sistem Yöneticisi","surname":"ASELSAN","username":"aselsan","detail":{"identityNumber":null,"email":null,"phoneNumber":null,"rank":null,"profilePicture":null,"supervisor":{"name":null,"surname":null}},"pushToken":null,"userLevelId":5,"userLevelName":"Aselsan","id":10},"tokenDetails":{"accessToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIwMzhlN2QyNC05NTgxLTRiYzQtYTAzZS1lNTY0MDdmYzEwYzgiLCJleHAiOjE3Mjc0MzQ0NDUsImlhdCI6MTcyNzQzMzg0NSwianRpIjoiYTgwMWQwODQtOTI5ZC00MmY2LThjMjctYWU3MmNkNzczNmNlIn0.LfQ6m-4qkwMV65AkweS5scOnDhhVktaNZre0XZYHe6xaWD8boS-OsACYMYiQtTe1COg8p__D7zIxhyyzvcplhg","refreshToken":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3NDY5ODQ1LCJpYXQiOjE3Mjc0MzM4NDUsImp0aSI6IjAzOGU3ZDI0LTk1ODEtNGJjNC1hMDNlLWU1NjQwN2ZjMTBjOCJ9.WKUOth2xyRtTlcd4pZMqaSvQmrhRxChfU7rmtPWVoK_oet7-vflQpWSVrRSDQl13xJfJGkXzjE8G87LWPtxYCA"},"authorities":["right.detection.createdetection","right.detection.map","right.detection.detail","right.detection.detail.read","right.detection.detail.update","right.detection.filter","right.detection.sort","right.detection.sosmessage","right.task.filter","right.task.sort","right.task.detail","right.task.detail.read","right.task.detail.starttask","right.sensor.list","right.sensor.map","right.sensor.livestream","right.sensor.filter","right.sensor.sort","right.profile.read","right.profile.usergroups.authorization","right.detection","right.task","right.sensor","right.profile","right.pushnotification","right.detection.incominglist","right.task.outgoinglist","right.detection.outgoinglist","right.task.incominglist","right.task.attachments.list","right.alarm","right.alarm.list","right.alarm.map","right.alarm.filter"]}
+2024-09-27 13:44:05.453 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Status Code: 200
+2024-09-27 13:44:05.458 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
+2024-09-27 13:44:05.459 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
+2024-09-27 13:44:05.459 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
+2024-09-27 13:44:05.460 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The Access Token has been saved: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIwMzhlN2QyNC05NTgxLTRiYzQtYTAzZS1lNTY0MDdmYzEwYzgiLCJleHAiOjE3Mjc0MzQ0NDUsImlhdCI6MTcyNzQzMzg0NSwianRpIjoiYTgwMWQwODQtOTI5ZC00MmY2LThjMjctYWU3MmNkNzczNmNlIn0.LfQ6m-4qkwMV65AkweS5scOnDhhVktaNZre0XZYHe6xaWD8boS-OsACYMYiQtTe1COg8p__D7zIxhyyzvcplhg
