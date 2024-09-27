@@ -30,7 +30,7 @@ public class LoginSteps {
     public void validUsernameAndInvalidPassword(){
 
         loginTests = new LoginTests();  // Create the LoginTests class for Login
-        loginResponse = loginTests.Login(validUsernameInvalidPassword,NOT_OK);  // Save the response in loginResponse
+        loginResponse = loginTests.Login(validUsernameInvalidPassword,NOT_OK,true);  // Save the response in loginResponse
         logger.info("The system has not been logged in with a valid username and password");
     }
 
@@ -38,7 +38,7 @@ public class LoginSteps {
     public void validUsernameAndEmptyPassword(){
 
         loginTests = new LoginTests();  // Create the LoginTests class for Login
-        loginResponse = loginTests.Login(validUsernameAndEmptyPassword,NOT_OK);  // Save the response in loginResponse
+        loginResponse = loginTests.Login(validUsernameAndEmptyPassword,NOT_OK,true);  // Save the response in loginResponse
         logger.info("The system has not been logged in with a valid username and empty password");
     }
 
@@ -47,7 +47,7 @@ public class LoginSteps {
 
         // Read the data from JSON file and save it in requestBody
         loginTests = new LoginTests();  // Create the LoginTests class for Login
-        loginResponse = loginTests.Login(validUsernameAndPassword,OK);  // Save the response in loginResponse
+        loginResponse = loginTests.Login(validUsernameAndPassword,OK,true);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and password");
     }
@@ -78,4 +78,47 @@ public class LoginSteps {
         Allure.addAttachment("Access Token", accessToken);
     }
 
+    @Given("User logs into the system with a valid username and hashed password")
+    public void validUsernameAndHashedPasswordAPI(){
+        // Read the data from JSON file and save it in requestBody
+        loginTests = new LoginTests();  // Create the LoginTests class for Login
+        loginResponse = loginTests.Login(validUsernameAndHashedPassword,OK,false);  // Save the response in loginResponse
+
+        logger.info("The system has been logged in with a valid username and hashed password when query parameter is false");
+    }
+
+    @When("Verifying the required response parameters by using hashed password")
+    public void checkParameterHashedPassword() throws JsonProcessingException{
+
+        String username = loginResponse.getUser().getUsername();
+        String requestBody = requestBodyLoader(validUsernameAndHashedPassword);
+        JsonNode jsonNode = objectMapper.readTree(requestBody);
+
+        // Username check
+        if (jsonNode.get("username").asText().equals(username)) {
+            logger.info("The username in the response matches the one in the request");
+            Allure.addAttachment("username check","The username in the response matches the one in the request");
+        } else {
+            logger.error("The username in the response does not match the one in the request");
+            Allure.addAttachment("username check","The username in the response does not matches the one in the request");
+            Assertions.fail("The username in the response does not match the one in the request");
+        }
+    }
+
+    @Then("Save the access token by using hashed password")
+    public void saveAccessTokenHashedPassword(){
+
+        // Save access token
+        accessToken = loginResponse.getTokenDetails().getAccessToken();
+        logger.info("The Access Token has been saved: " + accessToken);
+        Allure.addAttachment("Access Token", accessToken);
+    }
+
+    @Given("User logs into the system with a valid username and hashed password, true query")
+    public void validUsernameAndHashedPasswordTrueQueryAPI(){
+
+        loginTests = new LoginTests();  // Create the LoginTests class for Login
+        loginResponse = loginTests.Login(validUsernameAndHashedPassword,NOT_OK,true);  // Save the response in loginResponse
+        logger.info("The system has not been logged in with a valid username and hashed password when query parameter is true");
+    }
 }

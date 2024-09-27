@@ -17,7 +17,7 @@ public class LoginMockService {
     }
 
 
-    public void setupLoginMock(int statusCode, String mockResponseBodyPath, String requestBodyPath) {
+    public void setupLoginMock(int statusCode, String mockResponseBodyPath, String requestBodyPath, String torf) {
 
         String mockRespBody = requestBodyLoader(mockResponseBodyPath);
         String mockReqBody = requestBodyLoader(requestBodyPath);
@@ -26,7 +26,7 @@ public class LoginMockService {
                 .when(request()
                         .withMethod("POST")
                         .withPath("/v1/login")
-                        .withQueryStringParameter("basic", "true")
+                        .withQueryStringParameter("basic", torf)
                         .withHeader("Content-Type", "application/json")
                         .withHeader("Accept-Language", "en")
                         .withBody(mockReqBody)

@@ -17,7 +17,7 @@ public class LoginMockTest extends MockBaseTest {
     private static final Logger logger = LogManager.getLogger(LoginTests.class);
 
     @Step("User logs in with provided credentials")
-    public LoginResponse LoginForMock(String requestBodyPath, int statusCode) {
+    public LoginResponse LoginForMock(String requestBodyPath, int statusCode, boolean torf) {
 
         // Read the data from JSON file and save it in requestBody
         String requestBody = requestBodyLoader(requestBodyPath);
@@ -26,7 +26,7 @@ public class LoginMockTest extends MockBaseTest {
         // Send request
         Response response = given(spec)
                 .when().header("Accept-Language", "en")
-                .queryParam("basic", true)
+                .queryParam("basic", torf)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
                 .post(MOCK_LOGIN_ENDPOINT); // endpoint'ler bir class'tan çekilecek

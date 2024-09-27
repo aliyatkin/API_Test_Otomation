@@ -7,7 +7,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         glue = "com/apiTests/serviceSteps/mockTestSteps",                      // Packet name
-        features = "src/test/resources/featuresForMock",                              // .feature files location
+        features = "src/test/resources/featuresForMock",                       // .feature files location
         plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}          // Allure plugin
 )
 public class RunCucumberMockTest {

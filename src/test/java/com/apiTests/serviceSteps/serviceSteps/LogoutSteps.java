@@ -34,7 +34,7 @@ public class LogoutSteps {
 
         // Read the data from JSON file and save it in requestBody
         loginTests = new LoginTests();  // Create the LoginTests class for Login
-        loginResponse = loginTests.Login(validUsernameAndPassword,OK);  // Save the response in loginResponse
+        loginResponse = loginTests.Login(validUsernameAndPassword,OK,true);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and password");
     }
