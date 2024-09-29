@@ -8,13 +8,13 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.apiTests.constants.Endpoint.MOCK_LOGIN_ENDPOINT;
+import static com.apiTests.constants.Endpoint.LOGIN_ENDPOINT;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
 public class LoginMockTest extends MockBaseTest {
 
-    private static final Logger logger = LogManager.getLogger(LoginTests.class);
+    private static final Logger logger = LogManager.getLogger(LoginMockTest.class);
 
     @Step("User logs in with provided credentials")
     public LoginResponse LoginForMock(String requestBodyPath, int statusCode, boolean torf) {
@@ -29,7 +29,7 @@ public class LoginMockTest extends MockBaseTest {
                 .queryParam("basic", torf)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .post(MOCK_LOGIN_ENDPOINT); // endpoint'ler bir class'tan çekilecek
+                .post(LOGIN_ENDPOINT); // endpoint'ler bir class'tan çekilecek
 
         response.then().statusCode(statusCode);
         String contentType = response.getContentType();

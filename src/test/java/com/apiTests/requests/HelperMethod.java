@@ -13,7 +13,7 @@ import org.apache.logging.log4j.Logger;
 
 public class HelperMethod {
     public static String userLoginData;
-    private static final ObjectMapper objectMapper = new ObjectMapper();
+    public static final ObjectMapper objectMapper = new ObjectMapper();
     private static final Logger logger = LogManager.getLogger(HelperMethod.class);
 
 

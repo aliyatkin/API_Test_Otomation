@@ -10,5 +10,6 @@ public class Data_Path {
     public final static String mockResponseBody = "src/test/resources/jsonFilesLogin/mockFiles/mockResponse.json";
     public final static String mockResponseBodyInvalid = "src/test/resources/jsonFilesLogin/mockFiles/mockResponseInvalid.json";
     public final static String mockResponseBodyEmpty = "src/test/resources/jsonFilesLogin/mockFiles/mockResponseEmpty.json";
+    public final static String mockLogoutResponse = "src/test/resources/jsonFilesLogin/mockFiles/logoutResponse.json";
 
 }

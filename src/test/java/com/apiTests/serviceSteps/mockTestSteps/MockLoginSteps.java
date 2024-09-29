@@ -27,7 +27,7 @@ public class MockLoginSteps {
     private LoginResponse loginResponse;
     private String accessToken;
     private LoginMockTest loginMockTests;
-    private static LoginMockService loginMockTest;
+    private static LoginMockService loginMockService;
     private static final Logger logger = LogManager.getLogger(LoginSteps.class);
 
     @Given("User logs into the system with a valid username and invalid password for Mock Service")
@@ -36,9 +36,9 @@ public class MockLoginSteps {
         String mockRespBodyPath = mockResponseBodyInvalid;
         String mockReqBodyPath = validUsernameInvalidPassword;
 
-        loginMockTest = new LoginMockService();
-        loginMockTest.startMockServer();  // Mock sunucuyu başlat
-        loginMockTest.setupLoginMock(NOT_OK_404, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService = new LoginMockService();
+        loginMockService.startMockServer();  // Mock sunucuyu başlat
+        loginMockService.setupLoginMock(NOT_OK_404, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
 
         // Read the data from JSON file and save it in requestBody
         loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
@@ -46,7 +46,7 @@ public class MockLoginSteps {
 
         logger.info("The system has been logged in with a valid username and password");
 
-        loginMockTest.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();  // Mock sunucuyu durdur
     }
     @Given("User logs into the system with a valid username and empty password for Mock Service")
     public void validUsernameAndEmptyPasswordForMock(){
@@ -54,9 +54,9 @@ public class MockLoginSteps {
         String mockRespBodyPath = mockResponseBodyEmpty;
         String mockReqBodyPath = validUsernameAndEmptyPassword;
 
-        loginMockTest = new LoginMockService();
-        loginMockTest.startMockServer();  // Mock sunucuyu başlat
-        loginMockTest.setupLoginMock(NOT_OK_404,mockRespBodyPath,mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService = new LoginMockService();
+        loginMockService.startMockServer();  // Mock sunucuyu başlat
+        loginMockService.setupLoginMock(NOT_OK_404,mockRespBodyPath,mockReqBodyPath, "true");   // Mock yanıtını ayarla
 
         // Read the data from JSON file and save it in requestBody
         loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
@@ -64,7 +64,7 @@ public class MockLoginSteps {
 
         logger.info("The system has not been logged in with a valid username and password");
 
-        loginMockTest.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();  // Mock sunucuyu durdur
     }
 
     @Given("User logs into the system with a valid username and password for Mock Service")
@@ -73,9 +73,9 @@ public class MockLoginSteps {
         String mockRespBodyPath = mockResponseBody;
         String mockReqBodyPath = validUsernameAndPassword;
 
-        loginMockTest = new LoginMockService();
-        loginMockTest.startMockServer();  // Mock sunucuyu başlat
-        loginMockTest.setupLoginMock(OK, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService = new LoginMockService();
+        loginMockService.startMockServer();  // Mock sunucuyu başlat
+        loginMockService.setupLoginMock(OK, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
 
         // Read the data from JSON file and save it in requestBody
         loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
@@ -109,7 +109,7 @@ public class MockLoginSteps {
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Access Token", accessToken);
 
-        loginMockTest.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();  // Mock sunucuyu durdur
     }
 
     @Given("User logs into the system with a valid username and hashed password for Mock Service")
@@ -118,9 +118,9 @@ public class MockLoginSteps {
         String mockRespBodyPath = mockResponseBody;
         String mockReqBodyPath = validUsernameAndHashedPassword;
 
-        loginMockTest = new LoginMockService();
-        loginMockTest.startMockServer();  // Mock sunucuyu başlat
-        loginMockTest.setupLoginMock(OK, mockRespBodyPath, mockReqBodyPath,"false");   // Mock yanıtını ayarla
+        loginMockService = new LoginMockService();
+        loginMockService.startMockServer();  // Mock sunucuyu başlat
+        loginMockService.setupLoginMock(OK, mockRespBodyPath, mockReqBodyPath,"false");   // Mock yanıtını ayarla
 
         // Read the data from JSON file and save it in requestBody
         loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
@@ -152,7 +152,7 @@ public class MockLoginSteps {
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Access Token", accessToken);
 
-        loginMockTest.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();  // Mock sunucuyu durdur
     }
 
     @Given("User logs into the system with a valid username and hashed password for Mock Service, true query")
@@ -161,9 +161,9 @@ public class MockLoginSteps {
         String mockRespBodyPath = mockResponseBodyInvalid;
         String mockReqBodyPath = validUsernameAndHashedPassword;
 
-        loginMockTest = new LoginMockService();
-        loginMockTest.startMockServer();  // Mock sunucuyu başlat
-        loginMockTest.setupLoginMock(NOT_OK_404, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService = new LoginMockService();
+        loginMockService.startMockServer();  // Mock sunucuyu başlat
+        loginMockService.setupLoginMock(NOT_OK_404, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
 
         // Read the data from JSON file and save it in requestBody
         loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
@@ -171,6 +171,6 @@ public class MockLoginSteps {
 
         logger.info("The system has been logged in with a valid username and password");
 
-        loginMockTest.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();  // Mock sunucuyu durdur
     }
 }

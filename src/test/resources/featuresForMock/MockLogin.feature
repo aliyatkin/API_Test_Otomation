@@ -1,4 +1,4 @@
-Feature: User Login with Mock Server
+Feature: User Login with Mock Service
 
   Scenario: User logs into the system with a valid username and invalid password, verifies error response
     Given User logs into the system with a valid username and invalid password for Mock Service

@@ -1,7 +1,7 @@
-package com.apiTests.requests.serviceRequests.user_controller;
+package com.apiTests.requests.mockRequests;
 
-import com.apiTests.requests.serviceRequests.BaseTest;
 import io.qameta.allure.Step;
+import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,17 +9,16 @@ import org.apache.logging.log4j.Logger;
 import static com.apiTests.constants.Endpoint.LOGOUT_ENDPOINT;
 import static io.restassured.RestAssured.given;
 
-public class LogoutTests extends BaseTest {
+public class LogoutMockTest extends MockBaseTest{
 
-    private static final Logger logger = LogManager.getLogger(LogoutTests.class);
+    private static final Logger logger = LogManager.getLogger(LogoutMockTest.class);
 
-    @Step("User logs out with the provided access token")
-    public Response Logout(String accessToken, int statusCode) {
+    @Step("User logs in with provided credentials")
+    public Response LogoutForMock(String accessToken, int statusCode){
 
         // Send request to logout endpoint
         Response response = given(spec)
                 .header("Authorization", "Bearer " + accessToken)  // Access token'i header'a ekle
-                .accept("*/*")  // Accept header'ını ekle
                 .post(LOGOUT_ENDPOINT);  // Logout endpoint'e POST isteği gönder
 
         // Durum kodunu doğrula
@@ -37,5 +36,6 @@ public class LogoutTests extends BaseTest {
             logger.error("Response body: " + response.asString());
             return null;
         }
+
     }
 }
