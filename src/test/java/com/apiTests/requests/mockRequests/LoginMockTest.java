@@ -8,16 +8,16 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.apiTests.constants.Endpoint.MOCK_LOGIN_ENDPOINT;
+import static com.apiTests.constants.Endpoint.LOGIN_ENDPOINT;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
 public class LoginMockTest extends MockBaseTest {
 
-    private static final Logger logger = LogManager.getLogger(LoginTests.class);
+    private static final Logger logger = LogManager.getLogger(LoginMockTest.class);
 
     @Step("User logs in with provided credentials")
-    public LoginResponse LoginForMock(String requestBodyPath, int statusCode) {
+    public LoginResponse LoginForMock(String requestBodyPath, int statusCode, boolean torf) {
 
         // Read the data from JSON file and save it in requestBody
         String requestBody = requestBodyLoader(requestBodyPath);
@@ -26,10 +26,10 @@ public class LoginMockTest extends MockBaseTest {
         // Send request
         Response response = given(spec)
                 .when().header("Accept-Language", "en")
-                .queryParam("basic", true)
+                .queryParam("basic", torf)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .post(MOCK_LOGIN_ENDPOINT); // endpoint'ler bir class'tan çekilecek
+                .post(LOGIN_ENDPOINT); // endpoint'ler bir class'tan çekilecek
 
         response.then().statusCode(statusCode);
         String contentType = response.getContentType();

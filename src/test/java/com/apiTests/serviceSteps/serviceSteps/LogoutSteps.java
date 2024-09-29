@@ -16,6 +16,7 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
 import static com.apiTests.constants.Data_Path.validUsernameAndPassword;
+import static com.apiTests.constants.StatusCode.NOT_OK;
 import static com.apiTests.constants.StatusCode.OK;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 
@@ -34,7 +35,7 @@ public class LogoutSteps {
 
         // Read the data from JSON file and save it in requestBody
         loginTests = new LoginTests();  // Create the LoginTests class for Login
-        loginResponse = loginTests.Login(validUsernameAndPassword,OK);  // Save the response in loginResponse
+        loginResponse = loginTests.Login(validUsernameAndPassword,OK,true);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and password");
     }
@@ -68,7 +69,7 @@ public class LogoutSteps {
     @And("User logs out from the system with the saved access token")
     public void logout() {
         logoutTests = new LogoutTests();
-        logoutTests.Logout(accessToken,OK);
+        logoutTests.Logout(accessToken,NOT_OK);
         logger.info("The system has been logged out with a valid access token");
     }
 }

@@ -7,7 +7,7 @@ import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
 
-public class LoginMockService {
+public class LogoutMockService {
 
     private static ClientAndServer mockServer;
 
@@ -16,29 +16,22 @@ public class LoginMockService {
         mockServer = ClientAndServer.startClientAndServer(1080);
     }
 
+    public void setupLogoutMock(String accessToken, int statusCode, String responseBodyPath){
 
-    public void setupLoginMock(int statusCode, String mockResponseBodyPath, String requestBodyPath, String torf) {
-
-        String mockRespBody = requestBodyLoader(mockResponseBodyPath);
-        String mockReqBody = requestBodyLoader(requestBodyPath);
+        String responseBody = requestBodyLoader(responseBodyPath);
 
         new MockServerClient("localhost", 1080)
                 .when(request()
                         .withMethod("POST")
-                        .withPath("/v1/login")
-                        .withQueryStringParameter("basic", torf)
-                        .withHeader("Content-Type", "application/json")
-                        .withHeader("Accept-Language", "en")
-                        .withBody(mockReqBody)
+                        .withPath("/v1/logout")
+                        .withHeader("Authorization", "Bearer " + accessToken)
                 )
                 .respond(response()
                         .withStatusCode(statusCode)
-                        .withHeader("Content-Type", "application/json")
-                        .withBody(mockRespBody)
-                );
-    }
+                        .withHeader("Content-Type", "text/plain;charset=UTF-8")
+                        .withBody(responseBody)
 
-    public void stopMockServer() {
-        mockServer.stop();
+                );
+
     }
 }
