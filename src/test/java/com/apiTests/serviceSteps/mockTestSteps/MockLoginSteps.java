@@ -38,11 +38,11 @@ public class MockLoginSteps {
 
         loginMockService = new LoginMockService();
         loginMockService.startMockServer();  // Mock sunucuyu başlat
-        loginMockService.setupLoginMock(NOT_OK_404, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService.setupLoginMock(NOT_OK, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
 
         // Read the data from JSON file and save it in requestBody
         loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
-        loginResponse = loginMockTests.LoginForMock(validUsernameInvalidPassword,NOT_OK_404,true);  // Save the response in loginResponse
+        loginResponse = loginMockTests.LoginForMock(validUsernameInvalidPassword,NOT_OK,true);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and password");
 
@@ -56,11 +56,11 @@ public class MockLoginSteps {
 
         loginMockService = new LoginMockService();
         loginMockService.startMockServer();  // Mock sunucuyu başlat
-        loginMockService.setupLoginMock(NOT_OK_404,mockRespBodyPath,mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService.setupLoginMock(NOT_OK,mockRespBodyPath,mockReqBodyPath, "true");   // Mock yanıtını ayarla
 
         // Read the data from JSON file and save it in requestBody
         loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
-        loginResponse = loginMockTests.LoginForMock(validUsernameAndEmptyPassword,NOT_OK_404,true);  // Save the response in loginResponse
+        loginResponse = loginMockTests.LoginForMock(validUsernameAndEmptyPassword,NOT_OK,true);  // Save the response in loginResponse
 
         logger.info("The system has not been logged in with a valid username and password");
 
@@ -163,11 +163,11 @@ public class MockLoginSteps {
 
         loginMockService = new LoginMockService();
         loginMockService.startMockServer();  // Mock sunucuyu başlat
-        loginMockService.setupLoginMock(NOT_OK_404, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService.setupLoginMock(NOT_OK, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
 
         // Read the data from JSON file and save it in requestBody
         loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
-        loginResponse = loginMockTests.LoginForMock(validUsernameAndHashedPassword,NOT_OK_404,true);  // Save the response in loginResponse
+        loginResponse = loginMockTests.LoginForMock(validUsernameAndHashedPassword,NOT_OK,true);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and password");
 
