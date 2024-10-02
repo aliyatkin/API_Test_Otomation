@@ -15,15 +15,15 @@ import org.junit.jupiter.api.Assertions;
 
 import static com.apiTests.constants.Data_Path.*;
 import static com.apiTests.constants.StatusCode.*;
-import static com.apiTests.requests.HelperMethod.requestBodyLoader;
+import static com.apiTests.requests.HelperMethod.*;
 
 public class LoginSteps {
 
     ObjectMapper objectMapper = new ObjectMapper();
 
     private LoginResponse loginResponse;
-    private String accessToken;
     private LoginTests loginTests;
+    String accessToken;
     private static final Logger logger = LogManager.getLogger(LoginSteps.class);
 
     @Given("User logs into the system with a valid username and invalid password")
@@ -72,8 +72,10 @@ public class LoginSteps {
 
     @Then("Save the access token")
     public void saveAccessToken() {
+
         // Save access token
         accessToken = loginResponse.getTokenDetails().getAccessToken();
+        writeStringToFile(accessToken,accessTokenPath);
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Access Token", accessToken);
     }

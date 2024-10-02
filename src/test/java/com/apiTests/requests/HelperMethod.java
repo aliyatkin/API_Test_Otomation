@@ -12,10 +12,11 @@ import org.apache.logging.log4j.Logger;
 
 
 public class HelperMethod {
+
+
     public static String userLoginData;
     public static final ObjectMapper objectMapper = new ObjectMapper();
     private static final Logger logger = LogManager.getLogger(HelperMethod.class);
-
 
     public static String requestBodyLoader(String userDataPath) {
 
@@ -45,6 +46,16 @@ public class HelperMethod {
 
         } catch (Exception e) {
             logger.error ("Error writing to the file: " + e.getMessage());
+        }
+    }
+
+    public static void writeStringToFile(String content, String filePath) {
+        try {
+            // Verilen içeriği belirtilen dosya yoluna yaz
+            Files.write(Paths.get(filePath), content.getBytes());
+            logger.info("The content was successfully written to the file: " + filePath);
+        } catch (IOException e) {
+            logger.error("Error writing to the file: " + e.getMessage());
         }
     }
 }

@@ -3,6 +3,7 @@ package com.apiTests.mockService;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.integration.ClientAndServer;
 
+import static com.apiTests.constants.Endpoint.LOGOUT_ENDPOINT;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
@@ -23,7 +24,7 @@ public class LogoutMockService {
         new MockServerClient("localhost", 1080)
                 .when(request()
                         .withMethod("POST")
-                        .withPath("/v1/logout")
+                        .withPath(LOGOUT_ENDPOINT)
                         .withHeader("Authorization", "Bearer " + accessToken)
                 )
                 .respond(response()
@@ -33,5 +34,8 @@ public class LogoutMockService {
 
                 );
 
+    }
+    public void stopMockServer() {
+        mockServer.stop();
     }
 }
