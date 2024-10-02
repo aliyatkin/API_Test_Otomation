@@ -10,5 +10,6 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/featuresForMock",                       // .feature files location
         plugin = {"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm"}          // Allure plugin
 )
-public class RunCucumberMockTest {
+public class
+RunCucumberMockTest {
 }

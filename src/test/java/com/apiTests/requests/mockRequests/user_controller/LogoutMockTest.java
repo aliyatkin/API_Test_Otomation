@@ -1,7 +1,7 @@
-package com.apiTests.requests.mockRequests;
+package com.apiTests.requests.mockRequests.user_controller;
 
+import com.apiTests.requests.mockRequests.MockBaseTest;
 import io.qameta.allure.Step;
-import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -9,7 +9,8 @@ import org.apache.logging.log4j.Logger;
 import static com.apiTests.constants.Endpoint.LOGOUT_ENDPOINT;
 import static io.restassured.RestAssured.given;
 
-public class LogoutMockTest extends MockBaseTest{
+//
+public class LogoutMockTest extends MockBaseTest {
 
     private static final Logger logger = LogManager.getLogger(LogoutMockTest.class);
 
@@ -18,24 +19,22 @@ public class LogoutMockTest extends MockBaseTest{
 
         // Send request to logout endpoint
         Response response = given(spec)
-                .header("Authorization", "Bearer " + accessToken)  // Access token'i header'a ekle
-                .post(LOGOUT_ENDPOINT);  // Logout endpoint'e POST isteği gönder
+                .header("Authorization", "Bearer " + accessToken)
+                .post(LOGOUT_ENDPOINT);
 
-        // Durum kodunu doğrula
-        response.then().statusCode(statusCode);
+        response.then().statusCode(statusCode);          // Check the status code: As expected?
+        String contentType = response.getContentType();  // Store the content type of the response in a String
 
-        String contentType = response.getContentType();
         logger.info("Response received: " + response.asString());
         logger.info("Status Code: " + response.getStatusCode());
 
+        // Return response
         if (contentType != null && contentType.contains("text/plain;charset=UTF-8"))  {
             return response;
         } else {
-            // JSON değilse raw response'u logla
+            // If not JSON, log the raw response and return null
             logger.error("Unexpected content type: " + contentType);
-            logger.error("Response body: " + response.asString());
             return null;
         }
-
     }
 }

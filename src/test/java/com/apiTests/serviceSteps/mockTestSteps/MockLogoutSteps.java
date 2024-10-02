@@ -1,8 +1,7 @@
 package com.apiTests.serviceSteps.mockTestSteps;
 
-
 import com.apiTests.mockService.LogoutMockService;
-import com.apiTests.requests.mockRequests.LogoutMockTest;
+import com.apiTests.requests.mockRequests.user_controller.LogoutMockTest;
 import io.cucumber.java.en.And;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
@@ -26,8 +25,8 @@ public class MockLogoutSteps {
         String accessToken = requestBodyLoader(accessTokenPath);
 
         logoutMockService = new LogoutMockService();
-        logoutMockService.startMockServer();  // Mock sunucuyu başlat
-        logoutMockService.setupLogoutMock(accessToken, NOT_OK, mockLogoutResponse );   // Mock yanıtını ayarla
+        logoutMockService.startMockServer();
+        logoutMockService.setupLogoutMock(accessToken, NOT_OK, mockLogoutResponse );
 
         logoutMockTest = new LogoutMockTest();
         response = logoutMockTest.LogoutForMock(accessToken, NOT_OK);

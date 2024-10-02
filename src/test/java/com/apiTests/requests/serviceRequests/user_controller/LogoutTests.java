@@ -11,6 +11,7 @@ import static io.restassured.RestAssured.given;
 
 public class LogoutTests extends BaseTest {
 
+    //
     private static final Logger logger = LogManager.getLogger(LogoutTests.class);
 
     @Step("User logs out with the provided access token")
@@ -18,23 +19,22 @@ public class LogoutTests extends BaseTest {
 
         // Send request to logout endpoint
         Response response = given(spec)
-                .header("Authorization", "Bearer " + accessToken)  // Access token'i header'a ekle
-                .accept("*/*")  // Accept header'ını ekle
-                .post(LOGOUT_ENDPOINT);  // Logout endpoint'e POST isteği gönder
+                .header("Authorization", "Bearer " + accessToken)
+                .accept("*/*")
+                .post(LOGOUT_ENDPOINT);
 
-        // Durum kodunu doğrula
-        response.then().statusCode(statusCode);
+        response.then().statusCode(statusCode);         // Check the status code: As expected?
+        String contentType = response.getContentType(); // Store the content type of the response in a String
 
-        String contentType = response.getContentType();
         logger.info("Response received: " + response.asString());
         logger.info("Status Code: " + response.getStatusCode());
 
+        // Return response
         if (contentType != null && contentType.contains("text/plain;charset=UTF-8"))  {
             return response;
         } else {
-            // JSON değilse raw response'u logla
+            // If not JSON, log the raw response and return null
             logger.error("Unexpected content type: " + contentType);
-            logger.error("Response body: " + response.asString());
             return null;
         }
     }

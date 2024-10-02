@@ -9,10 +9,7 @@ import java.nio.file.Paths;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-
-
 public class HelperMethod {
-
 
     public static String userLoginData;
     public static final ObjectMapper objectMapper = new ObjectMapper();
@@ -21,11 +18,10 @@ public class HelperMethod {
     public static String requestBodyLoader(String userDataPath) {
 
         try {
-            /* The "userDataPath" string variable provides a path, and the JSON object within this path
-               is stored in the "userLoginData" variable. */
+            // The "userDataPath" string variable provides a path, and the JSON object within this path
+            // is stored in the "userLoginData" variable.
             userLoginData = new String(Files.readAllBytes(Paths.get(userDataPath)));
             logger.info("The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'");
-
         }
         catch (IOException e){
             logger.error("The user information in the 'userDataPath' JSON file was not assigned to a string variable named 'userLoginData'" + e.getMessage());
@@ -51,7 +47,6 @@ public class HelperMethod {
 
     public static void writeStringToFile(String content, String filePath) {
         try {
-            // Verilen içeriği belirtilen dosya yoluna yaz
             Files.write(Paths.get(filePath), content.getBytes());
             logger.info("The content was successfully written to the file: " + filePath);
         } catch (IOException e) {

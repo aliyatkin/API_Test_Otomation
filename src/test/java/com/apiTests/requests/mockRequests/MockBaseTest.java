@@ -9,9 +9,11 @@ import io.restassured.specification.RequestSpecification;
 
 import java.util.Arrays;
 
+import static com.apiTests.constants.BaseUri.Mock_Uri;
+
 public class MockBaseTest {
 
-    protected static RequestSpecification spec;
+    public static RequestSpecification spec;
 
     static {
         RestAssured.filters(new AllureRestAssured());
@@ -19,7 +21,7 @@ public class MockBaseTest {
 
     public MockBaseTest() {
         // Dynamic base URI assignment
-        String baseUri = System.getProperty("baseUri", "http://localhost:1080"); // baseUri bir class'tan çekilecek
+        String baseUri = System.getProperty("baseUri", Mock_Uri);
 
         // Logging option, can be disabled if desired
         boolean enableLogging = Boolean.parseBoolean(System.getProperty("enableLogging", "false"));
@@ -32,6 +34,5 @@ public class MockBaseTest {
         }
 
         spec = builder.build();
-        // RequestSpecification setted
     }
 }

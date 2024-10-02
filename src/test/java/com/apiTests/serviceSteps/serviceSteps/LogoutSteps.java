@@ -13,11 +13,12 @@ public class LogoutSteps{
     private LogoutTests logoutTests;
     private static final Logger logger = LogManager.getLogger(LogoutSteps.class);
 
-
     @And("User logs out from the system with the saved access token")
     public void logout() {
+
         logoutTests = new LogoutTests();
         logoutTests.Logout(accessToken,NOT_OK);
+
         logger.info("The system has been logged out with a valid access token");
     }
 }

@@ -21,9 +21,9 @@ public class LoginSteps {
 
     ObjectMapper objectMapper = new ObjectMapper();
 
-    private LoginResponse loginResponse;
+    public String accessToken;
     private LoginTests loginTests;
-    String accessToken;
+    private LoginResponse loginResponse;
     private static final Logger logger = LogManager.getLogger(LoginSteps.class);
 
     @Given("User logs into the system with a valid username and invalid password")
@@ -31,6 +31,7 @@ public class LoginSteps {
 
         loginTests = new LoginTests();  // Create the LoginTests class for Login
         loginResponse = loginTests.Login(validUsernameInvalidPassword,NOT_OK,true);  // Save the response in loginResponse
+
         logger.info("The system has not been logged in with a valid username and password");
     }
 
@@ -39,13 +40,13 @@ public class LoginSteps {
 
         loginTests = new LoginTests();  // Create the LoginTests class for Login
         loginResponse = loginTests.Login(validUsernameAndEmptyPassword,NOT_OK,true);  // Save the response in loginResponse
+
         logger.info("The system has not been logged in with a valid username and empty password");
     }
 
     @Given("User logs into the system with a valid username and password")
     public void validUsernameAndPassword() {
 
-        // Read the data from JSON file and save it in requestBody
         loginTests = new LoginTests();  // Create the LoginTests class for Login
         loginResponse = loginTests.Login(validUsernameAndPassword,OK,true);  // Save the response in loginResponse
 
@@ -76,13 +77,15 @@ public class LoginSteps {
         // Save access token
         accessToken = loginResponse.getTokenDetails().getAccessToken();
         writeStringToFile(accessToken,accessTokenPath);
+
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Access Token", accessToken);
     }
 
     @Given("User logs into the system with a valid username and hashed password")
     public void validUsernameAndHashedPasswordAPI(){
-        // Read the data from JSON file and save it in requestBody
+
+
         loginTests = new LoginTests();  // Create the LoginTests class for Login
         loginResponse = loginTests.Login(validUsernameAndHashedPassword,OK,false);  // Save the response in loginResponse
 
@@ -112,6 +115,7 @@ public class LoginSteps {
 
         // Save access token
         accessToken = loginResponse.getTokenDetails().getAccessToken();
+
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Access Token", accessToken);
     }
@@ -121,6 +125,7 @@ public class LoginSteps {
 
         loginTests = new LoginTests();  // Create the LoginTests class for Login
         loginResponse = loginTests.Login(validUsernameAndHashedPassword,NOT_OK,true);  // Save the response in loginResponse
+
         logger.info("The system has not been logged in with a valid username and hashed password when query parameter is true");
     }
 }

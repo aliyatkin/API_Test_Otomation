@@ -2,7 +2,7 @@ package com.apiTests.serviceSteps.mockTestSteps;
 
 import com.apiTests.mockService.RenewAccessTokenMockService;
 import com.apiTests.models.user_controller.renewAccessToken.RenewAccessTokenResponse;
-import com.apiTests.requests.mockRequests.RenewAccessTokenMockTest;
+import com.apiTests.requests.mockRequests.user_controller.RenewAccessTokenMockTest;
 import io.cucumber.java.en.And;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -62,5 +62,4 @@ public class MockRenewATSteps {
 
         renewAccessTokenMockService.stopMockServer();
     }
-
 }

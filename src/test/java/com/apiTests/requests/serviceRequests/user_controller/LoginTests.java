@@ -14,16 +14,18 @@ import static io.restassured.RestAssured.given;
 
 public class LoginTests extends BaseTest {
 
+    //
     private static final Logger logger = LogManager.getLogger(LoginTests.class);
 
     @Step("User logs in with provided credentials")
     public LoginResponse Login(String requestBodyPath, int statusCode, boolean torf) {
 
-        // Read the data from JSON file and save it in requestBody
+        // It goes to the paths given to the method and writes the String inside those paths to a String
         String requestBody = requestBodyLoader(requestBodyPath);
+
         logger.info("Request body loaded from: " + requestBodyPath);
 
-        // Send request
+        // Send request to login endpoint
         Response response = given(spec)
                 .when().header("Accept-Language", "en")
                 .queryParam("basic", torf)
@@ -31,8 +33,8 @@ public class LoginTests extends BaseTest {
                 .body(requestBody)
                 .post(LOGIN_ENDPOINT); // endpoint'ler bir class'tan çekilecek
 
-        response.then().statusCode(statusCode);
-        String contentType = response.getContentType();
+        response.then().statusCode(statusCode);         // Check the status code: As expected?
+        String contentType = response.getContentType(); // Store the content type of the response in a String
 
         logger.info("Response received: " + response.asString());
         logger.info("Status Code: " + response.getStatusCode());
@@ -41,9 +43,8 @@ public class LoginTests extends BaseTest {
         if (contentType != null && contentType.contains("application/json"))  {
             return response.as(LoginResponse.class);
         } else {
-            // If not JSON, log the raw response
+            // If not JSON, log the raw response and return null
             logger.error("Unexpected content type: " + contentType);
-            logger.error("Response body: " + response.asString());
             return null;
         }
     }

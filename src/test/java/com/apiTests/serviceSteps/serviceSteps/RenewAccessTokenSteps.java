@@ -14,12 +14,12 @@ public class RenewAccessTokenSteps {
     private RenewAccessTokenTests renewAccessTokenTests;
     private static final Logger logger = LogManager.getLogger(RenewAccessTokenSteps.class);
 
-
     @And("User refresh the access token with the saved access token")
     public void renewAccessToken(){
 
         renewAccessTokenTests = new RenewAccessTokenTests();
         renewAccessTokenTests.RenewAccessToken(OK,accessTokenPath);
+
         logger.info("The access token refreshed");
     }
 
@@ -28,6 +28,7 @@ public class RenewAccessTokenSteps {
 
         renewAccessTokenTests = new RenewAccessTokenTests();
         renewAccessTokenTests.RenewAccessToken(NOT_OK,emptyJSON);
+
         logger.info("The access token can not refreshed");
     }
 
@@ -36,6 +37,7 @@ public class RenewAccessTokenSteps {
 
         renewAccessTokenTests = new RenewAccessTokenTests();
         renewAccessTokenTests.RenewAccessToken(NOT_OK,wrongAccessToken);
+
         logger.info("The access token can not refreshed");
     }
 }

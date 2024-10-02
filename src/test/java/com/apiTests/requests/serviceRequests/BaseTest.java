@@ -9,6 +9,8 @@ import io.restassured.specification.RequestSpecification;
 
 import java.util.Arrays;
 
+import static com.apiTests.constants.BaseUri.API_Uri;
+
 public class BaseTest {
 
     protected static RequestSpecification spec;
@@ -19,7 +21,7 @@ public class BaseTest {
 
     public BaseTest() {
         // Dynamic base URI assignment
-        String baseUri = System.getProperty("baseUri", "http://10.10.10.64:9095"); // baseUri bir class'tan çekilecek
+        String baseUri = System.getProperty("baseUri", API_Uri);
 
         // Logging option, can be disabled if desired
         boolean enableLogging = Boolean.parseBoolean(System.getProperty("enableLogging", "false"));
@@ -32,7 +34,7 @@ public class BaseTest {
         }
 
         spec = builder.build();
-        // RequestSpecification setted
+
     }
 
 }

@@ -7,38 +7,39 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.apiTests.constants.Data_Path.accessTokenJSONPath;
 import static com.apiTests.constants.Endpoint.RENEW_ACCESS_TOKEN_ENDPOINT;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
 public class RenewAccessTokenTests extends BaseTest {
 
+    //
     private static final Logger logger = LogManager.getLogger(RenewAccessTokenTests.class);
 
     @Step("Renew Access Token")
     public RenewAccessTokenResponse RenewAccessToken(int statusCode, String accessTokenPath) {
 
+        // It goes to the paths given to the method and writes the String inside those paths to a String
         String accessToken = requestBodyLoader(accessTokenPath);
 
+        // Send request to renew access token endpoint
         Response response = given(spec)
-                .header("Authorization", "Bearer " + accessToken)  // Access token'i header'a ekle
-                .accept("*/*")  // Accept header'ını ekle
-                .post(RENEW_ACCESS_TOKEN_ENDPOINT);  // RENEW_ACCESS_TOKEN'a POST isteği gönder
+                .header("Authorization", "Bearer " + accessToken)
+                .accept("*/*")
+                .post(RENEW_ACCESS_TOKEN_ENDPOINT);
 
-        // Durum kodunu doğrula
-        response.then().statusCode(statusCode);
+        response.then().statusCode(statusCode);         // Check the status code: As expected?
+        String contentType = response.getContentType(); // Store the content type of the response in a String
 
-        String contentType = response.getContentType();
         logger.info("Response received: " + response.asString());
         logger.info("Status Code: " + response.getStatusCode());
 
+        // Return response
         if (contentType != null && contentType.contains("application/json"))  {
             return response.as(RenewAccessTokenResponse.class);
         } else {
-            // JSON değilse raw response'u logla
+            // If not JSON, log the raw response and return null
             logger.error("Unexpected content type: " + contentType);
-            logger.error("Response body: " + response.asString());
             return null;
         }
     }

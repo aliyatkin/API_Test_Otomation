@@ -2,9 +2,7 @@ package com.apiTests.serviceSteps.mockTestSteps;
 
 import com.apiTests.mockService.LoginMockService;
 import com.apiTests.models.user_controller.login.LoginResponse;
-import com.apiTests.requests.mockRequests.LoginMockTest;
-import com.apiTests.requests.serviceRequests.user_controller.LoginTests;
-import com.apiTests.serviceSteps.serviceSteps.LoginSteps;
+import com.apiTests.requests.mockRequests.user_controller.LoginMockTest;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -24,61 +22,49 @@ public class MockLoginSteps {
 
     ObjectMapper objectMapper = new ObjectMapper();
 
-    private LoginResponse loginResponse;
     private String accessToken;
+    private LoginResponse loginResponse;
     private LoginMockTest loginMockTests;
     private static LoginMockService loginMockService;
-    private static final Logger logger = LogManager.getLogger(LoginSteps.class);
+    private static final Logger logger = LogManager.getLogger(MockLoginSteps.class);
 
     @Given("User logs into the system with a valid username and invalid password for Mock Service")
     public void validUsernameAndInvalidPasswordForMock(){
 
-        String mockRespBodyPath = mockResponseBodyInvalid;
-        String mockReqBodyPath = validUsernameInvalidPassword;
-
         loginMockService = new LoginMockService();
-        loginMockService.startMockServer();  // Mock sunucuyu başlat
-        loginMockService.setupLoginMock(NOT_OK, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService.startMockServer();
+        loginMockService.setupLoginMock(NOT_OK, mockResponseBodyInvalid, validUsernameInvalidPassword, "true");
 
-        // Read the data from JSON file and save it in requestBody
-        loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
+        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
         loginResponse = loginMockTests.LoginForMock(validUsernameInvalidPassword,NOT_OK,true);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and password");
 
-        loginMockService.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();
     }
     @Given("User logs into the system with a valid username and empty password for Mock Service")
     public void validUsernameAndEmptyPasswordForMock(){
 
-        String mockRespBodyPath = mockResponseBodyEmpty;
-        String mockReqBodyPath = validUsernameAndEmptyPassword;
-
         loginMockService = new LoginMockService();
-        loginMockService.startMockServer();  // Mock sunucuyu başlat
-        loginMockService.setupLoginMock(NOT_OK,mockRespBodyPath,mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService.startMockServer();
+        loginMockService.setupLoginMock(NOT_OK, mockResponseBodyEmpty, validUsernameAndEmptyPassword, "true");
 
-        // Read the data from JSON file and save it in requestBody
-        loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
+        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
         loginResponse = loginMockTests.LoginForMock(validUsernameAndEmptyPassword,NOT_OK,true);  // Save the response in loginResponse
 
         logger.info("The system has not been logged in with a valid username and password");
 
-        loginMockService.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();
     }
 
     @Given("User logs into the system with a valid username and password for Mock Service")
     public void validUsernameAndPasswordForMock() {
 
-        String mockRespBodyPath = mockResponseBody;
-        String mockReqBodyPath = validUsernameAndPassword;
-
         loginMockService = new LoginMockService();
-        loginMockService.startMockServer();  // Mock sunucuyu başlat
-        loginMockService.setupLoginMock(OK, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService.startMockServer();
+        loginMockService.setupLoginMock(OK, mockResponseBody, validUsernameAndPassword, "true");
 
-        // Read the data from JSON file and save it in requestBody
-        loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
+        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
         loginResponse = loginMockTests.LoginForMock(validUsernameAndPassword,OK,true);  // Save the response in loginResponse
 
         logger.info("The system has not been logged in with a valid username and password");
@@ -104,26 +90,23 @@ public class MockLoginSteps {
 
     @Then("Save the access token for Mock Service")
     public void saveAccessTokenForMock() {
+
         // Save access token
         accessToken = loginResponse.getTokenDetails().getAccessToken();
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Access Token", accessToken);
 
-        loginMockService.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();
     }
 
     @Given("User logs into the system with a valid username and hashed password for Mock Service")
     public void validUsernameAndHashedPassword(){
 
-        String mockRespBodyPath = mockResponseBody;
-        String mockReqBodyPath = validUsernameAndHashedPassword;
-
         loginMockService = new LoginMockService();
-        loginMockService.startMockServer();  // Mock sunucuyu başlat
-        loginMockService.setupLoginMock(OK, mockRespBodyPath, mockReqBodyPath,"false");   // Mock yanıtını ayarla
+        loginMockService.startMockServer();
+        loginMockService.setupLoginMock(OK, mockResponseBody, validUsernameAndHashedPassword,"false");
 
-        // Read the data from JSON file and save it in requestBody
-        loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
+        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
         loginResponse = loginMockTests.LoginForMock(validUsernameAndHashedPassword, OK,false);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and hashed password");
@@ -152,25 +135,21 @@ public class MockLoginSteps {
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Access Token", accessToken);
 
-        loginMockService.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();
     }
 
     @Given("User logs into the system with a valid username and hashed password for Mock Service, true query")
     public void validUsernameAndHashedPasswordTrueQuery(){
 
-        String mockRespBodyPath = mockResponseBodyInvalid;
-        String mockReqBodyPath = validUsernameAndHashedPassword;
-
         loginMockService = new LoginMockService();
-        loginMockService.startMockServer();  // Mock sunucuyu başlat
-        loginMockService.setupLoginMock(NOT_OK, mockRespBodyPath, mockReqBodyPath, "true");   // Mock yanıtını ayarla
+        loginMockService.startMockServer();
+        loginMockService.setupLoginMock(NOT_OK, mockResponseBodyInvalid, validUsernameAndHashedPassword, "true");
 
-        // Read the data from JSON file and save it in requestBody
-        loginMockTests = new LoginMockTest();  // Create the LoginTests class for Login
+        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
         loginResponse = loginMockTests.LoginForMock(validUsernameAndHashedPassword,NOT_OK,true);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and password");
 
-        loginMockService.stopMockServer();  // Mock sunucuyu durdur
+        loginMockService.stopMockServer();
     }
 }

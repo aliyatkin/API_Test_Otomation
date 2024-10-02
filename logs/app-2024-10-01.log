@@ -2471,7 +2471,7 @@
   9bdbd426-c3f1-4c29-882e-78a8f7a95e5a
 
 2024-10-01 15:26:38.223 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:26:38.224 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 15:26:38.224 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 15:26:39.392 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -2606,8 +2606,8 @@
 
   9bdbd426-c3f1-4c29-882e-78a8f7a95e5a
 
-2024-10-01 15:26:39.484 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:26:39.485 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:26:39.484 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:26:39.485 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:26:39.565 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 15:26:39.566 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:26:39.810 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -2650,7 +2650,7 @@
   f0f0b2b9-1f67-4b9a-a823-294401ab5fe3
 
 2024-10-01 15:26:39.837 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:26:39.837 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 15:26:39.837 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 15:26:39.869 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -2785,8 +2785,8 @@
 
   f0f0b2b9-1f67-4b9a-a823-294401ab5fe3
 
-2024-10-01 15:26:39.876 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:26:39.876 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:26:39.876 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:26:39.876 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:26:39.882 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:26:39.882 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:26:40.068 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -2829,7 +2829,7 @@
   e82e53ba-97ec-4f43-a71f-64974b6cc03c
 
 2024-10-01 15:26:40.109 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:26:40.109 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 15:26:40.109 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 15:26:40.146 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -2964,7 +2964,7 @@
 
   e82e53ba-97ec-4f43-a71f-64974b6cc03c
 
-2024-10-01 15:26:40.174 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:26:40.174 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -3026,7 +3026,7 @@
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:26:40.175 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:26:40.175 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:26:40.183 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:26:40.184 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:26:40.184 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -3072,7 +3072,7 @@
   db87c7af-bc24-4da6-8935-f5a22190e4d5
 
 2024-10-01 15:26:40.423 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:26:40.424 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 15:26:40.424 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 15:26:40.458 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -3207,7 +3207,7 @@
 
   db87c7af-bc24-4da6-8935-f5a22190e4d5
 
-2024-10-01 15:26:40.472 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:26:40.472 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -3269,7 +3269,7 @@
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:26:40.473 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:26:40.473 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:26:40.478 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 15:26:40.480 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:26:40.481 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -3315,7 +3315,7 @@
   69226959-c188-443d-ab80-c54aa3cdc534
 
 2024-10-01 15:26:40.673 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:26:40.673 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 15:26:40.673 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 15:26:40.703 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -3450,8 +3450,8 @@
 
   69226959-c188-443d-ab80-c54aa3cdc534
 
-2024-10-01 15:26:40.710 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:26:40.710 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:26:40.710 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:26:40.710 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:26:40.715 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 15:26:40.715 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:26:40.878 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -3494,7 +3494,7 @@
   35161443-f230-4bf3-ae18-34da8c8c7372
 
 2024-10-01 15:26:40.939 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:26:40.940 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 15:26:40.940 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 15:26:40.970 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -3579,7 +3579,7 @@
     }
   }
 
-2024-10-01 15:26:40.979 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:26:40.979 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -3641,7 +3641,7 @@
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:26:40.980 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:26:40.980 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:26:40.984 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
 
   {
@@ -3842,8 +3842,8 @@
 
   c4d2eb38-8582-4da8-9a92-88817cd874bb
 
-2024-10-01 15:26:41.262 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 15:26:41.262 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 15:26:41.262 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 15:26:41.262 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 15:26:41.326 [MockServer-EventLog126] ERROR org.mockserver.log.MockServerEventLog - 1080 exception binding to port(s) [1080]
 java.lang.RuntimeException: Exception while binding MockServer to port 1080
 	at org.mockserver.lifecycle.LifeCycle.bindPorts(LifeCycle.java:231) ~[mockserver-netty-5.13.2.jar:5.13.2]
@@ -3965,7 +3965,7 @@ Caused by: java.net.BindException: Address already in use: bind
   cf32ed97-031f-4085-9256-0ed025e10b40
 
 2024-10-01 15:28:58.473 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:28:58.474 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 15:28:58.474 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 15:28:59.584 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4100,8 +4100,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   cf32ed97-031f-4085-9256-0ed025e10b40
 
-2024-10-01 15:28:59.672 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:28:59.673 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:28:59.672 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:28:59.673 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:28:59.744 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 15:28:59.745 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:28:59.992 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -4144,7 +4144,7 @@ Caused by: java.net.BindException: Address already in use: bind
   f35fa772-97bd-4ce1-bcd9-970d7be41b22
 
 2024-10-01 15:29:00.023 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:29:00.025 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 15:29:00.025 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 15:29:00.068 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4279,8 +4279,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   f35fa772-97bd-4ce1-bcd9-970d7be41b22
 
-2024-10-01 15:29:00.077 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:29:00.077 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:29:00.077 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:29:00.077 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:29:00.081 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:29:00.082 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:29:00.221 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -4323,7 +4323,7 @@ Caused by: java.net.BindException: Address already in use: bind
   df943aca-a03f-4f22-a5eb-8b83ab74409c
 
 2024-10-01 15:29:00.251 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:29:00.251 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 15:29:00.251 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 15:29:00.280 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4458,7 +4458,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   df943aca-a03f-4f22-a5eb-8b83ab74409c
 
-2024-10-01 15:29:00.292 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:29:00.292 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -4520,7 +4520,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:29:00.293 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:29:00.293 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:29:00.310 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:29:00.311 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:29:00.312 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -4566,7 +4566,7 @@ Caused by: java.net.BindException: Address already in use: bind
   810f7ffe-faa1-482d-a582-72165990b27c
 
 2024-10-01 15:29:00.562 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:29:00.563 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 15:29:00.563 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 15:29:00.607 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4701,7 +4701,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   810f7ffe-faa1-482d-a582-72165990b27c
 
-2024-10-01 15:29:00.625 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:29:00.625 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -4763,7 +4763,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:29:00.629 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:29:00.629 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:29:00.636 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 15:29:00.637 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:29:00.638 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -4809,7 +4809,7 @@ Caused by: java.net.BindException: Address already in use: bind
   93df25b4-e621-4bdb-a449-5a88522a35aa
 
 2024-10-01 15:29:00.824 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:29:00.825 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 15:29:00.825 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 15:29:00.845 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4944,8 +4944,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   93df25b4-e621-4bdb-a449-5a88522a35aa
 
-2024-10-01 15:29:00.855 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:29:00.855 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:29:00.855 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:29:00.855 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:29:00.860 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 15:29:00.860 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:29:01.015 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -4988,7 +4988,7 @@ Caused by: java.net.BindException: Address already in use: bind
   851b6755-3aa4-4576-ab3e-b905d515259d
 
 2024-10-01 15:29:01.059 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:29:01.060 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 15:29:01.060 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 15:29:01.090 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -5015,7 +5015,7 @@ Caused by: java.net.BindException: Address already in use: bind
     }
   }
 
-2024-10-01 15:29:01.098 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:29:01.098 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -5077,7 +5077,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:29:01.099 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:29:01.099 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:29:01.097 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
 
   {
@@ -5336,8 +5336,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   ce78538a-e8e8-4c40-8f0b-509bceba4ce3
 
-2024-10-01 15:29:01.373 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 15:29:01.373 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 15:29:01.373 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 15:29:01.373 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 15:35:26.942 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 15:35:26.942 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:35:26.947 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -5378,7 +5378,7 @@ Caused by: java.net.BindException: Address already in use: bind
   3209dcbe-cf11-4a03-816d-56b27195ec36
 
 2024-10-01 15:35:27.861 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:35:27.862 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 15:35:27.862 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 15:35:28.907 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -5513,8 +5513,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   3209dcbe-cf11-4a03-816d-56b27195ec36
 
-2024-10-01 15:35:29.015 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:35:29.016 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:35:29.015 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:35:29.016 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:35:29.080 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 15:35:29.081 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:35:29.300 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -5557,7 +5557,7 @@ Caused by: java.net.BindException: Address already in use: bind
   d8b0b711-799b-4c21-a6c2-f1a265ddcca0
 
 2024-10-01 15:35:29.321 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:35:29.321 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 15:35:29.321 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 15:35:29.353 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -5692,8 +5692,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   d8b0b711-799b-4c21-a6c2-f1a265ddcca0
 
-2024-10-01 15:35:29.361 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:35:29.362 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:35:29.361 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:35:29.362 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:35:29.366 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:35:29.367 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:35:29.553 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -5736,7 +5736,7 @@ Caused by: java.net.BindException: Address already in use: bind
   1e4e5d10-af98-42a0-ac52-42016464ef64
 
 2024-10-01 15:35:29.576 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:35:29.577 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 15:35:29.577 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 15:35:29.600 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -5821,7 +5821,7 @@ Caused by: java.net.BindException: Address already in use: bind
     }
   }
 
-2024-10-01 15:35:29.612 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:35:29.612 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -5883,7 +5883,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:35:29.613 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:35:29.613 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:35:29.620 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:35:29.621 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:35:29.621 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -5979,7 +5979,7 @@ Caused by: java.net.BindException: Address already in use: bind
   911703eb-bcee-4942-80d4-d55cf6a95790
 
 2024-10-01 15:35:29.863 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:35:29.863 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 15:35:29.863 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 15:35:29.913 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -6114,7 +6114,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   911703eb-bcee-4942-80d4-d55cf6a95790
 
-2024-10-01 15:35:29.931 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:35:29.931 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -6176,7 +6176,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:35:29.932 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:35:29.932 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:35:29.937 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 15:35:29.938 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:35:29.939 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -6222,7 +6222,7 @@ Caused by: java.net.BindException: Address already in use: bind
   a8571a92-2966-4c3b-99b5-92a5f62befc3
 
 2024-10-01 15:35:30.109 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:35:30.109 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 15:35:30.109 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 15:35:30.131 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -6357,8 +6357,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   a8571a92-2966-4c3b-99b5-92a5f62befc3
 
-2024-10-01 15:35:30.137 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:35:30.137 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:35:30.137 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:35:30.137 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:35:30.141 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 15:35:30.141 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:35:30.290 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -6401,7 +6401,7 @@ Caused by: java.net.BindException: Address already in use: bind
   c357b037-f20a-4cb2-9abf-c4b2236702b3
 
 2024-10-01 15:35:30.308 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:35:30.309 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 15:35:30.309 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 15:35:30.338 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -6536,7 +6536,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   c357b037-f20a-4cb2-9abf-c4b2236702b3
 
-2024-10-01 15:35:30.346 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:35:30.346 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -6598,7 +6598,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:35:30.347 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:35:30.347 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:35:30.358 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:35:30.359 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:35:30.359 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -6749,8 +6749,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   09166ad6-4fe9-4544-b834-34bc4c9983a9
 
-2024-10-01 15:35:30.557 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 15:35:30.557 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 15:35:30.557 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 15:35:30.557 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 15:35:30.593 [MockServer-EventLog126] ERROR org.mockserver.log.MockServerEventLog - 1080 exception binding to port(s) [1080]
 java.lang.RuntimeException: Exception while binding MockServer to port 1080
 	at org.mockserver.lifecycle.LifeCycle.bindPorts(LifeCycle.java:231) ~[mockserver-netty-5.13.2.jar:5.13.2]
@@ -7034,7 +7034,7 @@ Caused by: java.net.BindException: Address already in use: bind
   33cdca41-8b5a-4ac2-9bac-635b62eae2d3
 
 2024-10-01 15:38:32.801 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:38:32.802 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 15:38:32.802 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 15:38:33.999 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7169,8 +7169,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   33cdca41-8b5a-4ac2-9bac-635b62eae2d3
 
-2024-10-01 15:38:34.091 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:38:34.091 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:38:34.091 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:38:34.091 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:38:34.158 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 15:38:34.158 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:38:34.445 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -7213,7 +7213,7 @@ Caused by: java.net.BindException: Address already in use: bind
   49edffdf-52a3-43b3-9edb-7b3fd6dfd440
 
 2024-10-01 15:38:34.473 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:38:34.474 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 15:38:34.474 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 15:38:34.519 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7348,8 +7348,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   49edffdf-52a3-43b3-9edb-7b3fd6dfd440
 
-2024-10-01 15:38:34.526 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:38:34.527 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:38:34.526 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:38:34.527 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:38:34.532 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:38:34.532 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:38:34.688 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -7392,7 +7392,7 @@ Caused by: java.net.BindException: Address already in use: bind
   39c64c4f-d25c-4767-b82f-95dcc321e94e
 
 2024-10-01 15:38:34.753 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:38:34.753 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 15:38:34.753 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 15:38:34.778 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7527,7 +7527,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   39c64c4f-d25c-4767-b82f-95dcc321e94e
 
-2024-10-01 15:38:34.793 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:38:34.793 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -7589,7 +7589,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:38:34.794 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:38:34.794 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:38:34.800 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:38:34.801 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:38:34.802 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -7635,7 +7635,7 @@ Caused by: java.net.BindException: Address already in use: bind
   5879b60d-7431-46f9-af03-10eb793f4fc6
 
 2024-10-01 15:38:35.038 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:38:35.038 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 15:38:35.038 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 15:38:35.073 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7770,7 +7770,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   5879b60d-7431-46f9-af03-10eb793f4fc6
 
-2024-10-01 15:38:35.098 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:38:35.098 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -7832,7 +7832,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:38:35.099 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:38:35.099 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:38:35.105 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 15:38:35.106 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:38:35.107 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -7878,7 +7878,7 @@ Caused by: java.net.BindException: Address already in use: bind
   763330d2-d60c-417b-99b5-4306d1b10685
 
 2024-10-01 15:38:35.297 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:38:35.298 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 15:38:35.298 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 15:38:35.326 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -8013,8 +8013,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   763330d2-d60c-417b-99b5-4306d1b10685
 
-2024-10-01 15:38:35.332 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 15:38:35.332 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 15:38:35.332 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 15:38:35.332 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 15:38:35.336 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 15:38:35.336 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 15:38:35.499 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -8057,7 +8057,7 @@ Caused by: java.net.BindException: Address already in use: bind
   7094b422-af94-486f-b41b-b634229fc5fd
 
 2024-10-01 15:38:35.522 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 15:38:35.522 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 15:38:35.522 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 15:38:35.540 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -8192,7 +8192,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   7094b422-af94-486f-b41b-b634229fc5fd
 
-2024-10-01 15:38:35.554 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 15:38:35.554 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -8254,7 +8254,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 15:38:35.555 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 15:38:35.555 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 15:38:35.560 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 15:38:35.561 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 15:38:35.562 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -8405,8 +8405,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   80b7e1c2-1c0e-444e-9447-7255e6d3b8b3
 
-2024-10-01 15:38:35.781 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 15:38:35.781 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 15:38:35.781 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 15:38:35.781 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 15:38:35.827 [MockServer-EventLog126] ERROR org.mockserver.log.MockServerEventLog - 1080 exception binding to port(s) [1080]
 java.lang.RuntimeException: Exception while binding MockServer to port 1080
 	at org.mockserver.lifecycle.LifeCycle.bindPorts(LifeCycle.java:231) ~[mockserver-netty-5.13.2.jar:5.13.2]
@@ -8690,7 +8690,7 @@ Caused by: java.net.BindException: Address already in use: bind
   d168678d-36f4-4928-891e-52331840c38f
 
 2024-10-01 16:07:46.937 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:07:46.938 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:07:46.938 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:07:47.959 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -8825,8 +8825,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   d168678d-36f4-4928-891e-52331840c38f
 
-2024-10-01 16:07:48.041 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:07:48.042 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:07:48.041 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:07:48.042 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:07:48.113 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:07:48.113 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:07:48.334 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -8869,7 +8869,7 @@ Caused by: java.net.BindException: Address already in use: bind
   61043761-86fe-42c2-8607-606f32562c01
 
 2024-10-01 16:07:48.356 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:07:48.356 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:07:48.356 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:07:48.389 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9004,8 +9004,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   61043761-86fe-42c2-8607-606f32562c01
 
-2024-10-01 16:07:48.396 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:07:48.396 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:07:48.396 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:07:48.396 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:07:48.400 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:07:48.400 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:07:48.561 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -9048,7 +9048,7 @@ Caused by: java.net.BindException: Address already in use: bind
   4f814de9-d721-4fda-b848-c4a396aeea65
 
 2024-10-01 16:07:48.592 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:07:48.593 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:07:48.593 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:07:48.624 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9183,7 +9183,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   4f814de9-d721-4fda-b848-c4a396aeea65
 
-2024-10-01 16:07:48.634 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:07:48.634 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -9245,7 +9245,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:07:48.635 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:07:48.635 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:07:48.642 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:07:48.756 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:07:48.769 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -9291,7 +9291,7 @@ Caused by: java.net.BindException: Address already in use: bind
   904f182d-0877-4cde-8694-8d9d5303f053
 
 2024-10-01 16:07:48.837 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:07:48.838 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:07:48.838 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:07:48.888 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9426,7 +9426,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   904f182d-0877-4cde-8694-8d9d5303f053
 
-2024-10-01 16:07:48.912 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:07:48.912 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -9488,7 +9488,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:07:48.912 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:07:48.912 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:07:48.916 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:07:48.917 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:07:48.918 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -9534,7 +9534,7 @@ Caused by: java.net.BindException: Address already in use: bind
   2ac4ba77-8f1b-462d-984f-9d074cdad27a
 
 2024-10-01 16:07:49.170 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:07:49.171 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:07:49.171 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:07:49.221 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9669,8 +9669,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   2ac4ba77-8f1b-462d-984f-9d074cdad27a
 
-2024-10-01 16:07:49.239 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:07:49.239 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:07:49.239 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:07:49.239 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:07:49.244 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:07:49.244 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:07:49.414 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -9713,7 +9713,7 @@ Caused by: java.net.BindException: Address already in use: bind
   2f4c66d9-8353-4c9b-85b9-21f3a863f119
 
 2024-10-01 16:07:49.448 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:07:49.449 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:07:49.449 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:07:49.471 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9848,7 +9848,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   2f4c66d9-8353-4c9b-85b9-21f3a863f119
 
-2024-10-01 16:07:49.482 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:07:49.482 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -9910,7 +9910,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:07:49.482 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:07:49.482 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:07:49.487 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:07:49.599 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:07:49.601 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -10061,8 +10061,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   828843a8-c55d-49f1-8b0e-23592b0b7086
 
-2024-10-01 16:07:49.717 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:07:49.718 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:07:49.717 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:07:49.718 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:07:49.746 [MockServer-EventLog126] ERROR org.mockserver.log.MockServerEventLog - 1080 exception binding to port(s) [1080]
 java.lang.RuntimeException: Exception while binding MockServer to port 1080
 	at org.mockserver.lifecycle.LifeCycle.bindPorts(LifeCycle.java:231) ~[mockserver-netty-5.13.2.jar:5.13.2]
@@ -10346,7 +10346,7 @@ Caused by: java.net.BindException: Address already in use: bind
   ff1bb6da-4101-4460-b62c-f9d995aef458
 
 2024-10-01 16:09:11.596 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:09:11.596 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:09:11.596 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:09:12.624 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -10481,8 +10481,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   ff1bb6da-4101-4460-b62c-f9d995aef458
 
-2024-10-01 16:09:12.705 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:09:12.705 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:09:12.705 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:09:12.705 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:09:12.770 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:09:12.771 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:09:13.005 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -10525,7 +10525,7 @@ Caused by: java.net.BindException: Address already in use: bind
   f7a28cea-8c71-474e-80e6-a84514610fcf
 
 2024-10-01 16:09:13.036 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:09:13.036 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:09:13.036 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:09:13.062 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -10660,8 +10660,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   f7a28cea-8c71-474e-80e6-a84514610fcf
 
-2024-10-01 16:09:13.069 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:09:13.069 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:09:13.069 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:09:13.069 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:09:13.073 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:09:13.074 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:09:13.257 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -10704,7 +10704,7 @@ Caused by: java.net.BindException: Address already in use: bind
   0033aa71-629d-4c5e-9709-9d3db1ca0843
 
 2024-10-01 16:09:13.280 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:09:13.280 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:09:13.280 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:09:13.305 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -10839,7 +10839,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   0033aa71-629d-4c5e-9709-9d3db1ca0843
 
-2024-10-01 16:09:13.316 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:09:13.316 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -10901,7 +10901,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:09:13.316 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:09:13.316 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:09:13.323 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:09:13.441 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:09:13.442 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -10947,7 +10947,7 @@ Caused by: java.net.BindException: Address already in use: bind
   4ebfb03e-3689-4c23-bd4b-f4991a718bb6
 
 2024-10-01 16:09:13.544 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:09:13.544 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:09:13.544 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:09:13.589 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11082,7 +11082,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   4ebfb03e-3689-4c23-bd4b-f4991a718bb6
 
-2024-10-01 16:09:13.619 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:09:13.619 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -11144,7 +11144,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:09:13.619 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:09:13.619 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:09:13.627 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:09:13.628 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:09:13.629 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -11190,7 +11190,7 @@ Caused by: java.net.BindException: Address already in use: bind
   5bd0ab66-7480-4025-b10b-da09f6e4e43d
 
 2024-10-01 16:09:13.842 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:09:13.842 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:09:13.842 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:09:13.866 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11325,8 +11325,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   5bd0ab66-7480-4025-b10b-da09f6e4e43d
 
-2024-10-01 16:09:13.873 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:09:13.873 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:09:13.873 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:09:13.873 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:09:13.877 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:09:13.878 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:09:14.038 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -11369,7 +11369,7 @@ Caused by: java.net.BindException: Address already in use: bind
   13a58bc1-553f-4761-8f34-23aacbdbc082
 
 2024-10-01 16:09:14.061 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:09:14.061 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:09:14.061 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:09:14.091 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11504,7 +11504,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   13a58bc1-553f-4761-8f34-23aacbdbc082
 
-2024-10-01 16:09:14.100 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:09:14.100 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -11566,7 +11566,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:09:14.101 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:09:14.101 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:09:14.107 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:09:14.219 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:09:14.220 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -11717,8 +11717,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   3bbb2a6c-3320-4ac7-83b0-fc7a6e13cc41
 
-2024-10-01 16:09:14.330 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:09:14.330 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:09:14.330 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:09:14.330 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:13:19.980 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:13:19.980 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 16:13:19.984 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -11759,7 +11759,7 @@ Caused by: java.net.BindException: Address already in use: bind
   a6f56f53-236a-4091-83b0-af6f360c8206
 
 2024-10-01 16:13:20.884 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:20.885 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:13:20.885 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:13:21.886 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11894,8 +11894,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   a6f56f53-236a-4091-83b0-af6f360c8206
 
-2024-10-01 16:13:21.971 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:13:21.971 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:13:21.971 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:13:21.971 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:13:22.046 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:13:22.047 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:22.273 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -11938,7 +11938,7 @@ Caused by: java.net.BindException: Address already in use: bind
   2bfc4485-c2a4-4288-aba5-2a068a9ce09d
 
 2024-10-01 16:13:22.304 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:22.304 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:13:22.304 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:13:22.340 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -12073,8 +12073,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   2bfc4485-c2a4-4288-aba5-2a068a9ce09d
 
-2024-10-01 16:13:22.350 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:13:22.350 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:13:22.350 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:13:22.350 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:13:22.355 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:13:22.355 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:22.517 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -12117,7 +12117,7 @@ Caused by: java.net.BindException: Address already in use: bind
   d8e0012e-e6d6-41d5-8078-8d21fbc14113
 
 2024-10-01 16:13:22.542 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:22.542 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:13:22.542 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:13:22.566 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -12252,7 +12252,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   d8e0012e-e6d6-41d5-8078-8d21fbc14113
 
-2024-10-01 16:13:22.581 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:13:22.581 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -12314,7 +12314,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:13:22.582 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:13:22.582 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:13:22.601 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:22.717 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:13:22.718 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -12360,7 +12360,7 @@ Caused by: java.net.BindException: Address already in use: bind
   7eb26acc-8b7a-4921-8c27-cbef29517870
 
 2024-10-01 16:13:22.800 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:22.801 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:13:22.801 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:13:22.835 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -12495,7 +12495,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   7eb26acc-8b7a-4921-8c27-cbef29517870
 
-2024-10-01 16:13:22.851 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:13:22.851 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -12557,7 +12557,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:13:22.852 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:13:22.852 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:13:22.857 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:13:22.858 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:13:22.858 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -12603,7 +12603,7 @@ Caused by: java.net.BindException: Address already in use: bind
   bde629e0-c3f4-43cc-a1cb-1e43529ced90
 
 2024-10-01 16:13:23.028 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:23.028 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:13:23.028 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:13:23.053 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -12738,8 +12738,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   bde629e0-c3f4-43cc-a1cb-1e43529ced90
 
-2024-10-01 16:13:23.062 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:13:23.062 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:13:23.062 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:13:23.062 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:13:23.067 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:13:23.067 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:23.208 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -12782,7 +12782,7 @@ Caused by: java.net.BindException: Address already in use: bind
   3788b872-9b7f-4a67-81a9-d3144ffa39a0
 
 2024-10-01 16:13:23.229 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:23.229 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:13:23.229 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:13:23.256 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -12917,7 +12917,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   3788b872-9b7f-4a67-81a9-d3144ffa39a0
 
-2024-10-01 16:13:23.264 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:13:23.264 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -12979,7 +12979,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:13:23.265 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:13:23.265 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:13:23.270 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:23.384 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:13:23.385 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -13130,8 +13130,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   bb5ce08d-221b-4f38-bb09-32fee55c98a5
 
-2024-10-01 16:13:23.489 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:13:23.490 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:13:23.489 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:13:23.490 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:13:23.490 [MockServer-EventLog120] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:35.494 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 16:13:35.494 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -13173,7 +13173,7 @@ Caused by: java.net.BindException: Address already in use: bind
   3de0491b-4a83-453f-8d99-ef5eb4915886
 
 2024-10-01 16:13:36.428 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:36.429 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:13:36.429 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:13:37.458 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -13308,8 +13308,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   3de0491b-4a83-453f-8d99-ef5eb4915886
 
-2024-10-01 16:13:37.534 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:13:37.535 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:13:37.534 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:13:37.535 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:13:37.600 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:13:37.601 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:37.833 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -13352,7 +13352,7 @@ Caused by: java.net.BindException: Address already in use: bind
   1965e0e2-ede3-4e8e-94dd-ac575771ac48
 
 2024-10-01 16:13:37.865 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:37.866 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:13:37.866 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:13:37.892 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -13487,15 +13487,15 @@ Caused by: java.net.BindException: Address already in use: bind
 
   1965e0e2-ede3-4e8e-94dd-ac575771ac48
 
-2024-10-01 16:13:37.903 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:13:37.904 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:13:37.903 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:13:37.904 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:13:37.909 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:13:37.910 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:38.065 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:13:38.064 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 16:13:38.065 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:13:38.100 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:38.101 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:13:38.101 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:13:38.101 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 creating expectation:
 
   {
@@ -13666,7 +13666,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   2529a3f2-21e9-4b2c-b72f-4608f89a3dbd
 
-2024-10-01 16:13:38.141 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:13:38.141 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -13728,7 +13728,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:13:38.142 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:13:38.142 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:13:38.161 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:38.415 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:13:38.417 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -13774,7 +13774,7 @@ Caused by: java.net.BindException: Address already in use: bind
   37e97320-edbf-43ef-bdb4-8060fd1ca9f9
 
 2024-10-01 16:13:38.552 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:38.552 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:13:38.552 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:13:38.586 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -13909,7 +13909,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   37e97320-edbf-43ef-bdb4-8060fd1ca9f9
 
-2024-10-01 16:13:38.601 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:13:38.601 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -13971,7 +13971,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:13:38.601 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:13:38.601 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:13:38.606 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:13:38.607 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:13:38.607 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -14017,7 +14017,7 @@ Caused by: java.net.BindException: Address already in use: bind
   2e6c3fcf-c0ef-41e0-8770-0d6e18404b63
 
 2024-10-01 16:13:38.817 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:38.817 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:13:38.817 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:13:38.839 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -14152,8 +14152,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   2e6c3fcf-c0ef-41e0-8770-0d6e18404b63
 
-2024-10-01 16:13:38.846 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:13:38.847 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:13:38.846 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:13:38.847 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:13:38.851 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:13:38.851 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:39.024 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -14196,7 +14196,7 @@ Caused by: java.net.BindException: Address already in use: bind
   8880ea60-65d3-4abf-927b-cfe49f0f8a36
 
 2024-10-01 16:13:39.056 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:39.056 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:13:39.056 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:13:39.077 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -14331,7 +14331,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   8880ea60-65d3-4abf-927b-cfe49f0f8a36
 
-2024-10-01 16:13:39.085 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:13:39.085 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -14393,7 +14393,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:13:39.085 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:13:39.085 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:13:39.090 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:39.208 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:13:39.209 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -14544,8 +14544,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   60c3b0b8-bfe9-4d7c-8254-2d9bb088fd01
 
-2024-10-01 16:13:39.373 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:13:39.373 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:13:39.373 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:13:39.373 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:13:39.374 [MockServer-EventLog120] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:39.545 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:13:39.545 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -14587,7 +14587,7 @@ Caused by: java.net.BindException: Address already in use: bind
   baf42cc6-071c-4ebf-8d0e-720fe0465927
 
 2024-10-01 16:13:39.572 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:13:39.572 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:13:39.572 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:13:39.591 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -14722,7 +14722,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   baf42cc6-071c-4ebf-8d0e-720fe0465927
 
-2024-10-01 16:13:39.600 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:13:39.600 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -14784,7 +14784,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:13:39.600 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:13:39.600 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:13:39.605 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:13:39.726 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:13:39.727 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -15128,7 +15128,7 @@ Caused by: java.net.BindException: Address already in use: bind
   53447551-fe2e-4f6e-a0b5-1dc53a4bdaf0
 
 2024-10-01 16:20:43.522 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:20:43.522 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:20:43.522 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:20:44.541 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -15263,8 +15263,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   53447551-fe2e-4f6e-a0b5-1dc53a4bdaf0
 
-2024-10-01 16:20:44.621 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:20:44.622 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:20:44.621 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:20:44.622 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:20:44.689 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:20:44.690 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:20:44.915 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -15307,7 +15307,7 @@ Caused by: java.net.BindException: Address already in use: bind
   0b29dea5-c34b-4fe1-b7bb-cd68ec26034d
 
 2024-10-01 16:20:44.934 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:20:44.935 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:20:44.935 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:20:44.960 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -15442,8 +15442,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   0b29dea5-c34b-4fe1-b7bb-cd68ec26034d
 
-2024-10-01 16:20:44.967 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:20:44.967 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:20:44.967 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:20:44.967 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:20:44.971 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:20:44.971 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:20:45.136 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -15486,7 +15486,7 @@ Caused by: java.net.BindException: Address already in use: bind
   c6d6652d-51bb-485c-b238-da8b444b9ffd
 
 2024-10-01 16:20:45.165 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:20:45.166 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:20:45.166 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:20:45.188 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -15621,7 +15621,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   c6d6652d-51bb-485c-b238-da8b444b9ffd
 
-2024-10-01 16:20:45.200 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:20:45.200 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -15683,7 +15683,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:20:45.201 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:20:45.201 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:20:45.212 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:20:45.343 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:20:45.344 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -15729,7 +15729,7 @@ Caused by: java.net.BindException: Address already in use: bind
   112ffa78-a083-4332-8aa7-ffbbba0976c3
 
 2024-10-01 16:20:45.403 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:20:45.404 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:20:45.404 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:20:45.435 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -15864,7 +15864,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   112ffa78-a083-4332-8aa7-ffbbba0976c3
 
-2024-10-01 16:20:45.456 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:20:45.456 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -15926,7 +15926,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:20:45.456 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:20:45.456 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:20:45.461 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:20:45.462 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:20:45.462 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -15972,7 +15972,7 @@ Caused by: java.net.BindException: Address already in use: bind
   218ab45d-6cd0-43ab-ab9c-7f70a0f80173
 
 2024-10-01 16:20:45.635 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:20:45.635 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:20:45.635 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:20:45.662 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -16107,8 +16107,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   218ab45d-6cd0-43ab-ab9c-7f70a0f80173
 
-2024-10-01 16:20:45.668 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:20:45.668 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:20:45.668 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:20:45.668 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:20:45.672 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:20:45.673 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:20:45.834 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -16151,7 +16151,7 @@ Caused by: java.net.BindException: Address already in use: bind
   b9df4373-03a2-4a84-a4b8-be8419373676
 
 2024-10-01 16:20:45.870 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:20:45.870 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:20:45.870 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:20:45.891 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -16286,7 +16286,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   b9df4373-03a2-4a84-a4b8-be8419373676
 
-2024-10-01 16:20:45.905 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:20:45.905 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -16348,7 +16348,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:20:45.906 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:20:45.906 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:20:45.918 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:20:46.037 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:20:46.038 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -16499,8 +16499,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   fb4ef996-59d9-4a6d-ad15-eeb326c12149
 
-2024-10-01 16:20:46.149 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:20:46.149 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:20:46.149 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:20:46.149 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:20:46.150 [MockServer-EventLog120] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:20:46.314 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 16:20:46.315 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -16542,7 +16542,7 @@ Caused by: java.net.BindException: Address already in use: bind
   361f6069-6189-4c8a-b555-c91fbe854afe
 
 2024-10-01 16:20:46.337 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:20:46.337 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:20:46.337 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:20:46.356 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -16677,7 +16677,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   361f6069-6189-4c8a-b555-c91fbe854afe
 
-2024-10-01 16:20:46.364 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:20:46.364 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -16739,7 +16739,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:20:46.364 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:20:46.364 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:20:46.369 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:20:46.481 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:20:46.483 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -17085,7 +17085,7 @@ Caused by: java.net.BindException: Address already in use: bind
   4229bc7e-efe1-4a6f-8c53-72afafeda77d
 
 2024-10-01 16:24:20.166 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:24:20.166 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:24:20.166 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:24:21.193 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -17220,8 +17220,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   4229bc7e-efe1-4a6f-8c53-72afafeda77d
 
-2024-10-01 16:24:21.275 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:24:21.275 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:24:21.275 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:24:21.275 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:24:21.343 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:24:21.344 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:24:21.581 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -17264,7 +17264,7 @@ Caused by: java.net.BindException: Address already in use: bind
   7f129647-6451-49f3-8ebf-04045b5815d0
 
 2024-10-01 16:24:21.601 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:24:21.601 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:24:21.601 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:24:21.627 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -17399,8 +17399,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   7f129647-6451-49f3-8ebf-04045b5815d0
 
-2024-10-01 16:24:21.634 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:24:21.634 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:24:21.634 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:24:21.634 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:24:21.639 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:24:21.639 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:24:21.802 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -17443,7 +17443,7 @@ Caused by: java.net.BindException: Address already in use: bind
   fc1167a7-f92f-414b-8d8e-764e2583b0fd
 
 2024-10-01 16:24:21.828 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:24:21.829 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:24:21.829 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:24:21.852 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -17528,7 +17528,7 @@ Caused by: java.net.BindException: Address already in use: bind
     }
   }
 
-2024-10-01 16:24:21.876 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:24:21.876 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -17590,7 +17590,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:24:21.876 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:24:21.876 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:24:21.907 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
 
   {
@@ -17686,7 +17686,7 @@ Caused by: java.net.BindException: Address already in use: bind
   cdc26ba4-9f30-4c55-90a0-17e37c4e7461
 
 2024-10-01 16:24:22.139 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:24:22.140 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:24:22.140 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:24:22.179 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -17821,7 +17821,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   cdc26ba4-9f30-4c55-90a0-17e37c4e7461
 
-2024-10-01 16:24:22.194 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:24:22.194 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -17883,7 +17883,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:24:22.194 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:24:22.194 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:24:22.198 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:24:22.199 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:24:22.200 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -17929,7 +17929,7 @@ Caused by: java.net.BindException: Address already in use: bind
   25efbec2-49dd-4422-83f2-de38d2d7dda9
 
 2024-10-01 16:24:22.401 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:24:22.401 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:24:22.401 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:24:22.424 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -18064,8 +18064,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   25efbec2-49dd-4422-83f2-de38d2d7dda9
 
-2024-10-01 16:24:22.429 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:24:22.429 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:24:22.429 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:24:22.429 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:24:22.433 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:24:22.434 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:24:22.592 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -18108,7 +18108,7 @@ Caused by: java.net.BindException: Address already in use: bind
   62c5dd8c-3098-4b7b-b11f-486c03785d5a
 
 2024-10-01 16:24:22.616 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:24:22.616 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:24:22.616 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:24:22.636 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -18243,7 +18243,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   62c5dd8c-3098-4b7b-b11f-486c03785d5a
 
-2024-10-01 16:24:22.644 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:24:22.644 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -18305,7 +18305,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:24:22.644 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:24:22.644 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:24:22.648 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:24:22.768 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:24:22.769 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -18456,8 +18456,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   b332b310-9019-4b57-90e5-51bc5f10974a
 
-2024-10-01 16:24:22.950 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:24:22.951 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:24:22.950 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:24:22.951 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:24:22.951 [MockServer-EventLog120] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:24:23.125 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 16:24:23.126 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -18499,7 +18499,7 @@ Caused by: java.net.BindException: Address already in use: bind
   f6b93763-35f0-4f66-8d29-740ca4027325
 
 2024-10-01 16:24:23.148 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:24:23.148 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:24:23.148 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:24:23.167 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -18634,7 +18634,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   f6b93763-35f0-4f66-8d29-740ca4027325
 
-2024-10-01 16:24:23.174 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:24:23.174 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -18696,7 +18696,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:24:23.175 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:24:23.175 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:24:23.179 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:24:23.301 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:24:23.302 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -19042,7 +19042,7 @@ Caused by: java.net.BindException: Address already in use: bind
   9da98bac-60b9-4f15-958c-19999f201b73
 
 2024-10-01 16:26:15.829 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:26:15.830 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:26:15.830 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:26:16.846 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -19177,8 +19177,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   9da98bac-60b9-4f15-958c-19999f201b73
 
-2024-10-01 16:26:16.929 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:26:16.929 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:26:16.929 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:26:16.929 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:26:16.994 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:26:16.995 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:26:17.247 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -19221,7 +19221,7 @@ Caused by: java.net.BindException: Address already in use: bind
   91c0465d-86ce-4db7-9010-28320779c66f
 
 2024-10-01 16:26:17.276 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:26:17.276 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:26:17.276 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:26:17.303 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -19356,8 +19356,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   91c0465d-86ce-4db7-9010-28320779c66f
 
-2024-10-01 16:26:17.311 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:26:17.311 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:26:17.311 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:26:17.311 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:26:17.316 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:26:17.316 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:26:17.490 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -19400,7 +19400,7 @@ Caused by: java.net.BindException: Address already in use: bind
   ac1f9ad3-7d6b-4f41-ad46-3dad548c1561
 
 2024-10-01 16:26:17.514 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:26:17.514 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:26:17.514 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:26:17.540 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -19535,7 +19535,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   ac1f9ad3-7d6b-4f41-ad46-3dad548c1561
 
-2024-10-01 16:26:17.550 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:26:17.550 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -19597,7 +19597,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:26:17.551 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:26:17.551 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:26:17.558 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:26:17.666 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:26:17.667 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -19643,7 +19643,7 @@ Caused by: java.net.BindException: Address already in use: bind
   cc3103d7-ae0c-416d-8439-cb0a96234ee1
 
 2024-10-01 16:26:17.742 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:26:17.743 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:26:17.743 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:26:17.793 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -19778,7 +19778,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   cc3103d7-ae0c-416d-8439-cb0a96234ee1
 
-2024-10-01 16:26:17.803 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:26:17.803 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -19840,7 +19840,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:26:17.803 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:26:17.803 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:26:17.808 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:26:17.809 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:26:17.809 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -19886,7 +19886,7 @@ Caused by: java.net.BindException: Address already in use: bind
   71ac213f-9061-4caa-aaf5-97f06dcaf559
 
 2024-10-01 16:26:17.966 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:26:17.966 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:26:17.966 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:26:17.992 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -20021,8 +20021,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   71ac213f-9061-4caa-aaf5-97f06dcaf559
 
-2024-10-01 16:26:17.998 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:26:17.998 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:26:17.998 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:26:17.998 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:26:18.002 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:26:18.002 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:26:18.164 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -20065,7 +20065,7 @@ Caused by: java.net.BindException: Address already in use: bind
   1b5fe662-a3c4-4099-a2d8-d5246ba5a789
 
 2024-10-01 16:26:18.194 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:26:18.195 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:26:18.195 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:26:18.220 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -20092,7 +20092,7 @@ Caused by: java.net.BindException: Address already in use: bind
     }
   }
 
-2024-10-01 16:26:18.230 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:26:18.230 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -20154,7 +20154,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:26:18.231 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:26:18.231 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:26:18.238 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
 
   {
@@ -20413,8 +20413,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   3a24589a-af49-4091-9f2f-3f10da32d103
 
-2024-10-01 16:26:18.490 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:26:18.491 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:26:18.490 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:26:18.491 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:26:18.491 [MockServer-EventLog120] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:26:18.647 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 16:26:18.647 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -20456,7 +20456,7 @@ Caused by: java.net.BindException: Address already in use: bind
   36feddc5-5bc0-401c-a526-504773142ab0
 
 2024-10-01 16:26:18.674 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:26:18.675 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:26:18.675 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:26:18.694 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -20591,7 +20591,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   36feddc5-5bc0-401c-a526-504773142ab0
 
-2024-10-01 16:26:18.701 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:26:18.701 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -20653,7 +20653,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:26:18.702 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:26:18.702 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:26:18.707 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:26:18.824 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:26:18.825 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -20999,7 +20999,7 @@ Caused by: java.net.BindException: Address already in use: bind
   3271d8be-0ce1-4081-a9bd-c3b155d3221c
 
 2024-10-01 16:28:01.914 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:28:01.915 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:28:01.915 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:28:02.964 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -21134,8 +21134,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   3271d8be-0ce1-4081-a9bd-c3b155d3221c
 
-2024-10-01 16:28:03.051 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:28:03.051 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:28:03.051 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:28:03.051 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:28:03.134 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:28:03.136 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:28:03.369 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -21178,7 +21178,7 @@ Caused by: java.net.BindException: Address already in use: bind
   93318f9b-cdeb-430f-8f18-74976480e983
 
 2024-10-01 16:28:03.393 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:28:03.393 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:28:03.393 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:28:03.430 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -21313,8 +21313,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   93318f9b-cdeb-430f-8f18-74976480e983
 
-2024-10-01 16:28:03.441 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:28:03.441 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:28:03.441 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:28:03.441 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:28:03.445 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:28:03.446 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:28:03.621 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -21357,7 +21357,7 @@ Caused by: java.net.BindException: Address already in use: bind
   d7ea796e-52e1-4206-bf7f-fb16ef874f94
 
 2024-10-01 16:28:03.645 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:28:03.645 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:28:03.645 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:28:03.669 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -21492,7 +21492,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   d7ea796e-52e1-4206-bf7f-fb16ef874f94
 
-2024-10-01 16:28:03.684 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:28:03.684 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -21554,7 +21554,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:28:03.684 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:28:03.684 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:28:03.692 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:28:03.816 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:28:03.817 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -21600,7 +21600,7 @@ Caused by: java.net.BindException: Address already in use: bind
   baef4814-64c1-4cf1-9dcd-fdc1525ec938
 
 2024-10-01 16:28:03.893 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:28:03.893 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:28:03.893 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:28:03.949 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -21735,7 +21735,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   baef4814-64c1-4cf1-9dcd-fdc1525ec938
 
-2024-10-01 16:28:03.970 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:28:03.970 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -21797,7 +21797,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:28:03.970 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:28:03.970 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:28:03.975 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:28:03.975 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:28:03.976 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -21843,7 +21843,7 @@ Caused by: java.net.BindException: Address already in use: bind
   7c946c6f-fc97-400c-8689-a3c86822e928
 
 2024-10-01 16:28:04.193 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:28:04.193 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:28:04.193 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:28:04.216 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -21978,8 +21978,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   7c946c6f-fc97-400c-8689-a3c86822e928
 
-2024-10-01 16:28:04.225 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:28:04.225 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:28:04.225 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:28:04.225 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:28:04.233 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:28:04.234 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:28:04.379 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -22022,7 +22022,7 @@ Caused by: java.net.BindException: Address already in use: bind
   008784e8-2cfa-40ca-b314-e7830bfd8075
 
 2024-10-01 16:28:04.398 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:28:04.398 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:28:04.398 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:28:04.420 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -22157,7 +22157,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   008784e8-2cfa-40ca-b314-e7830bfd8075
 
-2024-10-01 16:28:04.433 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:28:04.433 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -22219,7 +22219,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:28:04.434 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:28:04.434 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:28:04.438 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:28:04.555 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:28:04.556 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -22370,8 +22370,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   f2f75be7-80bf-4a51-b704-f8ef6e478f01
 
-2024-10-01 16:28:04.722 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:28:04.725 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:28:04.722 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:28:04.725 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:28:04.726 [MockServer-EventLog120] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:28:04.895 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 16:28:04.896 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -22413,7 +22413,7 @@ Caused by: java.net.BindException: Address already in use: bind
   b596765c-8f11-49fc-bfbf-b02aad720403
 
 2024-10-01 16:28:04.916 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:28:04.916 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:28:04.916 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:28:04.939 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -22548,7 +22548,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   b596765c-8f11-49fc-bfbf-b02aad720403
 
-2024-10-01 16:28:04.947 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:28:04.947 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -22610,7 +22610,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:28:04.948 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:28:04.948 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:28:04.953 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:28:05.073 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:28:05.074 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -22957,7 +22957,7 @@ Caused by: java.net.BindException: Address already in use: bind
   cb036f58-890e-4b96-a377-a2816dc9c389
 
 2024-10-01 16:30:02.210 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:30:02.211 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:30:02.211 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:30:03.265 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -23092,8 +23092,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   cb036f58-890e-4b96-a377-a2816dc9c389
 
-2024-10-01 16:30:03.346 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:30:03.347 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:30:03.346 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:30:03.347 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:30:03.412 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:30:03.412 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:30:03.661 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -23136,7 +23136,7 @@ Caused by: java.net.BindException: Address already in use: bind
   6acc7a2b-3bc1-4ce7-adec-c2e0d25be620
 
 2024-10-01 16:30:03.682 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:30:03.682 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:30:03.682 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:30:03.716 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -23271,8 +23271,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   6acc7a2b-3bc1-4ce7-adec-c2e0d25be620
 
-2024-10-01 16:30:03.727 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:30:03.727 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:30:03.727 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:30:03.727 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:30:03.731 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:30:03.732 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:30:03.894 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -23315,7 +23315,7 @@ Caused by: java.net.BindException: Address already in use: bind
   142cc23f-675e-469b-8f9d-efe1b9342dc3
 
 2024-10-01 16:30:03.926 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:30:03.927 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:30:03.927 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:30:03.956 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -23450,7 +23450,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   142cc23f-675e-469b-8f9d-efe1b9342dc3
 
-2024-10-01 16:30:03.967 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:30:03.967 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -23512,7 +23512,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:30:03.968 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:30:03.968 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:30:03.976 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:30:04.088 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:30:04.089 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -23558,7 +23558,7 @@ Caused by: java.net.BindException: Address already in use: bind
   002cbafd-2b64-4bfc-9940-95acadde8dec
 
 2024-10-01 16:30:04.169 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:30:04.170 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:30:04.170 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:30:04.256 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -23693,7 +23693,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   002cbafd-2b64-4bfc-9940-95acadde8dec
 
-2024-10-01 16:30:04.272 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:30:04.272 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -23755,7 +23755,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:30:04.272 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:30:04.272 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:30:04.277 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:30:04.278 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:30:04.278 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -23801,7 +23801,7 @@ Caused by: java.net.BindException: Address already in use: bind
   653bab10-a895-4c4c-9877-6f5094026928
 
 2024-10-01 16:30:04.488 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:30:04.489 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:30:04.489 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:30:04.519 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -23936,8 +23936,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   653bab10-a895-4c4c-9877-6f5094026928
 
-2024-10-01 16:30:04.524 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:30:04.524 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:30:04.524 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:30:04.524 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:30:04.529 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:30:04.529 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:30:04.706 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -23980,7 +23980,7 @@ Caused by: java.net.BindException: Address already in use: bind
   6e2082ec-443e-473f-b8fb-813d84e43998
 
 2024-10-01 16:30:04.744 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:30:04.745 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:30:04.745 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:30:04.768 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -24115,7 +24115,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   6e2082ec-443e-473f-b8fb-813d84e43998
 
-2024-10-01 16:30:04.784 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:30:04.784 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -24177,7 +24177,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:30:04.784 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:30:04.784 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:30:04.794 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:30:04.912 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:30:04.913 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -24328,8 +24328,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   92d44343-334b-417c-ae31-23cb594a0971
 
-2024-10-01 16:30:05.051 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:30:05.051 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:30:05.051 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:30:05.051 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:30:05.052 [MockServer-EventLog120] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:30:05.220 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:30:05.219 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -24371,7 +24371,7 @@ Caused by: java.net.BindException: Address already in use: bind
   6deff38f-638d-491f-b8e3-1db0e1f4bb7d
 
 2024-10-01 16:30:05.256 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:30:05.256 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:30:05.256 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:30:05.279 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -24506,7 +24506,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   6deff38f-638d-491f-b8e3-1db0e1f4bb7d
 
-2024-10-01 16:30:05.287 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:30:05.287 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -24568,7 +24568,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:30:05.287 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:30:05.287 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:30:05.292 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:30:05.412 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:30:05.412 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -24916,7 +24916,7 @@ Caused by: java.net.BindException: Address already in use: bind
   a3d22e4f-d5b7-42d8-b4c5-e14e921d36ff
 
 2024-10-01 16:32:08.347 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:32:08.347 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-10-01 16:32:08.347 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-10-01 16:32:09.359 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -25051,8 +25051,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   a3d22e4f-d5b7-42d8-b4c5-e14e921d36ff
 
-2024-10-01 16:32:09.434 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:32:09.434 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:32:09.434 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:32:09.434 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:32:09.503 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:32:09.503 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:09.746 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -25095,7 +25095,7 @@ Caused by: java.net.BindException: Address already in use: bind
   286ef22c-fb10-427c-87e8-4110a487d55f
 
 2024-10-01 16:32:09.765 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:32:09.765 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-10-01 16:32:09.765 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-10-01 16:32:09.791 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -25230,8 +25230,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   286ef22c-fb10-427c-87e8-4110a487d55f
 
-2024-10-01 16:32:09.798 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:32:09.798 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:32:09.798 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:32:09.798 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:32:09.802 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:32:09.802 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:09.967 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -25274,7 +25274,7 @@ Caused by: java.net.BindException: Address already in use: bind
   1acb059a-de87-44f9-80b3-50eb0a8377a7
 
 2024-10-01 16:32:09.993 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:32:09.993 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:32:09.993 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:32:10.016 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -25409,7 +25409,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   1acb059a-de87-44f9-80b3-50eb0a8377a7
 
-2024-10-01 16:32:10.027 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:32:10.027 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -25471,7 +25471,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:32:10.027 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:32:10.027 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:32:10.034 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:10.152 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:32:10.153 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -25517,7 +25517,7 @@ Caused by: java.net.BindException: Address already in use: bind
   25cc4a3d-f560-484d-a7bc-f6d079d36852
 
 2024-10-01 16:32:10.252 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:32:10.252 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:32:10.252 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:32:10.295 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -25652,7 +25652,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   25cc4a3d-f560-484d-a7bc-f6d079d36852
 
-2024-10-01 16:32:10.309 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:32:10.309 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -25714,7 +25714,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:32:10.309 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:32:10.309 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:32:10.313 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-10-01 16:32:10.314 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:32:10.315 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -25760,7 +25760,7 @@ Caused by: java.net.BindException: Address already in use: bind
   6f7a873a-a434-4baa-baf9-63d71613482f
 
 2024-10-01 16:32:10.524 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:32:10.524 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-10-01 16:32:10.524 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-10-01 16:32:10.547 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -25895,8 +25895,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   6f7a873a-a434-4baa-baf9-63d71613482f
 
-2024-10-01 16:32:10.553 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-10-01 16:32:10.553 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-10-01 16:32:10.553 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-10-01 16:32:10.553 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-10-01 16:32:10.557 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-10-01 16:32:10.557 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:10.706 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -25939,7 +25939,7 @@ Caused by: java.net.BindException: Address already in use: bind
   ffc267bc-ce9a-4bf6-a1a6-76bdd46efee1
 
 2024-10-01 16:32:10.739 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:32:10.739 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:32:10.739 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:32:10.760 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -26074,7 +26074,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   ffc267bc-ce9a-4bf6-a1a6-76bdd46efee1
 
-2024-10-01 16:32:10.770 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:32:10.770 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -26136,7 +26136,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:32:10.771 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:32:10.771 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:32:10.779 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:10.893 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:32:10.894 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -26287,8 +26287,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   00f30973-78a9-404c-b75c-2e6246827b60
 
-2024-10-01 16:32:10.999 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:32:10.999 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:32:10.999 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:32:10.999 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:32:11.000 [MockServer-EventLog120] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:11.154 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-10-01 16:32:11.155 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -26330,7 +26330,7 @@ Caused by: java.net.BindException: Address already in use: bind
   0a401b0e-85c3-467a-a09c-2c4698b34476
 
 2024-10-01 16:32:11.190 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:32:11.191 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:32:11.191 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:32:11.215 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -26465,7 +26465,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   0a401b0e-85c3-467a-a09c-2c4698b34476
 
-2024-10-01 16:32:11.223 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:32:11.223 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -26527,7 +26527,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:32:11.224 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:32:11.224 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:32:11.228 [MockServer-EventLog140] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:11.353 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:32:11.354 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -26831,8 +26831,8 @@ Caused by: java.net.BindException: Address already in use: bind
 
   9031c4da-8e6f-4c17-9d38-2d1a5130e1ba
 
-2024-10-01 16:32:11.719 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-10-01 16:32:11.720 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-10-01 16:32:11.719 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-10-01 16:32:11.720 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-10-01 16:32:11.720 [MockServer-EventLog180] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:11.883 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-10-01 16:32:11.883 [MockServer-EventLog200] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -26874,7 +26874,7 @@ Caused by: java.net.BindException: Address already in use: bind
   570f8201-f6d7-4928-bbee-16c268302f22
 
 2024-10-01 16:32:11.917 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-10-01 16:32:11.918 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-10-01 16:32:11.918 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-10-01 16:32:11.936 [MockServer-EventLog200] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -27009,7 +27009,7 @@ Caused by: java.net.BindException: Address already in use: bind
 
   570f8201-f6d7-4928-bbee-16c268302f22
 
-2024-10-01 16:32:11.943 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-10-01 16:32:11.943 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -27071,7 +27071,7 @@ Caused by: java.net.BindException: Address already in use: bind
     "right.alarm.filter"
   ]
 }
-2024-10-01 16:32:11.943 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-10-01 16:32:11.943 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-10-01 16:32:11.948 [MockServer-EventLog200] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-10-01 16:32:12.063 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-10-01 16:32:12.064 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'

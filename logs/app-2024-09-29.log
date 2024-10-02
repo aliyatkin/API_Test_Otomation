@@ -1189,7 +1189,7 @@
   6464a9aa-75cd-4d73-aa05-ac3cb3552558
 
 2024-09-29 10:55:11.796 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:55:11.796 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-29 10:55:11.796 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 10:55:12.845 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -1324,8 +1324,8 @@
 
   6464a9aa-75cd-4d73-aa05-ac3cb3552558
 
-2024-09-29 10:55:12.943 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 10:55:12.944 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 10:55:12.943 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 10:55:12.944 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 10:55:13.004 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 10:55:13.005 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 10:55:13.222 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -1368,7 +1368,7 @@
   5dc4a2c3-4ab1-4e8a-9699-1a75b0603946
 
 2024-09-29 10:55:13.242 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:55:13.242 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-29 10:55:13.242 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-09-29 10:55:13.271 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -1503,8 +1503,8 @@
 
   5dc4a2c3-4ab1-4e8a-9699-1a75b0603946
 
-2024-09-29 10:55:13.277 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 10:55:13.278 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 10:55:13.277 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 10:55:13.278 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 10:55:13.282 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 10:55:13.282 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 10:55:13.453 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -1547,7 +1547,7 @@
   7406a4f9-d31e-47e4-b45e-cc801db209b0
 
 2024-09-29 10:55:13.483 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:55:13.483 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 10:55:13.483 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 10:55:13.514 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -1682,7 +1682,7 @@
 
   7406a4f9-d31e-47e4-b45e-cc801db209b0
 
-2024-09-29 10:55:13.526 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 10:55:13.526 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -1744,7 +1744,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 10:55:13.526 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 10:55:13.526 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 10:55:13.540 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 10:55:13.543 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 10:55:13.544 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -1790,7 +1790,7 @@
   ba1845e5-383c-4e62-8f9c-ff614fceec93
 
 2024-09-29 10:55:13.731 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:55:13.731 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 10:55:13.731 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 10:55:13.781 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -1925,7 +1925,7 @@
 
   ba1845e5-383c-4e62-8f9c-ff614fceec93
 
-2024-09-29 10:55:13.806 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 10:55:13.806 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -1987,7 +1987,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 10:55:13.808 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 10:55:13.808 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 10:55:13.819 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-09-29 10:55:13.820 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 10:55:13.820 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -2033,7 +2033,7 @@
   79ac551e-1afe-429b-b142-e3c68d404cc3
 
 2024-09-29 10:55:14.012 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:55:14.012 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 10:55:14.012 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 10:55:14.040 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -2168,8 +2168,8 @@
 
   79ac551e-1afe-429b-b142-e3c68d404cc3
 
-2024-09-29 10:55:14.050 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 10:55:14.050 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 10:55:14.050 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 10:55:14.050 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 10:55:14.054 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 10:55:14.054 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 10:55:14.240 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -2212,7 +2212,7 @@
   01702ac4-a35a-4d59-b7d6-d0803b5f2a67
 
 2024-09-29 10:55:14.260 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:55:14.260 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 10:55:14.260 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 10:55:14.279 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -2347,7 +2347,7 @@
 
   01702ac4-a35a-4d59-b7d6-d0803b5f2a67
 
-2024-09-29 10:55:14.287 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 10:55:14.287 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -2409,7 +2409,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 10:55:14.288 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 10:55:14.288 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 10:55:14.292 [main] INFO  com.apiTests.serviceSteps.mockTestSteps.MockLogoutSteps - The system has not been logged in with a valid username and password
 2024-09-29 10:55:14.292 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 10:55:14.293 [main] INFO  com.apiTests.serviceSteps.mockTestSteps.MockLogoutSteps - The username in the response matches the one in the request
@@ -2592,7 +2592,7 @@
   019253f7-6285-4c21-868d-ff2ebb5729b1
 
 2024-09-29 10:57:08.825 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:57:08.826 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-29 10:57:08.826 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 10:57:09.912 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -2727,8 +2727,8 @@
 
   019253f7-6285-4c21-868d-ff2ebb5729b1
 
-2024-09-29 10:57:10.002 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 10:57:10.003 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 10:57:10.002 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 10:57:10.003 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 10:57:10.076 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 10:57:10.078 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 10:57:10.323 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -2771,7 +2771,7 @@
   682f0c7d-d83d-40c3-9535-a07db519e07d
 
 2024-09-29 10:57:10.349 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:57:10.349 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-29 10:57:10.349 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-09-29 10:57:10.388 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -2906,8 +2906,8 @@
 
   682f0c7d-d83d-40c3-9535-a07db519e07d
 
-2024-09-29 10:57:10.400 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 10:57:10.400 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 10:57:10.400 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 10:57:10.400 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 10:57:10.404 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 10:57:10.405 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 10:57:10.544 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -2950,7 +2950,7 @@
   817fe4ab-ece4-4594-80d8-19e6a5641cdd
 
 2024-09-29 10:57:10.577 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:57:10.577 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 10:57:10.577 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 10:57:10.604 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -3085,7 +3085,7 @@
 
   817fe4ab-ece4-4594-80d8-19e6a5641cdd
 
-2024-09-29 10:57:10.617 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 10:57:10.617 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -3147,7 +3147,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 10:57:10.619 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 10:57:10.619 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 10:57:10.643 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 10:57:10.647 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 10:57:10.647 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -3193,7 +3193,7 @@
   8120995a-55bf-4f69-9432-6b560e9407e4
 
 2024-09-29 10:57:10.919 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:57:10.920 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 10:57:10.920 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 10:57:10.958 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -3328,7 +3328,7 @@
 
   8120995a-55bf-4f69-9432-6b560e9407e4
 
-2024-09-29 10:57:10.974 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 10:57:10.974 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -3390,7 +3390,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 10:57:10.975 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 10:57:10.975 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 10:57:10.983 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-09-29 10:57:10.984 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 10:57:10.984 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -3436,7 +3436,7 @@
   e9f377e7-a0a9-434e-a118-02d99fb907f9
 
 2024-09-29 10:57:11.175 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:57:11.175 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 10:57:11.175 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 10:57:11.200 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -3571,8 +3571,8 @@
 
   e9f377e7-a0a9-434e-a118-02d99fb907f9
 
-2024-09-29 10:57:11.212 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 10:57:11.213 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 10:57:11.212 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 10:57:11.213 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 10:57:11.217 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 10:57:11.217 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 10:57:11.370 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -3615,7 +3615,7 @@
   ca103cb8-72a8-42ff-9a1c-ff27a7d11157
 
 2024-09-29 10:57:11.393 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 10:57:11.393 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 10:57:11.393 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 10:57:11.417 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -3700,7 +3700,7 @@
     }
   }
 
-2024-09-29 10:57:11.438 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 10:57:11.438 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -3762,7 +3762,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 10:57:11.439 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 10:57:11.439 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 10:57:11.442 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
 
   {
@@ -3962,8 +3962,8 @@
 
   777981af-c07a-4970-bf51-82163ba9c68d
 
-2024-09-29 10:57:11.648 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-09-29 10:57:11.648 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-09-29 10:57:11.648 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-09-29 10:57:11.648 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-09-29 13:25:27.240 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-09-29 13:25:27.240 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:25:27.245 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -4004,7 +4004,7 @@
   5c063035-e2e8-4175-bc9a-e8f7176d6218
 
 2024-09-29 13:25:28.185 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:25:28.185 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-29 13:25:28.185 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 13:25:29.234 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4139,8 +4139,8 @@
 
   5c063035-e2e8-4175-bc9a-e8f7176d6218
 
-2024-09-29 13:25:29.333 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 13:25:29.334 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 13:25:29.333 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 13:25:29.334 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 13:25:29.401 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 13:25:29.403 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 13:25:29.664 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -4183,7 +4183,7 @@
   bb80e831-517e-4fdd-b949-1296ba8a0b93
 
 2024-09-29 13:25:29.721 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:25:29.722 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-29 13:25:29.722 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-09-29 13:25:29.752 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4318,8 +4318,8 @@
 
   bb80e831-517e-4fdd-b949-1296ba8a0b93
 
-2024-09-29 13:25:29.762 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 13:25:29.762 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 13:25:29.762 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 13:25:29.762 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 13:25:29.766 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 13:25:29.766 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 13:25:29.926 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -4362,7 +4362,7 @@
   4d01eea4-38ed-4043-8b23-79d7f4136bef
 
 2024-09-29 13:25:30.038 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:25:30.038 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 13:25:30.038 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 13:25:30.069 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4497,7 +4497,7 @@
 
   4d01eea4-38ed-4043-8b23-79d7f4136bef
 
-2024-09-29 13:25:30.085 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 13:25:30.085 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -4559,7 +4559,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 13:25:30.085 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 13:25:30.085 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 13:25:30.093 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 13:25:30.094 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:25:30.094 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -4605,7 +4605,7 @@
   809008c1-32ae-44f5-b420-fac03be7f277
 
 2024-09-29 13:25:30.347 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:25:30.347 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 13:25:30.347 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 13:25:30.392 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4740,7 +4740,7 @@
 
   809008c1-32ae-44f5-b420-fac03be7f277
 
-2024-09-29 13:25:30.415 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 13:25:30.415 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -4802,7 +4802,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 13:25:30.416 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 13:25:30.416 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 13:25:30.435 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-09-29 13:25:30.437 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:25:30.438 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -4848,7 +4848,7 @@
   2a38cb3f-5341-4374-a29e-b67388bfd6c9
 
 2024-09-29 13:25:30.677 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:25:30.678 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 13:25:30.678 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 13:25:30.711 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -4933,8 +4933,8 @@
     }
   }
 
-2024-09-29 13:25:30.720 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 13:25:30.720 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 13:25:30.720 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 13:25:30.720 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 13:25:30.721 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
 
   {
@@ -5027,7 +5027,7 @@
   3623d8d8-be86-40f7-bdb5-b5c24ea24959
 
 2024-09-29 13:25:30.998 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:25:30.998 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 13:25:30.998 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 13:25:31.025 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -5162,7 +5162,7 @@
 
   3623d8d8-be86-40f7-bdb5-b5c24ea24959
 
-2024-09-29 13:25:31.058 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 13:25:31.058 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -5224,7 +5224,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 13:25:31.058 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 13:25:31.058 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 13:25:31.065 [main] INFO  com.apiTests.serviceSteps.mockTestSteps.MockLogoutSteps - The system has not been logged in with a valid username and password
 2024-09-29 13:25:31.066 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:25:31.068 [main] INFO  com.apiTests.serviceSteps.mockTestSteps.MockLogoutSteps - The username in the response matches the one in the request
@@ -5374,8 +5374,8 @@
 
   a948b0cd-aaab-4ee7-b9dd-9b97c28a73ee
 
-2024-09-29 13:25:31.277 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-09-29 13:25:31.277 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-09-29 13:25:31.277 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-09-29 13:25:31.277 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-09-29 13:26:12.367 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:26:12.372 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 13:26:34.802 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -5468,7 +5468,7 @@
   c0fc4c43-2c87-4d75-8d6e-cf9e572f46c0
 
 2024-09-29 13:34:43.329 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:34:43.329 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-29 13:34:43.329 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 13:34:44.377 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -5603,8 +5603,8 @@
 
   c0fc4c43-2c87-4d75-8d6e-cf9e572f46c0
 
-2024-09-29 13:34:44.468 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 13:34:44.469 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 13:34:44.468 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 13:34:44.469 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 13:34:44.565 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 13:34:44.574 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 13:34:44.860 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -5647,7 +5647,7 @@
   a5bf7851-e3ef-464b-80fb-81254760264c
 
 2024-09-29 13:34:44.904 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:34:44.904 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-29 13:34:44.904 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-09-29 13:34:44.935 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -5782,8 +5782,8 @@
 
   a5bf7851-e3ef-464b-80fb-81254760264c
 
-2024-09-29 13:34:44.947 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 13:34:44.947 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 13:34:44.947 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 13:34:44.947 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 13:34:44.951 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 13:34:44.952 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 13:34:45.170 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -5826,7 +5826,7 @@
   a8c150e2-ee07-4a92-95b3-651af09a8934
 
 2024-09-29 13:34:45.221 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:34:45.221 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 13:34:45.221 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 13:34:45.280 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -5961,7 +5961,7 @@
 
   a8c150e2-ee07-4a92-95b3-651af09a8934
 
-2024-09-29 13:34:45.358 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 13:34:45.358 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -6023,7 +6023,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 13:34:45.358 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 13:34:45.358 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 13:34:45.358 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 13:34:45.358 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:34:45.358 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -6069,7 +6069,7 @@
   a886e6f5-3038-4a75-aad0-662f2e08a5ff
 
 2024-09-29 13:34:45.587 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:34:45.587 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 13:34:45.587 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 13:34:45.664 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -6204,7 +6204,7 @@
 
   a886e6f5-3038-4a75-aad0-662f2e08a5ff
 
-2024-09-29 13:34:45.678 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 13:34:45.678 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -6266,7 +6266,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 13:34:45.679 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 13:34:45.679 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 13:34:45.683 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-09-29 13:34:45.684 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:34:45.684 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -6312,7 +6312,7 @@
   d587de89-63f9-46d2-a748-e3b6360db507
 
 2024-09-29 13:34:45.951 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:34:45.951 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 13:34:45.951 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 13:34:45.976 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -6447,8 +6447,8 @@
 
   d587de89-63f9-46d2-a748-e3b6360db507
 
-2024-09-29 13:34:45.996 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 13:34:45.997 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 13:34:45.996 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 13:34:45.997 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 13:34:46.001 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 13:34:46.001 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 13:34:46.157 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -6491,7 +6491,7 @@
   77865d26-fb86-4dbb-8a31-8426450b90fd
 
 2024-09-29 13:34:46.233 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 13:34:46.234 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 13:34:46.234 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 13:34:46.258 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -6626,7 +6626,7 @@
 
   77865d26-fb86-4dbb-8a31-8426450b90fd
 
-2024-09-29 13:34:46.269 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 13:34:46.269 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -6688,7 +6688,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 13:34:46.269 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 13:34:46.269 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 13:34:46.273 [main] INFO  com.apiTests.serviceSteps.mockTestSteps.MockLogoutSteps - The system has not been logged in with a valid username and password
 2024-09-29 13:34:46.274 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:34:46.274 [main] INFO  com.apiTests.serviceSteps.mockTestSteps.MockLogoutSteps - The username in the response matches the one in the request
@@ -6838,8 +6838,8 @@
 
   1c878859-0156-46f6-939a-179b84ee2764
 
-2024-09-29 13:34:46.519 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-09-29 13:34:46.520 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-09-29 13:34:46.519 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-09-29 13:34:46.520 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-09-29 13:42:27.333 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 13:42:27.339 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 13:42:28.775 [main] INFO  com.apiTests.requests.serviceRequests.user_controller.LoginTests - Response received: User is unauthorized
@@ -6928,7 +6928,7 @@
   31f20689-bf8d-43a1-b5e5-8c60f34b125f
 
 2024-09-29 14:14:55.773 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:14:55.773 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-29 14:14:55.773 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 14:14:56.859 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7063,8 +7063,8 @@
 
   31f20689-bf8d-43a1-b5e5-8c60f34b125f
 
-2024-09-29 14:14:56.961 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:14:56.961 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-09-29 14:14:56.961 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:14:56.961 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-09-29 14:14:57.027 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 14:14:57.028 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:14:57.263 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -7107,7 +7107,7 @@
   1857e36d-8d4d-495a-b474-d65fa3f91f9c
 
 2024-09-29 14:14:57.283 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:14:57.283 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-29 14:14:57.283 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-09-29 14:14:57.322 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7242,8 +7242,8 @@
 
   1857e36d-8d4d-495a-b474-d65fa3f91f9c
 
-2024-09-29 14:14:57.335 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:14:57.336 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 14:14:57.335 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:14:57.336 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 14:14:57.340 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:14:57.340 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:14:57.503 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -7286,7 +7286,7 @@
   173a8023-a501-4d30-8f7e-613782c048f3
 
 2024-09-29 14:14:57.544 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:14:57.544 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 14:14:57.544 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 14:14:57.573 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7421,7 +7421,7 @@
 
   173a8023-a501-4d30-8f7e-613782c048f3
 
-2024-09-29 14:14:57.584 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:14:57.584 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -7483,7 +7483,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:14:57.585 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:14:57.585 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:14:57.597 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:14:57.598 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:14:57.599 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -7529,7 +7529,7 @@
   471d2093-1ce9-4c15-947c-08c14f8e62f2
 
 2024-09-29 14:14:57.823 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:14:57.823 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 14:14:57.823 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 14:14:57.882 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7664,7 +7664,7 @@
 
   471d2093-1ce9-4c15-947c-08c14f8e62f2
 
-2024-09-29 14:14:57.909 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:14:57.909 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -7726,7 +7726,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:14:57.909 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:14:57.909 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:14:57.914 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-09-29 14:14:57.915 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:14:57.916 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -7772,7 +7772,7 @@
   f39c24a3-a7d3-48af-92cc-4e7630ad20fb
 
 2024-09-29 14:14:58.142 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:14:58.143 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 14:14:58.143 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 14:14:58.165 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -7907,8 +7907,8 @@
 
   f39c24a3-a7d3-48af-92cc-4e7630ad20fb
 
-2024-09-29 14:14:58.175 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:14:58.175 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 14:14:58.175 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:14:58.175 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 14:14:58.180 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 14:14:58.181 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:14:58.339 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -7951,7 +7951,7 @@
   e33596c7-b383-47d9-9285-cbf711a8d5c8
 
 2024-09-29 14:14:58.399 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:14:58.400 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 14:14:58.400 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 14:14:58.424 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -8086,7 +8086,7 @@
 
   e33596c7-b383-47d9-9285-cbf711a8d5c8
 
-2024-09-29 14:14:58.441 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:14:58.441 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -8148,7 +8148,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:14:58.442 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:14:58.442 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:14:58.447 [main] INFO  com.apiTests.serviceSteps.mockTestSteps.MockLogoutSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:14:58.448 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:14:58.448 [main] INFO  com.apiTests.serviceSteps.mockTestSteps.MockLogoutSteps - The username in the response matches the one in the request
@@ -8298,8 +8298,8 @@
 
   58f64a70-c6d6-4d21-b7a9-b5880f1103e2
 
-2024-09-29 14:14:58.665 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-09-29 14:14:58.665 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-09-29 14:14:58.665 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-09-29 14:14:58.665 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
 2024-09-29 14:22:34.216 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:22:34.217 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-09-29 14:22:34.221 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -8340,7 +8340,7 @@
   4b1c30f6-89c0-45f9-9957-c29296e9a713
 
 2024-09-29 14:22:35.146 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:22:35.146 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-29 14:22:35.146 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 14:22:36.201 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -8475,8 +8475,8 @@
 
   4b1c30f6-89c0-45f9-9957-c29296e9a713
 
-2024-09-29 14:22:36.279 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:22:36.280 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-09-29 14:22:36.279 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:22:36.280 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-09-29 14:22:36.344 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 14:22:36.346 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:22:36.582 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -8519,7 +8519,7 @@
   14dd8ecb-a9f5-43dc-b795-aa35aed2b4b2
 
 2024-09-29 14:22:36.601 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:22:36.602 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-29 14:22:36.602 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-09-29 14:22:36.642 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -8654,8 +8654,8 @@
 
   14dd8ecb-a9f5-43dc-b795-aa35aed2b4b2
 
-2024-09-29 14:22:36.649 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:22:36.649 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 14:22:36.649 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:22:36.649 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 14:22:36.654 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:22:36.654 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:22:36.810 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -8698,7 +8698,7 @@
   b78bacfa-5d12-4b55-a685-4ccfb99f3c63
 
 2024-09-29 14:22:36.836 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:22:36.837 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 14:22:36.837 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 14:22:36.861 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -8833,7 +8833,7 @@
 
   b78bacfa-5d12-4b55-a685-4ccfb99f3c63
 
-2024-09-29 14:22:36.872 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:22:36.872 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -8895,7 +8895,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:22:36.872 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:22:36.872 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:22:36.878 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:22:36.879 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:22:36.879 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -8941,7 +8941,7 @@
   d445bba4-8722-43bc-820e-d7a76ec6928e
 
 2024-09-29 14:22:37.096 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:22:37.096 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 14:22:37.096 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 14:22:37.124 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9076,7 +9076,7 @@
 
   d445bba4-8722-43bc-820e-d7a76ec6928e
 
-2024-09-29 14:22:37.140 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:22:37.140 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -9138,7 +9138,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:22:37.140 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:22:37.140 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:22:37.145 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-09-29 14:22:37.145 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:22:37.146 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -9184,7 +9184,7 @@
   25cae7b5-af17-4bde-8218-cc64b50bd22a
 
 2024-09-29 14:22:37.343 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:22:37.344 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 14:22:37.344 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 14:22:37.368 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9319,8 +9319,8 @@
 
   25cae7b5-af17-4bde-8218-cc64b50bd22a
 
-2024-09-29 14:22:37.374 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:22:37.374 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 14:22:37.374 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:22:37.374 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 14:22:37.379 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 14:22:37.379 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:22:37.612 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -9363,7 +9363,7 @@
   0dc1a15a-2d7c-4e7a-a584-eb9758dcb544
 
 2024-09-29 14:22:37.642 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:22:37.642 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 14:22:37.642 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 14:22:37.664 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9498,8 +9498,8 @@
 
   0dc1a15a-2d7c-4e7a-a584-eb9758dcb544
 
-2024-09-29 14:22:37.670 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: "User is unauthorized"
-2024-09-29 14:22:37.670 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:22:37.670 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: "User is unauthorized"
+2024-09-29 14:22:37.670 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:25:30.807 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
 2024-09-29 14:25:30.807 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:25:30.812 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
@@ -9540,7 +9540,7 @@
   fad3554a-2a17-406d-aac0-940b3263fc00
 
 2024-09-29 14:25:31.768 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:25:31.768 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-29 14:25:31.768 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 14:25:33.035 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9675,8 +9675,8 @@
 
   fad3554a-2a17-406d-aac0-940b3263fc00
 
-2024-09-29 14:25:33.146 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:25:33.147 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-09-29 14:25:33.146 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:25:33.147 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-09-29 14:25:33.213 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 14:25:33.213 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:25:33.453 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -9719,7 +9719,7 @@
   ceee48d5-d2cd-42d7-9365-8d284471888c
 
 2024-09-29 14:25:33.491 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:25:33.492 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-29 14:25:33.492 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-09-29 14:25:33.520 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9854,8 +9854,8 @@
 
   ceee48d5-d2cd-42d7-9365-8d284471888c
 
-2024-09-29 14:25:33.535 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:25:33.535 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 14:25:33.535 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:25:33.535 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 14:25:33.540 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:25:33.540 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:25:33.699 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -9898,7 +9898,7 @@
   24e0f44c-1d18-4a5e-b2f7-707ff7333a57
 
 2024-09-29 14:25:33.729 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:25:33.730 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 14:25:33.730 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 14:25:33.757 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -9983,7 +9983,7 @@
     }
   }
 
-2024-09-29 14:25:33.767 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:25:33.767 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -10045,7 +10045,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:25:33.767 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:25:33.767 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:25:33.767 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:25:33.767 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:25:33.767 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -10141,7 +10141,7 @@
   513053a0-0838-45e9-a215-23aa4f44bfd5
 
 2024-09-29 14:25:34.009 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:25:34.009 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 14:25:34.009 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 14:25:34.063 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -10276,7 +10276,7 @@
 
   513053a0-0838-45e9-a215-23aa4f44bfd5
 
-2024-09-29 14:25:34.082 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:25:34.082 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -10338,7 +10338,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:25:34.083 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:25:34.083 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:25:34.089 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-09-29 14:25:34.090 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:25:34.090 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -10384,7 +10384,7 @@
   0ee03188-b9e0-45d5-90f4-029da6e0080e
 
 2024-09-29 14:25:34.272 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:25:34.272 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 14:25:34.272 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 14:25:34.302 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -10519,8 +10519,8 @@
 
   0ee03188-b9e0-45d5-90f4-029da6e0080e
 
-2024-09-29 14:25:34.312 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:25:34.312 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 14:25:34.312 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:25:34.312 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 14:25:34.316 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 14:25:34.317 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:25:34.473 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -10563,7 +10563,7 @@
   b1f3ae06-75c4-4071-b358-0a3b8ab65b22
 
 2024-09-29 14:25:34.517 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:25:34.517 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 14:25:34.517 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 14:25:34.539 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -10590,7 +10590,7 @@
     }
   }
 
-2024-09-29 14:25:34.546 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: "User is unauthorized"
+2024-09-29 14:25:34.546 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: "User is unauthorized"
 2024-09-29 14:25:34.545 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 request:
 
   {
@@ -10649,7 +10649,7 @@
     }
   }
 
-2024-09-29 14:25:34.547 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:25:34.547 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:25:34.547 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
 
   {
@@ -10740,7 +10740,7 @@
   bad9df4b-d3b4-4722-8856-b4c095178c25
 
 2024-09-29 14:26:21.062 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:26:21.063 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
+2024-09-29 14:26:21.063 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameInvalidPassword.json
 2024-09-29 14:26:22.104 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -10875,8 +10875,8 @@
 
   bad9df4b-d3b4-4722-8856-b4c095178c25
 
-2024-09-29 14:26:22.198 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:26:22.198 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 401
+2024-09-29 14:26:22.198 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:26:22.198 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 401
 2024-09-29 14:26:22.378 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 14:26:22.381 [MockServer-EventLog0] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:26:22.641 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -10919,7 +10919,7 @@
   c76ad5a0-daee-4a52-85f4-a7c09adc3ebf
 
 2024-09-29 14:26:22.663 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:26:22.663 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
+2024-09-29 14:26:22.663 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndEmptyPassword.json
 2024-09-29 14:26:22.695 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11054,8 +11054,8 @@
 
   c76ad5a0-daee-4a52-85f4-a7c09adc3ebf
 
-2024-09-29 14:26:22.701 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:26:22.701 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 14:26:22.701 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:26:22.701 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 14:26:22.705 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:26:22.706 [MockServer-EventLog20] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:26:22.864 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -11098,7 +11098,7 @@
   9e0b06e8-9c53-49df-b022-a816514c64a9
 
 2024-09-29 14:26:22.887 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:26:22.887 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 14:26:22.887 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 14:26:22.924 [MockServer-EventLog40] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11233,7 +11233,7 @@
 
   9e0b06e8-9c53-49df-b022-a816514c64a9
 
-2024-09-29 14:26:22.929 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:26:22.929 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -11295,7 +11295,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:26:22.929 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:26:22.929 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:26:22.945 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has not been logged in with a valid username and password
 2024-09-29 14:26:22.945 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:26:22.948 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -11341,7 +11341,7 @@
   ba21f358-9366-43f4-8392-599712ec2d99
 
 2024-09-29 14:26:23.140 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:26:23.140 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 14:26:23.140 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 14:26:23.194 [MockServer-EventLog60] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11476,7 +11476,7 @@
 
   ba21f358-9366-43f4-8392-599712ec2d99
 
-2024-09-29 14:26:23.207 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:26:23.207 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -11538,7 +11538,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:26:23.208 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:26:23.208 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:26:23.212 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and hashed password
 2024-09-29 14:26:23.213 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
 2024-09-29 14:26:23.213 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The username in the response matches the one in the request
@@ -11584,7 +11584,7 @@
   11e551ea-3f5e-402b-832d-7e7cc7a291d7
 
 2024-09-29 14:26:23.420 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:26:23.420 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
+2024-09-29 14:26:23.420 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndHashedPassword.json
 2024-09-29 14:26:23.442 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11719,8 +11719,8 @@
 
   11e551ea-3f5e-402b-832d-7e7cc7a291d7
 
-2024-09-29 14:26:23.455 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: null
-2024-09-29 14:26:23.455 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 404
+2024-09-29 14:26:23.455 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: null
+2024-09-29 14:26:23.455 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 404
 2024-09-29 14:26:23.459 [main] INFO  com.apiTests.serviceSteps.serviceSteps.LoginSteps - The system has been logged in with a valid username and password
 2024-09-29 14:26:23.460 [MockServer-EventLog80] INFO  org.mockserver.log.MockServerEventLog - 1080 stopped for port: 1080
 2024-09-29 14:26:23.628 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 started on port: 1080
@@ -11763,7 +11763,7 @@
   f6b296d7-1617-4415-ac0f-21e4cfff6ac0
 
 2024-09-29 14:26:23.655 [main] INFO  com.apiTests.requests.HelperMethod - The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'
-2024-09-29 14:26:23.655 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
+2024-09-29 14:26:23.655 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Request body loaded from: src/test/resources/jsonFilesLogin/validUsernameAndPassword.json
 2024-09-29 14:26:23.687 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 received request:
 
   {
@@ -11848,7 +11848,7 @@
     }
   }
 
-2024-09-29 14:26:23.697 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Response received: {
+2024-09-29 14:26:23.697 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Response received: {
   "user": {
     "name": "Sistem Yöneticisi",
     "surname": "ASELSAN",
@@ -11910,7 +11910,7 @@
     "right.alarm.filter"
   ]
 }
-2024-09-29 14:26:23.698 [main] INFO  com.apiTests.requests.mockRequests.LoginMockTest - Status Code: 200
+2024-09-29 14:26:23.698 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LoginMockTest - Status Code: 200
 2024-09-29 14:26:23.699 [MockServer-EventLog100] INFO  org.mockserver.log.MockServerEventLog - 1080 returning response:
 
   {
@@ -12110,5 +12110,5 @@
 
   f6d00a22-db81-47b5-8896-d251d8fa5b45
 
-2024-09-29 14:26:23.909 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Response received: "User is unauthorized"
-2024-09-29 14:26:23.909 [main] INFO  com.apiTests.requests.mockRequests.LogoutMockTest - Status Code: 401
+2024-09-29 14:26:23.909 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Response received: "User is unauthorized"
+2024-09-29 14:26:23.909 [main] INFO  com.apiTests.requests.mockRequests.user_controller.LogoutMockTest - Status Code: 401
