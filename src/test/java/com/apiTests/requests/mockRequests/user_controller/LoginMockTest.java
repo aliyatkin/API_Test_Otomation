@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.given;
 
 public class LoginMockTest extends MockBaseTest {
 
-    //
+    // Initialize a logger using Log4j for the LoginMockTest class
     private static final Logger logger = LogManager.getLogger(LoginMockTest.class);
 
     @Step("User logs in with provided credentials")
@@ -25,7 +25,7 @@ public class LoginMockTest extends MockBaseTest {
 
         logger.info("Request body loaded from: " + requestBodyPath);
 
-        // Send request to login endpoint
+        // Send request to login endpoint with given parameters
         Response response = given(spec)
                 .when().header("Accept-Language", "en")
                 .queryParam("basic", torf)

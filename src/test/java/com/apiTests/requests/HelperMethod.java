@@ -24,7 +24,7 @@ public class HelperMethod {
             logger.info("The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'");
         }
         catch (IOException e){
-            logger.error("The user information in the 'userDataPath' JSON file was not assigned to a string variable named 'userLoginData'" + e.getMessage());
+            logger.error("The user information in the 'userDataPath' JSON file was not assigned to a string variable named 'userLoginData'{}", e.getMessage());
         }
         return userLoginData;
     }
@@ -38,19 +38,19 @@ public class HelperMethod {
             // Write the JSON data to a file.
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(responseBodyPath), jsonNode);
 
-            logger.info("The JSON data was successfully written to the file: " + responseBodyPath);
+            logger.info("The JSON data was successfully written to the file: {}", responseBodyPath);
 
         } catch (Exception e) {
-            logger.error ("Error writing to the file: " + e.getMessage());
+            logger.error("Error writing to the file: {}", e.getMessage());
         }
     }
 
     public static void writeStringToFile(String content, String filePath) {
         try {
             Files.write(Paths.get(filePath), content.getBytes());
-            logger.info("The content was successfully written to the file: " + filePath);
+            logger.info("The content was successfully written to the file: {}", filePath);
         } catch (IOException e) {
-            logger.error("Error writing to the file: " + e.getMessage());
+            logger.error("Error writing to the file: {}", e.getMessage());
         }
     }
 }

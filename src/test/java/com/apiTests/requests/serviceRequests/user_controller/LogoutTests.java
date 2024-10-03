@@ -11,7 +11,7 @@ import static io.restassured.RestAssured.given;
 
 public class LogoutTests extends BaseTest {
 
-    //
+    // Initialize a logger using Log4j for the LoginMockTest class
     private static final Logger logger = LogManager.getLogger(LogoutTests.class);
 
     @Step("User logs out with the provided access token")
@@ -26,15 +26,15 @@ public class LogoutTests extends BaseTest {
         response.then().statusCode(statusCode);         // Check the status code: As expected?
         String contentType = response.getContentType(); // Store the content type of the response in a String
 
-        logger.info("Response received: " + response.asString());
-        logger.info("Status Code: " + response.getStatusCode());
+        logger.info("Response received: {}", response.asString());
+        logger.info("Status Code: {}", response.getStatusCode());
 
         // Return response
         if (contentType != null && contentType.contains("text/plain;charset=UTF-8"))  {
             return response;
         } else {
             // If not JSON, log the raw response and return null
-            logger.error("Unexpected content type: " + contentType);
+            logger.error("Unexpected content type: {}", contentType);
             return null;
         }
     }

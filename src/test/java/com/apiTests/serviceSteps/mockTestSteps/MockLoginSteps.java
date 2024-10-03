@@ -93,7 +93,7 @@ public class MockLoginSteps {
 
         // Save access token
         accessToken = loginResponse.getTokenDetails().getAccessToken();
-        logger.info("The Access Token has been saved: " + accessToken);
+        logger.info("The Access Token has been saved: {}", accessToken);
         Allure.addAttachment("Access Token", accessToken);
 
         loginMockService.stopMockServer();
@@ -132,7 +132,7 @@ public class MockLoginSteps {
     public void saveAccessTokenForMockHashedPassword(){
 
         accessToken = loginResponse.getTokenDetails().getAccessToken();
-        logger.info("The Access Token has been saved: " + accessToken);
+        logger.info("The Access Token has been saved: {}", accessToken);
         Allure.addAttachment("Access Token", accessToken);
 
         loginMockService.stopMockServer();

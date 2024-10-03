@@ -2,7 +2,6 @@ package com.apiTests.requests.mockRequests.user_controller;
 
 import com.apiTests.models.user_controller.renewAccessToken.RenewAccessTokenResponse;
 import com.apiTests.requests.mockRequests.MockBaseTest;
-import com.apiTests.requests.serviceRequests.user_controller.RenewAccessTokenTests;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
@@ -14,8 +13,8 @@ import static io.restassured.RestAssured.given;
 
 public class RenewAccessTokenMockTest extends MockBaseTest {
 
-    //
-    private static final Logger logger = LogManager.getLogger(RenewAccessTokenTests.class);
+    // Initialize a logger using Log4j for the LoginMockTest class
+    private static final Logger logger = LogManager.getLogger(RenewAccessTokenMockTest.class);
 
     @Step("Renew Access Token")
     public RenewAccessTokenResponse RenewAccessTokenForMock(int statusCode, String accessTokenPath ) {
@@ -32,15 +31,15 @@ public class RenewAccessTokenMockTest extends MockBaseTest {
         response.then().statusCode(statusCode);         // Check the status code: As expected?
         String contentType = response.getContentType(); // Store the content type of the response in a String
 
-        logger.info("Response received: " + response.asString());
-        logger.info("Status Code: " + response.getStatusCode());
+        logger.info("Response received: {}", response.asString());
+        logger.info("Status Code: {}", response.getStatusCode());
 
         // Return response
         if (contentType != null && contentType.contains("application/json"))  {
             return response.as(RenewAccessTokenResponse.class);
         } else {
             // If not JSON, log the raw response and return null
-            logger.error("Unexpected content type: " + contentType);
+            logger.error("Unexpected content type: {}", contentType);
             return null;
         }
     }

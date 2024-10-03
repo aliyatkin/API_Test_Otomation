@@ -14,7 +14,7 @@ import static io.restassured.RestAssured.given;
 
 public class LoginTests extends BaseTest {
 
-    //
+    // Initialize a logger using Log4j for the LoginMockTest class
     private static final Logger logger = LogManager.getLogger(LoginTests.class);
 
     @Step("User logs in with provided credentials")
@@ -23,7 +23,7 @@ public class LoginTests extends BaseTest {
         // It goes to the paths given to the method and writes the String inside those paths to a String
         String requestBody = requestBodyLoader(requestBodyPath);
 
-        logger.info("Request body loaded from: " + requestBodyPath);
+        logger.info("Request body loaded from: {}", requestBodyPath);
 
         // Send request to login endpoint
         Response response = given(spec)
@@ -31,20 +31,20 @@ public class LoginTests extends BaseTest {
                 .queryParam("basic", torf)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
-                .post(LOGIN_ENDPOINT); // endpoint'ler bir class'tan çekilecek
+                .post(LOGIN_ENDPOINT);
 
         response.then().statusCode(statusCode);         // Check the status code: As expected?
         String contentType = response.getContentType(); // Store the content type of the response in a String
 
-        logger.info("Response received: " + response.asString());
-        logger.info("Status Code: " + response.getStatusCode());
+        logger.info("Response received: {}", response.asString());
+        logger.info("Status Code: {}", response.getStatusCode());
 
         // Return response
         if (contentType != null && contentType.contains("application/json"))  {
             return response.as(LoginResponse.class);
         } else {
             // If not JSON, log the raw response and return null
-            logger.error("Unexpected content type: " + contentType);
+            logger.error("Unexpected content type: {}", contentType);
             return null;
         }
     }
