@@ -20,136 +20,176 @@ import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 
 public class MockLoginSteps {
 
+    // Used for JSON processing and comparison
     ObjectMapper objectMapper = new ObjectMapper();
 
+    // Variables to store access token and login response
     private String accessToken;
     private LoginResponse loginResponse;
     private LoginMockTest loginMockTests;
     private static LoginMockService loginMockService;
+
+    // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(MockLoginSteps.class);
 
-    @Given("User logs into the system with a valid username and invalid password for Mock Service")
-    public void validUsernameAndInvalidPasswordForMock(){
+    // Mock login with a valid username and invalid password
+    @Given("the user logs in with a valid username and an invalid password using the mock service")
+    public void invalidPassword_mock() {
 
+        // Initialize and start the mock service for login
         loginMockService = new LoginMockService();
         loginMockService.startMockServer();
-        loginMockService.setupLoginMock(NOT_OK, mockResponseBodyInvalid, validUsernameInvalidPassword, "true");
 
-        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
-        loginResponse = loginMockTests.LoginForMock(validUsernameInvalidPassword,NOT_OK,true);  // Save the response in loginResponse
+        // Set up the mock request and response for the login with invalid password
+        loginMockService.setupLoginMock(NOT_OK, V_USERNAME_I_PASSWORD, NULL_JSON, "true");
+
+        // Send a login request using mock data
+        loginMockTests = new LoginMockTest();
+        loginResponse = loginMockTests.LoginForMock(NOT_OK, V_USERNAME_I_PASSWORD, true);
+
+        logger.info("The system has not been logged in with a valid username and invalid password");
+
+        // Stop the mock server after test
+        loginMockService.stopMockServer();
+    }
+
+    // Mock login with a valid username and empty password
+    @Given("the user logs in with a valid username and an empty password using the mock service")
+    public void emptyPassword_mock() {
+
+        // Initialize and start the mock service for login
+        loginMockService = new LoginMockService();
+        loginMockService.startMockServer();
+
+        // Set up the mock request and response for login with empty password
+        loginMockService.setupLoginMock(NOT_OK, V_USERNAME_E_PASSWORD, NULL_JSON, "true");
+
+        // Execute login request with mock data
+        loginMockTests = new LoginMockTest();
+        loginResponse = loginMockTests.LoginForMock(NOT_OK, V_USERNAME_E_PASSWORD, true);
+
+        logger.info("The system has not been logged in with a valid username and empty password");
+
+        // Stop the mock server after the test
+        loginMockService.stopMockServer();
+    }
+
+    // Mock login with valid username and password
+    @Given("the user logs in with a valid username and password using the mock service")
+    public void valid_mock() {
+
+        // Initialize and start the mock service for login
+        loginMockService = new LoginMockService();
+        loginMockService.startMockServer();
+
+        // Set up the mock request and response for the login with valid credentials
+        loginMockService.setupLoginMock(OK, V_USERNAME_PASSWORD, MOCK_LOGIN_RESPONSE_BODY, "true");
+
+        // Execute login request
+        loginMockTests = new LoginMockTest();
+        loginResponse = loginMockTests.LoginForMock(OK, V_USERNAME_PASSWORD, true);
 
         logger.info("The system has been logged in with a valid username and password");
-
-        loginMockService.stopMockServer();
-    }
-    @Given("User logs into the system with a valid username and empty password for Mock Service")
-    public void validUsernameAndEmptyPasswordForMock(){
-
-        loginMockService = new LoginMockService();
-        loginMockService.startMockServer();
-        loginMockService.setupLoginMock(NOT_OK, mockResponseBodyEmpty, validUsernameAndEmptyPassword, "true");
-
-        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
-        loginResponse = loginMockTests.LoginForMock(validUsernameAndEmptyPassword,NOT_OK,true);  // Save the response in loginResponse
-
-        logger.info("The system has not been logged in with a valid username and password");
-
-        loginMockService.stopMockServer();
     }
 
-    @Given("User logs into the system with a valid username and password for Mock Service")
-    public void validUsernameAndPasswordForMock() {
-
-        loginMockService = new LoginMockService();
-        loginMockService.startMockServer();
-        loginMockService.setupLoginMock(OK, mockResponseBody, validUsernameAndPassword, "true");
-
-        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
-        loginResponse = loginMockTests.LoginForMock(validUsernameAndPassword,OK,true);  // Save the response in loginResponse
-
-        logger.info("The system has not been logged in with a valid username and password");
-    }
-
-    @When("Verifying the required response parameters for Mock Service")
-    public void checkParameterForMock() throws JsonProcessingException {
+    // Verifies the response parameters after mock login
+    @When("the system verifies the required response parameters for the mock service")
+    public void checkParameter_mock() throws JsonProcessingException {
 
         String username = loginResponse.getUser().getUsername();
-        String requestBody = requestBodyLoader(validUsernameAndPassword);
+        String requestBody = requestBodyLoader(V_USERNAME_PASSWORD);
         JsonNode jsonNode = objectMapper.readTree(requestBody);
 
-        // Username check
+        // Check if the username in the response matches the request
         if (jsonNode.get("username").asText().equals(username)) {
-            logger.info("The username in the response matches the one in the request");
-            Allure.addAttachment("username check","The username in the response matches the one in the request");
+            logger.info("The username in the response matches the request");
+            Allure.addAttachment("Username Check", "The username in the response matches the request");
         } else {
             logger.error("The username in the response does not match the one in the request");
-            Allure.addAttachment("username check","The username in the response does not matches the one in the request");
-            Assertions.fail("The username in the response does not match the one in the request");
+            Allure.addAttachment("Username Check", "The username in the response does not match the request");
+            Assertions.fail("The username in the response does not match the request");
         }
     }
 
-    @Then("Save the access token for Mock Service")
-    public void saveAccessTokenForMock() {
+    // Saves the access token returned from the mock service
+    @Then("the access token is saved for the mock service")
+    public void saveAccessToken_mock() {
 
-        // Save access token
         accessToken = loginResponse.getTokenDetails().getAccessToken();
         logger.info("The Access Token has been saved: {}", accessToken);
         Allure.addAttachment("Access Token", accessToken);
 
+        // Stop the mock server after test
         loginMockService.stopMockServer();
     }
 
-    @Given("User logs into the system with a valid username and hashed password for Mock Service")
-    public void validUsernameAndHashedPassword(){
+    // Mock login with hashed password
+    @Given("the user logs in with a valid username and hashed password using the mock service")
+    public void hashedPassword_mock() {
 
+        // Initialize and start the mock service for login
         loginMockService = new LoginMockService();
         loginMockService.startMockServer();
-        loginMockService.setupLoginMock(OK, mockResponseBody, validUsernameAndHashedPassword,"false");
 
-        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
-        loginResponse = loginMockTests.LoginForMock(validUsernameAndHashedPassword, OK,false);  // Save the response in loginResponse
+        // Set up the mock request and response for the login with hashed password
+        loginMockService.setupLoginMock(OK, V_USERNAME_H_PASSWORD, MOCK_LOGIN_RESPONSE_BODY, "false");
+
+        // Execute login request with hashed password
+        loginMockTests = new LoginMockTest();
+        loginResponse = loginMockTests.LoginForMock(OK, V_USERNAME_H_PASSWORD, false);
 
         logger.info("The system has been logged in with a valid username and hashed password");
     }
-    @When("Verifying the required response parameters for Mock Service by using hashed password")
-    public void checkParameterForMockHashedPassword() throws JsonProcessingException{
+
+    // Verifies the response when using hashed password
+    @When("the system verifies the required response parameters using the hashed password for the mock service")
+    public void checkParameterHashedPassword_mock() throws JsonProcessingException {
 
         String username = loginResponse.getUser().getUsername();
-        String requestBody = requestBodyLoader(validUsernameAndHashedPassword);
+        String requestBody = requestBodyLoader(V_USERNAME_H_PASSWORD);
         JsonNode jsonNode = objectMapper.readTree(requestBody);
 
-        // Username check
+        // Check if the username in the response matches the request
         if (jsonNode.get("username").asText().equals(username)) {
             logger.info("The username in the response matches the one in the request");
-            Allure.addAttachment("username check","The username in the response matches the one in the request");
+            Allure.addAttachment("Username Check", "The username in the response matches the request");
         } else {
             logger.error("The username in the response does not match the one in the request");
-            Allure.addAttachment("username check","The username in the response does not matches the one in the request");
-            Assertions.fail("The username in the response does not match the one in the request");
+            Allure.addAttachment("Username Check", "The username in the response does not match the request");
+            Assertions.fail("The username in the response does not match the request");
         }
     }
-    @Then("Save the access token for Mock Service by using hashed password")
-    public void saveAccessTokenForMockHashedPassword(){
+
+    // Saves the access token when using hashed password
+    @Then("the access token is saved using the hashed password for the mock service")
+    public void saveAccessTokenHashedPassword_mock() {
 
         accessToken = loginResponse.getTokenDetails().getAccessToken();
         logger.info("The Access Token has been saved: {}", accessToken);
         Allure.addAttachment("Access Token", accessToken);
 
+        // Stop the mock server after test
         loginMockService.stopMockServer();
     }
 
-    @Given("User logs into the system with a valid username and hashed password for Mock Service, true query")
-    public void validUsernameAndHashedPasswordTrueQuery(){
+    // Mock login with a valid username, hashed password, and true query
+    @Given("the user logs in with a valid username and hashed password with a true query using the mock service")
+    public void hashedPasswordTrueQuery_mock() {
 
+        // Initialize and start the mock service for login
         loginMockService = new LoginMockService();
         loginMockService.startMockServer();
-        loginMockService.setupLoginMock(NOT_OK, mockResponseBodyInvalid, validUsernameAndHashedPassword, "true");
 
-        loginMockTests = new LoginMockTest();  // Create the LoginMockTest class for Login
-        loginResponse = loginMockTests.LoginForMock(validUsernameAndHashedPassword,NOT_OK,true);  // Save the response in loginResponse
+        // Set up the mock request and response for the login with hashed password when query is True
+        loginMockService.setupLoginMock(NOT_OK, V_USERNAME_H_PASSWORD, NULL_JSON, "true");
 
-        logger.info("The system has been logged in with a valid username and password");
+        // Execute login request with hashed password when query is True
+        loginMockTests = new LoginMockTest();
+        loginResponse = loginMockTests.LoginForMock(NOT_OK, V_USERNAME_H_PASSWORD, true);
 
+        logger.info("The system has not been logged in with a valid username and password");
+
+        // Stop the mock server after test
         loginMockService.stopMockServer();
     }
 }

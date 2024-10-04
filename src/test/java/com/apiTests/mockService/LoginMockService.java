@@ -10,22 +10,34 @@ import static org.mockserver.model.HttpResponse.response;
 
 public class LoginMockService {
 
+    // The mockServer variable belonging to the ClientAndServer class is being defined
     private static ClientAndServer mockServer;
 
+    /**
+     * This method starts the MockServer on port 1080 and assigns it to the mockServer variable.
+     */
     public void startMockServer() {
 
-        // Start the MockServer
+        // MockServer is started on port 1080 and assigned to the mockServer variable
         mockServer = ClientAndServer.startClientAndServer(1080);
     }
-    // torf = Shortcut of "True or False"
-    public void setupLoginMock(int statusCode, String mockResponseBodyPath, String requestBodyPath, String torf) {
 
-        // It goes to the paths given to the method and writes the String inside those paths to a String
+    /**
+     * This method sets up the login mock service with the specified parameters
+     *
+     * @param statusCode                The status code that the MockServer should return
+     * @param mockResponseBodyPath      The path to the file containing the mock response body
+     * @param mockRequestBodyPath       The path to the file containing the expected request body
+     * @param torf                      A string representing "True or False" for query parameter
+     */
+    public void setupLoginMock(int statusCode, String mockRequestBodyPath, String mockResponseBodyPath,  String torf) {
+
+        // Load the response and request body from the specified file paths
+        String mockReqBody = requestBodyLoader(mockRequestBodyPath);
         String mockRespBody = requestBodyLoader(mockResponseBodyPath);
-        String mockReqBody = requestBodyLoader(requestBodyPath);
 
-        // The purpose of this code is to mock a POST request and provide a predefined response for testing,
-        // without needing the actual server interaction.
+        // Mocking a POST request and providing a predefined response for testing,
+        // without needing actual server interaction.
         new MockServerClient("localhost", 1080)
                 .when(request()
                         .withMethod("POST")
@@ -42,8 +54,12 @@ public class LoginMockService {
                 );
     }
 
-    // Stop the MockServer
-    public void stopMockServer() {
+    /**
+     * Stops the MockServer instance.
+     */
+    public void stopMockServer()
+    {
+        // Stop the MockServer
         mockServer.stop();
     }
 }

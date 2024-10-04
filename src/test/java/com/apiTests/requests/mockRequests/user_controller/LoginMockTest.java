@@ -14,18 +14,28 @@ import static io.restassured.RestAssured.given;
 
 public class LoginMockTest extends MockBaseTest {
 
-    // Initialize a logger using Log4j for the LoginMockTest class
+    // Logger instance is initialized using Log4j for logging in this class
     private static final Logger logger = LogManager.getLogger(LoginMockTest.class);
 
+    /**
+     * Simulates a login request and returns the response.
+     *
+     * @param statusCode        The expected status code of the response.
+     * @param requestBodyPath   Path to the request body JSON file.
+     * @param torf              A boolean query parameter ("True or False").
+     * @return LoginResponse    If the response is in JSON format, it is deserialized into LoginResponse object.
+     *                          Otherwise, returns null.
+     */
     @Step("User logs in with provided credentials")
-    public LoginResponse LoginForMock(String requestBodyPath, int statusCode, boolean torf) {
+    public LoginResponse LoginForMock(int statusCode, String requestBodyPath, boolean torf) {
 
-        // It goes to the paths given to the method and writes the String inside those paths to a String
+        // Load the request body from the specified file path
         String requestBody = requestBodyLoader(requestBodyPath);
 
+        // Log the loaded request body file path
         logger.info("Request body loaded from: " + requestBodyPath);
 
-        // Send request to login endpoint with given parameters
+        // Send the login request to the specified endpoint with headers, query parameters, and request body
         Response response = given(spec)
                 .when().header("Accept-Language", "en")
                 .queryParam("basic", torf)
@@ -33,17 +43,20 @@ public class LoginMockTest extends MockBaseTest {
                 .body(requestBody)
                 .post(LOGIN_ENDPOINT);
 
-        response.then().statusCode(statusCode);         // Check the status code: As expected?
-        String contentType = response.getContentType(); // Store the content type of the response in a String
+        // Validate the status code of the response
+        response.then().statusCode(statusCode);
+        // Retrieve the content type of the response
+        String contentType = response.getContentType();
 
+        // Log the response details
         logger.info("Response received: " + response.asString());
         logger.info("Status Code: " + response.getStatusCode());
 
-        // Return response
+        // Check if the content type is JSON and return the deserialized response
         if (contentType != null && contentType.contains("application/json"))  {
             return response.as(LoginResponse.class);
         } else {
-            // If not JSON, log the raw response and return null
+            // Log an error if the content type is unexpected and return null
             logger.error("Unexpected content type: " + contentType);
             return null;
         }

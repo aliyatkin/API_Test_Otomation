@@ -16,50 +16,70 @@ public class MockRenewATSteps {
     private RenewAccessTokenMockTest renewAccessTokenMockTest;
     private RenewAccessTokenResponse response;
     private static RenewAccessTokenMockService renewAccessTokenMockService;
+
+    // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(MockRenewATSteps.class);
 
-    @And("User refresh the access token with the saved access token, Mock Service")
-    public void renewAccessToken_mock(){
+    // Mock renew access token with saved access token
+    @And("the user refresh the access token with the saved access token for mock service")
+    public void valid_mock(){
 
+        // Initialize and start the mock service for renew access token
         renewAccessTokenMockService = new RenewAccessTokenMockService();
         renewAccessTokenMockService.startMockServer();
-        renewAccessTokenMockService.setupRenewAccessTokenMock(accessTokenJSONPath, OK, mockRenewATResponse);
 
+        // Set up the mock response for the renew access token with saved access token
+        renewAccessTokenMockService.setupRenewAccessTokenMock(OK, ACCESS_TOKEN_JSON, MOCK_RENEW_RESPONSE_BODY);
+
+        // Send a renew access token request using mock data
         renewAccessTokenMockTest = new RenewAccessTokenMockTest();
-        response = renewAccessTokenMockTest.RenewAccessTokenForMock(OK,accessTokenJSONPath);
-        System.out.println(response);
+        response = renewAccessTokenMockTest.RenewAccessTokenForMock(OK,ACCESS_TOKEN_JSON);
+
         logger.info("The access token refreshed");
 
+        // Stop the mock server after test
         renewAccessTokenMockService.stopMockServer();
     }
 
-    @And("User can not refresh the access token with empty parameter, Mock Service")
-    public void renewAccessToken_emptyParameter_mock(){
+    // Mock renew access token with empty access token
+    @And("the user can not refresh the access token with empty parameter for mock service")
+    public void emptyParameter_mock(){
 
+        // Initialize and start the mock service for renew access token
         renewAccessTokenMockService = new RenewAccessTokenMockService();
         renewAccessTokenMockService.startMockServer();
-        renewAccessTokenMockService.setupRenewAccessTokenMock(emptyJSON, NOT_OK, mockRenewATResponse);
 
+        // Set up the mock response for the renew access token with empty access token
+        renewAccessTokenMockService.setupRenewAccessTokenMock(NOT_OK, EMPTY_JSON, MOCK_RENEW_RESPONSE_BODY);
+
+        // Send a renew access token request using mock data
         renewAccessTokenMockTest = new RenewAccessTokenMockTest();
-        response = renewAccessTokenMockTest.RenewAccessTokenForMock(NOT_OK,emptyJSON);
+        response = renewAccessTokenMockTest.RenewAccessTokenForMock(NOT_OK, EMPTY_JSON);
 
         logger.info("The access token can not refreshed");
 
+        // Stop the mock server after test
         renewAccessTokenMockService.stopMockServer();
     }
 
-    @And("User can not refresh the access token with wrong parameter, Mock Service")
-    public void renewAccessToken_wrongParameter_mock(){
+    // Mock renew access token with wrong access token
+    @And("the user can not refresh the access token with wrong parameter, mock service")
+    public void wrongParameter_mock(){
 
+        // Initialize and start the mock service for renew access token
         renewAccessTokenMockService = new RenewAccessTokenMockService();
         renewAccessTokenMockService.startMockServer();
-        renewAccessTokenMockService.setupRenewAccessTokenMock(wrongAccessToken, NOT_OK, mockRenewATResponse);
 
+        // Set up the mock response for the renew access token with wrong access token
+        renewAccessTokenMockService.setupRenewAccessTokenMock(NOT_OK, WRONG_ACCESS_TOKEN, MOCK_RENEW_RESPONSE_BODY);
+
+        // Send a renew access token request using mock data
         renewAccessTokenMockTest = new RenewAccessTokenMockTest();
-        response = renewAccessTokenMockTest.RenewAccessTokenForMock(NOT_OK,wrongAccessToken);
+        response = renewAccessTokenMockTest.RenewAccessTokenForMock(NOT_OK, WRONG_ACCESS_TOKEN);
 
         logger.info("The access token can not refreshed");
 
+        // Stop the mock server after test
         renewAccessTokenMockService.stopMockServer();
     }
 }

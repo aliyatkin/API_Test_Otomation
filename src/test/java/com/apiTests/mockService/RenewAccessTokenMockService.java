@@ -11,22 +11,33 @@ import static org.mockserver.model.HttpResponse.response;
 
 public class RenewAccessTokenMockService {
 
+    // The mockServer variable belonging to the ClientAndServer class is being defined
     private static ClientAndServer mockServer;
 
+    /**
+     * This method starts the MockServer on port 1080 and assigns it to the mockServer variable.
+     */
     public void startMockServer() {
 
-        // Start the MockServer
+        // MockServer is started on port 1080 and assigned to the mockServer variable
         mockServer = ClientAndServer.startClientAndServer(1080);
     }
 
-    public void setupRenewAccessTokenMock(String accessTokenPath, int statusCode, String responseBodyPath) {
+    /**
+     * This method sets up the renew access token mock service with the specified parameters.
+     *
+     * @param statusCode            The status code that the MockServer should return
+     * @param accessTokenPath       The path to the file containing the access token
+     * @param responseBodyPath      The path to the file containing the mock response body
+     */
+    public void setupRenewAccessTokenMock(int statusCode, String accessTokenPath,  String responseBodyPath) {
 
-        // It goes to the paths given to the method and writes the String inside those paths to a String
-        String responseBody = requestBodyLoader(responseBodyPath);
+        // Load the access token and response body from the specified file paths
         String accessToken = requestBodyLoader(accessTokenPath);
+        String responseBody = requestBodyLoader(responseBodyPath);
 
-        // The purpose of this code is to mock a POST request and provide a predefined response for testing,
-        // without needing the actual server interaction.
+        // Mocking a POST request and providing a predefined response for testing,
+        // without needing actual server interaction.
         new MockServerClient("localhost", 1080)
                 .when(request()
                         .withMethod("POST")
@@ -40,8 +51,11 @@ public class RenewAccessTokenMockService {
                 );
     }
 
-    // Stop the MockServer
+    /**
+     * Stops the MockServer instance.
+     */
     public void stopMockServer() {
+        // Stop the MockServer
         mockServer.stop();
     }
 }

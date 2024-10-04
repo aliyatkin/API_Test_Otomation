@@ -12,31 +12,39 @@ import static com.apiTests.constants.StatusCode.OK;
 public class RenewAccessTokenSteps {
 
     private RenewAccessTokenTests renewAccessTokenTests;
+
+    // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(RenewAccessTokenSteps.class);
 
-    @And("User refresh the access token with the saved access token")
+    // API renew access token with saved access token
+    @And("the user refresh the access token with the saved access token")
     public void renewAccessToken(){
 
+        // Send a renew access token request to API
         renewAccessTokenTests = new RenewAccessTokenTests();
-        renewAccessTokenTests.RenewAccessToken(OK,accessTokenPath);
+        renewAccessTokenTests.RenewAccessToken(OK,ACCESS_TOKEN);
 
         logger.info("The access token refreshed");
     }
 
-    @And("User can not refresh the access token with empty parameter")
+    // API renew access token with saved access token
+    @And("the user can not refresh the access token with empty parameter")
     public void renewAccessToken_emptyParameter(){
 
+        // Send a renew access token request to API
         renewAccessTokenTests = new RenewAccessTokenTests();
-        renewAccessTokenTests.RenewAccessToken(NOT_OK,emptyJSON);
+        renewAccessTokenTests.RenewAccessToken(NOT_OK,EMPTY_JSON);
 
         logger.info("The access token can not refreshed");
     }
 
-    @And("User can not refresh the access token with wrong parameter")
+    // API renew access token with saved access token
+    @And("the user can not refresh the access token with wrong parameter")
     public void renewAccessToken_wrongParameter(){
 
+        // Send a renew access token request to API
         renewAccessTokenTests = new RenewAccessTokenTests();
-        renewAccessTokenTests.RenewAccessToken(NOT_OK,wrongAccessToken);
+        renewAccessTokenTests.RenewAccessToken(NOT_OK,WRONG_ACCESS_TOKEN);
 
         logger.info("The access token can not refreshed");
     }
