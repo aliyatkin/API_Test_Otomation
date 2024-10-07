@@ -6,7 +6,10 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static com.apiTests.constants.ContentType.charset;
 import static com.apiTests.constants.Endpoint.LOGOUT_ENDPOINT;
+import static com.apiTests.constants.Language.en;
+import static com.apiTests.constants.Language.language;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
@@ -30,6 +33,7 @@ public class LogoutMockTest extends MockBaseTest {
         // Send the logout request to the specified endpoint with headers
         Response response = given(spec)
                 .header("Authorization", "Bearer " + accessToken)
+                .header(language, en)
                 .post(LOGOUT_ENDPOINT);
 
         // Validate the status code of the response
@@ -42,7 +46,7 @@ public class LogoutMockTest extends MockBaseTest {
         logger.info("Status Code: {}", response.getStatusCode());
 
         // Check if the content type is JSON and return the deserialized response
-        if (contentType != null && contentType.contains("text/plain;charset=UTF-8"))  {
+        if (contentType != null && contentType.contains(charset))  {
             return response;
         } else {
             // Log an error if the content type is unexpected and return null

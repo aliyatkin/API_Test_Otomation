@@ -41,11 +41,11 @@ public class MockLoginSteps {
         loginMockService.startMockServer();
 
         // Set up the mock request and response for the login with invalid password
-        loginMockService.setupLoginMock(NOT_OK, V_USERNAME_I_PASSWORD, NULL_JSON, "true");
+        loginMockService.setupLoginMock(UNAUTHORIZED, V_USERNAME_I_PASSWORD, NULL_JSON, "true");
 
         // Send a login request using mock data
         loginMockTests = new LoginMockTest();
-        loginResponse = loginMockTests.LoginForMock(NOT_OK, V_USERNAME_I_PASSWORD, true);
+        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, V_USERNAME_I_PASSWORD, true);
 
         logger.info("The system has not been logged in with a valid username and invalid password");
 
@@ -62,11 +62,11 @@ public class MockLoginSteps {
         loginMockService.startMockServer();
 
         // Set up the mock request and response for login with empty password
-        loginMockService.setupLoginMock(NOT_OK, V_USERNAME_E_PASSWORD, NULL_JSON, "true");
+        loginMockService.setupLoginMock(UNAUTHORIZED, V_USERNAME_E_PASSWORD, NULL_JSON, "true");
 
         // Execute login request with mock data
         loginMockTests = new LoginMockTest();
-        loginResponse = loginMockTests.LoginForMock(NOT_OK, V_USERNAME_E_PASSWORD, true);
+        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, V_USERNAME_E_PASSWORD, true);
 
         logger.info("The system has not been logged in with a valid username and empty password");
 
@@ -181,11 +181,11 @@ public class MockLoginSteps {
         loginMockService.startMockServer();
 
         // Set up the mock request and response for the login with hashed password when query is True
-        loginMockService.setupLoginMock(NOT_OK, V_USERNAME_H_PASSWORD, NULL_JSON, "true");
+        loginMockService.setupLoginMock(UNAUTHORIZED, V_USERNAME_H_PASSWORD, NULL_JSON, "true");
 
         // Execute login request with hashed password when query is True
         loginMockTests = new LoginMockTest();
-        loginResponse = loginMockTests.LoginForMock(NOT_OK, V_USERNAME_H_PASSWORD, true);
+        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, V_USERNAME_H_PASSWORD, true);
 
         logger.info("The system has not been logged in with a valid username and password");
 

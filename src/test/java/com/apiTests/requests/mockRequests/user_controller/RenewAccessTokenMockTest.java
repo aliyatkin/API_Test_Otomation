@@ -7,7 +7,10 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static com.apiTests.constants.ContentType.json;
 import static com.apiTests.constants.Endpoint.RENEW_ACCESS_TOKEN_ENDPOINT;
+import static com.apiTests.constants.Language.en;
+import static com.apiTests.constants.Language.language;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
@@ -31,6 +34,7 @@ public class RenewAccessTokenMockTest extends MockBaseTest {
         // Send the renew access token request to the specified endpoint with headers
         Response response = given(spec)
                 .header("Authorization", "Bearer" + accessToken)
+                .header(language, en)
                 .post(RENEW_ACCESS_TOKEN_ENDPOINT);
 
         // Validate the status code of the response
@@ -43,7 +47,7 @@ public class RenewAccessTokenMockTest extends MockBaseTest {
         logger.info("Status Code: {}", response.getStatusCode());
 
         // Check if the content type is JSON and return the deserialized response
-        if (contentType != null && contentType.contains("application/json"))  {
+        if (contentType != null && contentType.contains(json))  {
             return response.as(RenewAccessTokenResponse.class);
         } else {
             // Log an error if the content type is unexpected and return null

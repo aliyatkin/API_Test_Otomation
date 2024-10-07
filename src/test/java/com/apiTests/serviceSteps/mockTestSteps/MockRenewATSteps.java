@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static com.apiTests.constants.Data_Path.*;
-import static com.apiTests.constants.StatusCode.NOT_OK;
+import static com.apiTests.constants.StatusCode.UNAUTHORIZED;
 import static com.apiTests.constants.StatusCode.OK;
 
 public class MockRenewATSteps {
@@ -50,11 +50,11 @@ public class MockRenewATSteps {
         renewAccessTokenMockService.startMockServer();
 
         // Set up the mock response for the renew access token with empty access token
-        renewAccessTokenMockService.setupRenewAccessTokenMock(NOT_OK, EMPTY_JSON, MOCK_RENEW_RESPONSE_BODY);
+        renewAccessTokenMockService.setupRenewAccessTokenMock(UNAUTHORIZED, EMPTY_JSON, MOCK_RENEW_RESPONSE_BODY);
 
         // Send a renew access token request using mock data
         renewAccessTokenMockTest = new RenewAccessTokenMockTest();
-        response = renewAccessTokenMockTest.RenewAccessTokenForMock(NOT_OK, EMPTY_JSON);
+        response = renewAccessTokenMockTest.RenewAccessTokenForMock(UNAUTHORIZED, EMPTY_JSON);
 
         logger.info("The access token can not refreshed");
 
@@ -71,11 +71,11 @@ public class MockRenewATSteps {
         renewAccessTokenMockService.startMockServer();
 
         // Set up the mock response for the renew access token with wrong access token
-        renewAccessTokenMockService.setupRenewAccessTokenMock(NOT_OK, WRONG_ACCESS_TOKEN, MOCK_RENEW_RESPONSE_BODY);
+        renewAccessTokenMockService.setupRenewAccessTokenMock(UNAUTHORIZED, WRONG_ACCESS_TOKEN, MOCK_RENEW_RESPONSE_BODY);
 
         // Send a renew access token request using mock data
         renewAccessTokenMockTest = new RenewAccessTokenMockTest();
-        response = renewAccessTokenMockTest.RenewAccessTokenForMock(NOT_OK, WRONG_ACCESS_TOKEN);
+        response = renewAccessTokenMockTest.RenewAccessTokenForMock(UNAUTHORIZED, WRONG_ACCESS_TOKEN);
 
         logger.info("The access token can not refreshed");
 

@@ -3,7 +3,13 @@ package com.apiTests.mockService;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.integration.ClientAndServer;
 
+import static com.apiTests.constants.ContentType.charset;
+import static com.apiTests.constants.ContentType.contentType;
 import static com.apiTests.constants.Endpoint.LOGOUT_ENDPOINT;
+import static com.apiTests.constants.HttpMethod.POST;
+import static com.apiTests.constants.Language.en;
+import static com.apiTests.constants.Language.language;
+import static com.apiTests.constants.Numbers.portNumber;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
@@ -37,15 +43,16 @@ public class LogoutMockService {
 
         // Mocking a POST request and providing a predefined response for testing,
         // without needing actual server interaction.
-        new MockServerClient("localhost", 1080)
+        new MockServerClient("localhost", portNumber)
                 .when(request()
-                        .withMethod("POST")
+                        .withMethod(POST)
                         .withPath(LOGOUT_ENDPOINT)
                         .withHeader("Authorization", "Bearer " + accessToken)
+                        .withHeader(language, en)
                 )
                 .respond(response()
                         .withStatusCode(statusCode)
-                        .withHeader("Content-Type", "text/plain;charset=UTF-8")
+                        .withHeader(contentType, charset)
                         .withBody(responseBody)
                 );
     }

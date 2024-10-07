@@ -8,7 +8,12 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.List;
+
+import static com.apiTests.constants.ContentType.json;
 import static com.apiTests.constants.Endpoint.LOGIN_ENDPOINT;
+import static com.apiTests.constants.Language.en;
+import static com.apiTests.constants.Language.language;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
@@ -31,13 +36,12 @@ public class LoginTests extends BaseTest {
 
         // Load the request body from the specified file path
         String requestBody = requestBodyLoader(requestBodyPath);
-
         // Log the loaded request body file path
         logger.info("Request body loaded from: {}", requestBodyPath);
 
         // Send the login request to the specified endpoint with headers, query parameters, and request body
         Response response = given(spec)
-                .when().header("Accept-Language", "en")
+                .when().header(language, en)
                 .queryParam("basic", torf)
                 .contentType(ContentType.JSON)
                 .body(requestBody)
@@ -53,7 +57,7 @@ public class LoginTests extends BaseTest {
         logger.info("Status Code: {}", response.getStatusCode());
 
         // Check if the content type is JSON and return the deserialized response
-        if (contentType != null && contentType.contains("application/json"))  {
+        if (contentType != null && contentType.contains(json))  {
             return response.as(LoginResponse.class);
         } else {
             // Log an error if the content type is unexpected and return null

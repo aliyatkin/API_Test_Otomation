@@ -35,7 +35,7 @@ public class LoginSteps {
 
         // Send a login request to API
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(NOT_OK, V_USERNAME_I_PASSWORD,true);
+        loginResponse = loginTests.Login(UNAUTHORIZED,V_USERNAME_I_PASSWORD,true);
 
         logger.info("The system has not been logged in with a valid username and password");
     }
@@ -45,7 +45,7 @@ public class LoginSteps {
 
         // Send a login request to API
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(NOT_OK, V_USERNAME_E_PASSWORD,true);  // Save the response in loginResponse
+        loginResponse = loginTests.Login(UNAUTHORIZED, V_USERNAME_E_PASSWORD,true);  // Save the response in loginResponse
 
         logger.info("The system has not been logged in with a valid username and empty password");
     }
@@ -134,7 +134,7 @@ public class LoginSteps {
 
         // Send a login request to API
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(NOT_OK, V_USERNAME_H_PASSWORD,true);
+        loginResponse = loginTests.Login(UNAUTHORIZED, V_USERNAME_H_PASSWORD,true);
 
         logger.info("The system has not been logged in with a valid username and hashed password when query parameter is true");
     }

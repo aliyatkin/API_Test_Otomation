@@ -6,7 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static com.apiTests.constants.Data_Path.*;
-import static com.apiTests.constants.StatusCode.NOT_OK;
+import static com.apiTests.constants.StatusCode.UNAUTHORIZED;
 import static com.apiTests.constants.StatusCode.OK;
 
 public class RenewAccessTokenSteps {
@@ -33,7 +33,7 @@ public class RenewAccessTokenSteps {
 
         // Send a renew access token request to API
         renewAccessTokenTests = new RenewAccessTokenTests();
-        renewAccessTokenTests.RenewAccessToken(NOT_OK,EMPTY_JSON);
+        renewAccessTokenTests.RenewAccessToken(UNAUTHORIZED,EMPTY_JSON);
 
         logger.info("The access token can not refreshed");
     }
@@ -44,7 +44,7 @@ public class RenewAccessTokenSteps {
 
         // Send a renew access token request to API
         renewAccessTokenTests = new RenewAccessTokenTests();
-        renewAccessTokenTests.RenewAccessToken(NOT_OK,WRONG_ACCESS_TOKEN);
+        renewAccessTokenTests.RenewAccessToken(UNAUTHORIZED,WRONG_ACCESS_TOKEN);
 
         logger.info("The access token can not refreshed");
     }
