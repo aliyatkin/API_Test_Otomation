@@ -8,7 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static com.apiTests.constants.Data_Path.*;
-import static com.apiTests.constants.StatusCode.UNAUTHORIZED;
+import static com.apiTests.constants.StatusCode.OK;
 
 public class MockLogoutSteps {
 
@@ -28,11 +28,11 @@ public class MockLogoutSteps {
         logoutMockService.startMockServer();
 
         // Set up the mock response for the logout with saved access token
-        logoutMockService.setupLogoutMock(UNAUTHORIZED, ACCESS_TOKEN_JSON, MOCK_LOGOUT_RESPONSE_BODY );
+        logoutMockService.setupLogoutMock(OK, ACCESS_TOKEN_JSON, MOCK_LOGOUT_RESPONSE_BODY );
 
         // Send a logout request using mock data
         logoutMockTest = new LogoutMockTest();
-        response = logoutMockTest.LogoutForMock(UNAUTHORIZED, ACCESS_TOKEN_JSON);
+        response = logoutMockTest.LogoutForMock(OK, ACCESS_TOKEN_JSON);
 
         // Stop the mock server after test
         logoutMockService.stopMockServer();

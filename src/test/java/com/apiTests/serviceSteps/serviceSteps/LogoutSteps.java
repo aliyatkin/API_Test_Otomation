@@ -6,7 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static com.apiTests.constants.Data_Path.*;
-import static com.apiTests.constants.StatusCode.UNAUTHORIZED;
+import static com.apiTests.constants.StatusCode.OK;
 
 public class LogoutSteps{
 
@@ -21,7 +21,7 @@ public class LogoutSteps{
 
         // Send a logout request to API
         logoutTests = new LogoutTests();
-        logoutTests.Logout(UNAUTHORIZED, ACCESS_TOKEN);
+        logoutTests.Logout(OK, ACCESS_TOKEN);
 
         logger.info("The system has been logged out with a valid access token");
     }

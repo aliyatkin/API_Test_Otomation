@@ -33,8 +33,8 @@ public class MockLoginSteps {
     private static final Logger logger = LogManager.getLogger(MockLoginSteps.class);
 
     // Mock login with a valid username and invalid password
-    @Given("the user logs in with a valid username and an invalid password using the mock service")
-    public void invalidPassword_mock() {
+    @Given("the user logs in with a valid {string} and an invalid {string} using the mock service")
+    public void invalidPassword_mock(String username, String password) {
 
         // Initialize and start the mock service for login
         loginMockService = new LoginMockService();
@@ -45,7 +45,7 @@ public class MockLoginSteps {
 
         // Send a login request using mock data
         loginMockTests = new LoginMockTest();
-        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, V_USERNAME_I_PASSWORD, true);
+        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, username, password, true);
 
         logger.info("The system has not been logged in with a valid username and invalid password");
 
@@ -54,8 +54,8 @@ public class MockLoginSteps {
     }
 
     // Mock login with a valid username and empty password
-    @Given("the user logs in with a valid username and an empty password using the mock service")
-    public void emptyPassword_mock() {
+    @Given("the user logs in with a valid {string} and an empty {string} using the mock service")
+    public void emptyPassword_mock(String username, String password) {
 
         // Initialize and start the mock service for login
         loginMockService = new LoginMockService();
@@ -66,7 +66,7 @@ public class MockLoginSteps {
 
         // Execute login request with mock data
         loginMockTests = new LoginMockTest();
-        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, V_USERNAME_E_PASSWORD, true);
+        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, username, password, true);
 
         logger.info("The system has not been logged in with a valid username and empty password");
 
@@ -75,8 +75,8 @@ public class MockLoginSteps {
     }
 
     // Mock login with valid username and password
-    @Given("the user logs in with a valid username and password using the mock service")
-    public void valid_mock() {
+    @Given("the user logs in with a valid {string} and {string} using the mock service")
+    public void valid_mock(String username, String password) {
 
         // Initialize and start the mock service for login
         loginMockService = new LoginMockService();
@@ -87,7 +87,7 @@ public class MockLoginSteps {
 
         // Execute login request
         loginMockTests = new LoginMockTest();
-        loginResponse = loginMockTests.LoginForMock(OK, V_USERNAME_PASSWORD, true);
+        loginResponse = loginMockTests.LoginForMock(OK, username, password, true);
 
         logger.info("The system has been logged in with a valid username and password");
     }
@@ -124,8 +124,14 @@ public class MockLoginSteps {
     }
 
     // Mock login with hashed password
-    @Given("the user logs in with a valid username and hashed password using the mock service")
-    public void hashedPassword_mock() {
+    @Given("the user logs in with a valid {string} and hashed password with a {string} false query using the mock service")
+    public void hashedPassword_mock(String username, String trueOrFalse) {
+
+        // Convert from string to boolean
+        boolean torf = Boolean.parseBoolean(trueOrFalse);
+
+        // Load the request body from the specified file path
+        String password = requestBodyLoader(HASHED_PASSWORD);
 
         // Initialize and start the mock service for login
         loginMockService = new LoginMockService();
@@ -136,7 +142,7 @@ public class MockLoginSteps {
 
         // Execute login request with hashed password
         loginMockTests = new LoginMockTest();
-        loginResponse = loginMockTests.LoginForMock(OK, V_USERNAME_H_PASSWORD, false);
+        loginResponse = loginMockTests.LoginForMock(OK, username, password, torf);
 
         logger.info("The system has been logged in with a valid username and hashed password");
     }
@@ -173,8 +179,14 @@ public class MockLoginSteps {
     }
 
     // Mock login with a valid username, hashed password, and true query
-    @Given("the user logs in with a valid username and hashed password with a true query using the mock service")
-    public void hashedPasswordTrueQuery_mock() {
+    @Given("the user logs in with a valid {string} and hashed password with a {string} true query using the mock service")
+    public void hashedPasswordTrueQuery_mock(String username, String trueOrFalse) {
+
+        // Convert from string to boolean
+        boolean torf = Boolean.parseBoolean(trueOrFalse);
+
+        // Load the request body from the specified file path
+        String password = requestBodyLoader(HASHED_PASSWORD);
 
         // Initialize and start the mock service for login
         loginMockService = new LoginMockService();
@@ -185,7 +197,7 @@ public class MockLoginSteps {
 
         // Execute login request with hashed password when query is True
         loginMockTests = new LoginMockTest();
-        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, V_USERNAME_H_PASSWORD, true);
+        loginResponse = loginMockTests.LoginForMock(UNAUTHORIZED, username, password, torf);
 
         logger.info("The system has not been logged in with a valid username and password");
 

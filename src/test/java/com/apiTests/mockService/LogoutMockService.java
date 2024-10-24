@@ -3,12 +3,10 @@ package com.apiTests.mockService;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.integration.ClientAndServer;
 
-import static com.apiTests.constants.ContentType.charset;
-import static com.apiTests.constants.ContentType.contentType;
+import static com.apiTests.constants.ContentType.*;
 import static com.apiTests.constants.Endpoint.LOGOUT_ENDPOINT;
 import static com.apiTests.constants.HttpMethod.POST;
-import static com.apiTests.constants.Language.en;
-import static com.apiTests.constants.Language.language;
+import static com.apiTests.constants.Language.*;
 import static com.apiTests.constants.Numbers.portNumber;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static org.mockserver.model.HttpRequest.request;

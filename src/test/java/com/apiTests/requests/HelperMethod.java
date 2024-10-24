@@ -53,4 +53,8 @@ public class HelperMethod {
             logger.error("Error writing to the file: {}", e.getMessage());
         }
     }
+    public static String createJson(String username, String password) {
+        return String.format("{\"username\": \"%s\", \"password\": \"%s\"}", username, password);
+    }
+
 }

@@ -8,12 +8,10 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.util.List;
-
 import static com.apiTests.constants.ContentType.json;
 import static com.apiTests.constants.Endpoint.LOGIN_ENDPOINT;
-import static com.apiTests.constants.Language.en;
-import static com.apiTests.constants.Language.language;
+import static com.apiTests.constants.Language.*;
+import static com.apiTests.requests.HelperMethod.createJson;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
@@ -26,18 +24,19 @@ public class LoginTests extends BaseTest {
      * Simulates a login request and returns the response.
      *
      * @param statusCode        The expected status code of the response.
-     * @param requestBodyPath   Path to the request body JSON file.
+     * @param username          username
+     * @param password          password
      * @param torf              A boolean query parameter ("True or False").
      * @return LoginResponse    If the response is in JSON format, it is deserialized into LoginResponse object.
      *                          Otherwise, returns null.
      */
     @Step("User logs in with provided credentials")
-    public LoginResponse Login(int statusCode, String requestBodyPath, boolean torf) {
+    public LoginResponse Login(int statusCode, String username, String password, boolean torf) {
 
-        // Load the request body from the specified file path
-        String requestBody = requestBodyLoader(requestBodyPath);
-        // Log the loaded request body file path
-        logger.info("Request body loaded from: {}", requestBodyPath);
+        // Create request body by using username and password
+        String requestBody = createJson(username,password);
+
+        System.out.println(requestBody);
 
         // Send the login request to the specified endpoint with headers, query parameters, and request body
         Response response = given(spec)

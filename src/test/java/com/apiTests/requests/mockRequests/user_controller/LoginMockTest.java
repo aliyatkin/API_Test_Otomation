@@ -12,7 +12,7 @@ import static com.apiTests.constants.ContentType.json;
 import static com.apiTests.constants.Endpoint.LOGIN_ENDPOINT;
 import static com.apiTests.constants.Language.en;
 import static com.apiTests.constants.Language.language;
-import static com.apiTests.requests.HelperMethod.requestBodyLoader;
+import static com.apiTests.requests.HelperMethod.createJson;
 import static io.restassured.RestAssured.given;
 
 public class LoginMockTest extends MockBaseTest {
@@ -24,19 +24,17 @@ public class LoginMockTest extends MockBaseTest {
      * Simulates a login request and returns the response.
      *
      * @param statusCode        The expected status code of the response.
-     * @param requestBodyPath   Path to the request body JSON file.
+     * @param username          username
+     * @param password          password
      * @param torf              A boolean query parameter ("True or False").
      * @return LoginResponse    If the response is in JSON format, it is deserialized into LoginResponse object.
      *                          Otherwise, returns null.
      */
     @Step("User logs in with provided credentials")
-    public LoginResponse LoginForMock(int statusCode, String requestBodyPath, boolean torf) {
+    public LoginResponse LoginForMock(int statusCode, String username, String password, boolean torf) {
 
-        // Load the request body from the specified file path
-        String requestBody = requestBodyLoader(requestBodyPath);
-
-        // Log the loaded request body file path
-        logger.info("Request body loaded from: " + requestBodyPath);
+        // Create request body by using username and password
+        String requestBody = createJson(username,password);
 
         // Send the login request to the specified endpoint with headers, query parameters, and request body
         Response response = given(spec)

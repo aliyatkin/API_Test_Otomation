@@ -21,7 +21,6 @@ public class LoginSteps {
 
     // Used for JSON processing and comparison
     ObjectMapper objectMapper = new ObjectMapper();
-
     public String accessToken;
     private LoginTests loginTests;
     private LoginResponse loginResponse;
@@ -30,32 +29,34 @@ public class LoginSteps {
     private static final Logger logger = LogManager.getLogger(LoginSteps.class);
 
     //API login with valid username and invalid password
-    @Given("the user logs in with a valid username and an invalid password")
-    public void invalidPassword(){
+    @Given("the user logs in with a valid {string} and an invalid {string}")
+    public void invalidPassword(String username, String password){
 
         // Send a login request to API
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(UNAUTHORIZED,V_USERNAME_I_PASSWORD,true);
 
-        logger.info("The system has not been logged in with a valid username and password");
+        loginResponse = loginTests.Login(UNAUTHORIZED,username, password,true);
+
+        logger.info("The system has not been logged in with a valid username and invalid password");
     }
 
-    @Given("the user logs in with a valid username and an empty password")
-    public void emptyPassword(){
+    @Given("the user logs in with a valid {string} and an empty {string}")
+    public void emptyPassword(String username, String password){
 
         // Send a login request to API
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(UNAUTHORIZED, V_USERNAME_E_PASSWORD,true);  // Save the response in loginResponse
+        loginResponse = loginTests.Login(UNAUTHORIZED, username, password, true);  // Save the response in loginResponse
 
         logger.info("The system has not been logged in with a valid username and empty password");
     }
 
-    @Given("the user logs in with a valid username and password")
-    public void valid() {
+
+    @Given("the user logs in with a valid {string} and {string}")
+    public void valid(String username, String password) {
 
         // Send a login request to API
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(OK, V_USERNAME_PASSWORD,true);
+        loginResponse = loginTests.Login(OK, username, password,true);
 
         logger.info("The system has been logged in with a valid username and password");
     }
@@ -91,12 +92,18 @@ public class LoginSteps {
         Allure.addAttachment("Access Token", accessToken);
     }
 
-    @Given("the user logs in with a valid username and a hashed password")
-    public void hashedPasswordAPI(){
+    @Given("the user logs in with a valid {string} and a hashed password with a {string} false query")
+    public void hashedPasswordAPI(String username, String trueOrFalse){
+
+        // Convert from string to boolean
+        boolean torf = Boolean.parseBoolean(trueOrFalse);
+
+        // Load the request body from the specified file path
+        String password = requestBodyLoader(HASHED_PASSWORD);
 
         // Send a login request to API
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(OK, V_USERNAME_H_PASSWORD,false);  // Save the response in loginResponse
+        loginResponse = loginTests.Login(OK, username, password, torf);  // Save the response in loginResponse
 
         logger.info("The system has been logged in with a valid username and hashed password when query parameter is false");
     }
@@ -129,12 +136,18 @@ public class LoginSteps {
         Allure.addAttachment("Access Token", accessToken);
     }
 
-    @Given("the user logs in with a valid username and a hashed password with a true query")
-    public void hashedPasswordTrueQuery(){
+    @Given("the user logs in with a valid {string} and a hashed password with a {string} true query")
+    public void hashedPasswordTrueQuery(String username, String trueOrFalse){
+
+        // Convert from string to boolean
+        boolean torf = Boolean.parseBoolean(trueOrFalse);
+
+        // Load the request body from the specified file path
+        String password = requestBodyLoader(HASHED_PASSWORD);
 
         // Send a login request to API
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(UNAUTHORIZED, V_USERNAME_H_PASSWORD,true);
+        loginResponse = loginTests.Login(UNAUTHORIZED, username, password, torf);
 
         logger.info("The system has not been logged in with a valid username and hashed password when query parameter is true");
     }
