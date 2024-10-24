@@ -3,16 +3,19 @@ package com.apiTests.mockService;
 import org.mockserver.client.MockServerClient;
 import org.mockserver.integration.ClientAndServer;
 
-import static com.apiTests.constants.ContentType.*;
-import static com.apiTests.constants.Endpoint.LOGIN_ENDPOINT;
+import static com.apiTests.constants.ContentType.contentType;
+import static com.apiTests.constants.ContentType.json;
+import static com.apiTests.constants.Endpoint.RENEW_ACCESS_TOKEN_ENDPOINT;
 import static com.apiTests.constants.HttpMethod.POST;
-import static com.apiTests.constants.Language.*;
+import static com.apiTests.constants.Language.en;
+import static com.apiTests.constants.Language.language;
 import static com.apiTests.constants.Numbers.portNumber;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static org.mockserver.model.HttpRequest.request;
 import static org.mockserver.model.HttpResponse.response;
 
-public class LoginMockService {
+
+public class RenewAccessTokenMockService {
 
     // The mockServer variable belonging to the ClientAndServer class is being defined
     private static ClientAndServer mockServer;
@@ -27,42 +30,38 @@ public class LoginMockService {
     }
 
     /**
-     * This method sets up the login mock service with the specified parameters
+     * This method sets up the renew access token mock service with the specified parameters.
      *
-     * @param statusCode                The status code that the MockServer should return
-     * @param mockResponseBodyPath      The path to the file containing the mock response body
-     * @param mockRequestBodyPath       The path to the file containing the expected request body
-     * @param torf                      A string representing "True or False" for query parameter
+     * @param statusCode            The status code that the MockServer should return
+     * @param accessTokenPath       The path to the file containing the access token
+     * @param responseBodyPath      The path to the file containing the mock response body
      */
-    public void setupLoginMock(int statusCode, String mockRequestBodyPath, String mockResponseBodyPath,  String torf) {
+    public void setupRenewAccessTokenMock(int statusCode, String accessTokenPath,  String responseBodyPath) {
 
-        // Load the response and request body from the specified file paths
-        String mockReqBody = requestBodyLoader(mockRequestBodyPath);
-        String mockRespBody = requestBodyLoader(mockResponseBodyPath);
+        // Load the access token and response body from the specified file paths
+        String accessToken = requestBodyLoader(accessTokenPath);
+        String responseBody = requestBodyLoader(responseBodyPath);
 
         // Mocking a POST request and providing a predefined response for testing,
         // without needing actual server interaction.
         new MockServerClient("localhost", portNumber)
                 .when(request()
                         .withMethod(POST)
-                        .withPath(LOGIN_ENDPOINT)
-                        .withQueryStringParameter("basic", torf)
-                        .withHeader(contentType, json)
+                        .withPath(RENEW_ACCESS_TOKEN_ENDPOINT)
+                        .withHeader("Authorization", "Bearer" + accessToken)
                         .withHeader(language, en)
-                        .withBody(mockReqBody)
                 )
                 .respond(response()
                         .withStatusCode(statusCode)
                         .withHeader(contentType, json)
-                        .withBody(mockRespBody)
+                        .withBody(responseBody)
                 );
     }
 
     /**
      * Stops the MockServer instance.
      */
-    public void stopMockServer()
-    {
+    public void stopMockServer() {
         // Stop the MockServer
         mockServer.stop();
     }

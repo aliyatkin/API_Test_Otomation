@@ -1,6 +1,6 @@
-package com.apiTests.requests.serviceRequests.user_controller;
+package com.apiTests.requests.mockRequests.user_controller;
 
-import com.apiTests.requests.serviceRequests.BaseTest;
+import com.apiTests.requests.mockRequests.MockBaseTest;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
@@ -13,10 +13,10 @@ import static com.apiTests.constants.Language.language;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
-public class LogoutTests extends BaseTest {
+public class LogoutMockTest extends MockBaseTest {
 
     // Logger instance is initialized using Log4j for logging in this class
-    private static final Logger logger = LogManager.getLogger(LogoutTests.class);
+    private static final Logger logger = LogManager.getLogger(LogoutMockTest.class);
 
     /**
      * Simulates a login request and returns the response.
@@ -24,13 +24,13 @@ public class LogoutTests extends BaseTest {
      * @param statusCode        The expected status code of the response.
      * @param accessTokenPath   Path to the accessToken that is uses in header.
      */
-    @Step("User logs out with the provided access token")
-    public Response Logout(int statusCode, String accessTokenPath) {
+    @Step("User logs in with provided credentials")
+    public Response LogoutForMock(int statusCode, String accessTokenPath){
 
-        // Send the logout request to the specified endpoint with headers
+        // Load the access token from the specified file path
         String accessToken = requestBodyLoader(accessTokenPath);
 
-        // Send request to logout endpoint
+        // Send the logout request to the specified endpoint with headers
         Response response = given(spec)
                 .header("Authorization", "Bearer " + accessToken)
                 .header(language, en)
