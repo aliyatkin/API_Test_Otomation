@@ -1,13 +1,12 @@
-package com.apiTests.serviceSteps.serviceSteps;
+package com.apiTests.serviceSteps.serviceSteps.user_controller;
 
 import com.apiTests.requests.serviceRequests.user_controller.RenewAccessTokenTests;
 import io.cucumber.java.en.And;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.apiTests.constants.Data_Path.*;
-import static com.apiTests.constants.StatusCode.UNAUTHORIZED;
-import static com.apiTests.constants.StatusCode.OK;
+import static com.apiTests.constants.DataPath.*;
+import static com.apiTests.constants.StatusCode.*;
 
 public class RenewAccessTokenSteps {
 

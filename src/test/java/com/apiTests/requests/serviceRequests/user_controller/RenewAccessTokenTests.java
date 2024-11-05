@@ -7,10 +7,9 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.apiTests.constants.ContentType.json;
+import static com.apiTests.constants.ContentType.*;
 import static com.apiTests.constants.Endpoint.RENEW_ACCESS_TOKEN_ENDPOINT;
-import static com.apiTests.constants.Language.en;
-import static com.apiTests.constants.Language.language;
+import static com.apiTests.constants.Language.*;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
@@ -33,7 +32,7 @@ public class RenewAccessTokenTests extends BaseTest {
 
         // Send the renew access token request to the specified endpoint with headers
         Response response = given(spec)
-                .header("Authorization", "Bearer " + accessToken)
+                .when().header("Authorization", "Bearer " + accessToken)
                 .header(language, en)
                 .post(RENEW_ACCESS_TOKEN_ENDPOINT);
 

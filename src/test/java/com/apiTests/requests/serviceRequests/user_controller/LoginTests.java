@@ -12,7 +12,6 @@ import static com.apiTests.constants.ContentType.json;
 import static com.apiTests.constants.Endpoint.LOGIN_ENDPOINT;
 import static com.apiTests.constants.Language.*;
 import static com.apiTests.requests.HelperMethod.createJson;
-import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
 
 public class LoginTests extends BaseTest {
@@ -35,8 +34,6 @@ public class LoginTests extends BaseTest {
 
         // Create request body by using username and password
         String requestBody = createJson(username,password);
-
-        System.out.println(requestBody);
 
         // Send the login request to the specified endpoint with headers, query parameters, and request body
         Response response = given(spec)

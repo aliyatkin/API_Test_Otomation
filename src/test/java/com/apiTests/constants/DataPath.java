@@ -1,6 +1,6 @@
 package com.apiTests.constants;
 
-public class Data_Path {
+public class DataPath {
 
     // Paths of JSON files that store Login information
 
