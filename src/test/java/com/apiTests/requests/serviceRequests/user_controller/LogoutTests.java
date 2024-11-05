@@ -32,7 +32,7 @@ public class LogoutTests extends BaseTest {
 
         // Send request to logout endpoint
         Response response = given(spec)
-                .header("Authorization", "Bearer " + accessToken)
+                .when().header("Authorization", "Bearer " + accessToken)
                 .header(language, en)
                 .post(LOGOUT_ENDPOINT);
 

@@ -21,7 +21,6 @@ public class HelperMethod {
             // The "userDataPath" string variable provides a path, and the JSON object within this path
             // is stored in the "userLoginData" variable.
             userLoginData = new String(Files.readAllBytes(Paths.get(userDataPath)));
-            logger.info("The user information in the 'userDataPath' JSON file was assigned to a string variable named 'userLoginData'");
         }
         catch (IOException e){
             logger.error("The user information in the 'userDataPath' JSON file was not assigned to a string variable named 'userLoginData'{}", e.getMessage());

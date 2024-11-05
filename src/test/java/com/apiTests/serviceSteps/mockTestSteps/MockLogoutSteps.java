@@ -7,7 +7,7 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.apiTests.constants.Data_Path.*;
+import static com.apiTests.constants.DataPath.*;
 import static com.apiTests.constants.StatusCode.OK;
 
 public class MockLogoutSteps {

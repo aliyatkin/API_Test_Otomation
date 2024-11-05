@@ -6,4 +6,6 @@ public class Endpoint {
     public final static String LOGOUT_ENDPOINT = "/v1/logout";
     public final static String RENEW_ACCESS_TOKEN_ENDPOINT = "/v1/renew-access-token";
 
+    public final static String DETECTIONS_ENDPOINT = "/v1/detections";
+
 }
