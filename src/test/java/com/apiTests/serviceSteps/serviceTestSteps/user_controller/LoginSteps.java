@@ -1,4 +1,4 @@
-package com.apiTests.serviceSteps.serviceSteps.user_controller;
+package com.apiTests.serviceSteps.serviceTestSteps.user_controller;
 
 import com.apiTests.models.user_controller.login.LoginResponse;
 import com.apiTests.requests.serviceRequests.user_controller.LoginTests;
