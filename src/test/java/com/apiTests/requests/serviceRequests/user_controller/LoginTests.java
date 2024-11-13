@@ -16,11 +16,11 @@ import static io.restassured.RestAssured.given;
 
 public class LoginTests extends BaseTest {
 
-    // Logger instance is initialized using Log4j for logging in this class
+    // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(LoginTests.class);
 
     /**
-     * Simulates a login request and returns the response.
+     * Send a login request and returns the response.
      *
      * @param statusCode        The expected status code of the response.
      * @param username          username
@@ -29,7 +29,7 @@ public class LoginTests extends BaseTest {
      * @return LoginResponse    If the response is in JSON format, it is deserialized into LoginResponse object.
      *                          Otherwise, returns null.
      */
-    @Step("User logs in with provided credentials")
+    @Step("the user tries to logs in with provided credentials")
     public LoginResponse Login(int statusCode, String username, String password, boolean torf) {
 
         // Create request body by using username and password
@@ -52,7 +52,7 @@ public class LoginTests extends BaseTest {
         logger.info("Response received: {}", response.asString());
         logger.info("Status Code: {}", response.getStatusCode());
 
-        // Check if the content type is JSON and return the deserialized response
+        // Check if the content type is JSON and return the response
         if (contentType != null && contentType.contains(json))  {
             return response.as(LoginResponse.class);
         } else {
