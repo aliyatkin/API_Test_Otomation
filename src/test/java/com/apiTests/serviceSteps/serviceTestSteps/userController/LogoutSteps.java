@@ -1,4 +1,4 @@
-package com.apiTests.serviceSteps.serviceTestSteps.user_controller;
+package com.apiTests.serviceSteps.serviceTestSteps.userController;
 
 import com.apiTests.requests.serviceRequests.user_controller.LogoutTests;
 import io.cucumber.java.en.*;

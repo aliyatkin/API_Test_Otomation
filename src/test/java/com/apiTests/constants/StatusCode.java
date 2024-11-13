@@ -2,7 +2,8 @@ package com.apiTests.constants;
 
 public class StatusCode {
 
-    public final static int OK = 200;       // successful
-    public final static int UNAUTHORIZED = 401;   // "User is not authorized" error
+    // Status Codes
+    public static final int OK = 200;             // successful
+    public static final int UNAUTHORIZED = 401;   // "User is not authorized" error
 
 }

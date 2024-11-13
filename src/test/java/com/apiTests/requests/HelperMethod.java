@@ -11,33 +11,32 @@ import org.apache.logging.log4j.Logger;
 
 public class HelperMethod {
 
-    public static String userLoginData;
+    public static String data;
     public static final ObjectMapper objectMapper = new ObjectMapper();
     private static final Logger logger = LogManager.getLogger(HelperMethod.class);
 
-    public static String requestBodyLoader(String userDataPath) {
+    public static String requestBodyLoader(String dataPath) {
 
         try {
             // The "userDataPath" string variable provides a path, and the JSON object within this path
             // is stored in the "userLoginData" variable.
-            userLoginData = new String(Files.readAllBytes(Paths.get(userDataPath)));
+            data = new String(Files.readAllBytes(Paths.get(dataPath)));
+        } catch (IOException e) {
+            logger.error("The user information in the 'dataPath' JSON file was not assigned to a string variable named 'data'{}", e.getMessage());
         }
-        catch (IOException e){
-            logger.error("The user information in the 'userDataPath' JSON file was not assigned to a string variable named 'userLoginData'{}", e.getMessage());
-        }
-        return userLoginData;
+        return data;
     }
 
-    public static void writeStringToJsonFile(String jsonString, String responseBodyPath){
+    public static void writeStringToJsonFile(String jsonString, String dataPath) {
 
         try {
             // Parse the JSON string as a "JsonNode"
             JsonNode jsonNode = objectMapper.readTree(jsonString);
 
             // Write the JSON data to a file.
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(responseBodyPath), jsonNode);
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(new File(dataPath), jsonNode);
 
-            logger.info("The JSON data was successfully written to the file: {}", responseBodyPath);
+            logger.info("The JSON data was successfully written to the file: {}", dataPath);
 
         } catch (Exception e) {
             logger.error("Error writing to the file: {}", e.getMessage());
@@ -52,8 +51,8 @@ public class HelperMethod {
             logger.error("Error writing to the file: {}", e.getMessage());
         }
     }
+
     public static String createJson(String username, String password) {
         return String.format("{\"username\": \"%s\", \"password\": \"%s\"}", username, password);
     }
-
 }
