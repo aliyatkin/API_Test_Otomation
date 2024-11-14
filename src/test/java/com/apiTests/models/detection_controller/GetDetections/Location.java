@@ -1,4 +1,4 @@
-package com.apiTests.models.detection_controller.getDetections;
+package com.apiTests.models.detection_controller.GetDetections;
 
 public class Location {
 

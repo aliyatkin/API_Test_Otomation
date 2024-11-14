@@ -1,6 +1,6 @@
 package com.apiTests.requests.serviceRequests.detection_controller;
 
-import com.apiTests.models.detection_controller.getDetections.GetDetectionsResponse;
+import com.apiTests.models.detection_controller.GetDetections.GetDetectionsResponse;
 import com.apiTests.requests.serviceRequests.BaseTest;
 import io.qameta.allure.Step;
 import io.restassured.common.mapper.TypeRef;
@@ -10,6 +10,7 @@ import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
+import java.util.Objects;
 
 import static com.apiTests.constants.ContentType.*;
 import static com.apiTests.constants.Endpoint.DETECTIONS_ENDPOINT;
@@ -41,7 +42,7 @@ public class GetDetectionsTests extends BaseTest {
     public void GetDetections(int statusCode, String accessTokenPath, String page, String pageSize, boolean torf, String classificationTypeId) {
 
         // If the classificationTypeId value is 0, convert it to null to prevent it from affecting filtering
-        if (classificationTypeId == ("0")) {
+        if (Objects.equals(classificationTypeId, "0")) {
             classificationTypeId = null;
         }
 
