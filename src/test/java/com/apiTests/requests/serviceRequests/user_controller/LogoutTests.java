@@ -15,11 +15,11 @@ import static io.restassured.RestAssured.given;
 
 public class LogoutTests extends BaseTest {
 
-    // Logger instance is initialized using Log4j for logging in this class
+    // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(LogoutTests.class);
 
     /**
-     * Simulates a login request and returns the response.
+     * Send a logout request and returns the response.
      *
      * @param statusCode        The expected status code of the response.
      * @param accessTokenPath   Path to the accessToken that is uses in header.
@@ -45,7 +45,7 @@ public class LogoutTests extends BaseTest {
         logger.info("Response received: {}", response.asString());
         logger.info("Status Code: {}", response.getStatusCode());
 
-        // Check if the content type is JSON and return the deserialized response
+        // Check if the content type is charset and return the deserialized response
         if (contentType != null && contentType.contains(charset))  {
             return response;
         } else {
