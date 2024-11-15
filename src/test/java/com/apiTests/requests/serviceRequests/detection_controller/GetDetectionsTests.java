@@ -1,6 +1,6 @@
 package com.apiTests.requests.serviceRequests.detection_controller;
 
-import com.apiTests.models.detection_controller.GetDetections.GetDetectionsResponse;
+import com.apiTests.models.detection_controller.getDetections.GetDetectionsResponse;
 import com.apiTests.requests.serviceRequests.BaseTest;
 import io.qameta.allure.Step;
 import io.restassured.common.mapper.TypeRef;
@@ -21,7 +21,9 @@ import static io.restassured.RestAssured.given;
 public class GetDetectionsTests extends BaseTest {
 
     public static int intClassificationTypeId;
+    public static int intZoneId;
     public static int responseClassificationTypeId;
+    public static int responseZoneId;
     public static int listElement;
     private static List<GetDetectionsResponse> detectionsList;  // Define detectionsList here for accessibility in both methods
 
@@ -39,12 +41,17 @@ public class GetDetectionsTests extends BaseTest {
      * @param classificationTypeId Classification type id for detection request
      */
     @Step("Get Detections")
-    public void GetDetections(int statusCode, String accessTokenPath, String page, String pageSize, boolean torf, String classificationTypeId) {
+    public void GetDetections(int statusCode, String accessTokenPath, String page, String pageSize, boolean torf, String classificationTypeId, String zoneId) {
 
+        /*
         // If the classificationTypeId value is 0, convert it to null to prevent it from affecting filtering
         if (Objects.equals(classificationTypeId, "0")) {
             classificationTypeId = null;
         }
+        if (Objects.equals(zoneId, "0")) {
+            zoneId = null;
+        }
+        */
 
         // Load the access token from the specified file path
         String accessToken = requestBodyLoader(accessTokenPath);
@@ -55,6 +62,7 @@ public class GetDetectionsTests extends BaseTest {
                 .queryParam("page", page)
                 .queryParam("pageSize", pageSize)
                 .queryParam("filterByClassificationTypeId", classificationTypeId)
+                .queryParam("filterByZoneId", zoneId)
                 .queryParam("createdByMe", torf)
                 .get(DETECTIONS_ENDPOINT);
 
@@ -78,6 +86,7 @@ public class GetDetectionsTests extends BaseTest {
             if (!detectionsList.isEmpty()) {
 
                 filterClassificationType(classificationTypeId);
+                filterZone(zoneId);
 
             } else {
                 // If the list is empty, log an error message
@@ -109,11 +118,38 @@ public class GetDetectionsTests extends BaseTest {
                 responseClassificationTypeId = detections.getType().getId();
 
                 // This code checks if intClassificationTypeId and responseClassificationTypeId are equal
-                // If they are, it logs an info message confirming that the IDs match
+                // If they are not, it logs an error message that the IDs does not match
                 Assertions.assertEquals(intClassificationTypeId, responseClassificationTypeId, "The ID of the elements in the response does not match the filtered ID in the request.");
             }
         }else{
             logger.error("The classificationTypeId is null !");
+        }
+    }
+
+    public void filterZone(String zoneId){
+
+        // Check if the zoneId is null. If it is not, continue processing
+        if (zoneId != null) {
+
+            // Convert the parameter from a string to an integer to use it in the if statement comparison
+            intZoneId = Integer.parseInt(zoneId);
+
+            // The `for` loop will continue based on the size of the detection list
+            for (listElement = 0; listElement < detectionsList.size(); listElement++) {
+
+                // We iterate through all the elements in the list and assign them to the POJO class one by one
+                GetDetectionsResponse detections = detectionsList.get(listElement);
+                logger.info("{}. Detection: {} , {}", listElement, detections.getId(), detections.getZone().getName());
+
+                // Get the  zone ID from the response and save it as an integer
+                responseZoneId = detections.getZone().getId();
+
+                // This code checks if intZoneId and responseZoneId are equal
+                // If they are not, it logs an error message that the IDs does not match
+                Assertions.assertEquals(intZoneId, responseZoneId, "The ID of the elements in the response does not match the filtered ID in the request.");
+            }
+        }else{
+            logger.error("The zoneId is null !");
         }
     }
 }

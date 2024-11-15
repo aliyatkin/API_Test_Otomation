@@ -1,4 +1,4 @@
-package com.apiTests.models.detection_controller.GetDetections;
+package com.apiTests.models.detection_controller.getDetections;
 
 public class Type {
 

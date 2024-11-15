@@ -10,4 +10,5 @@ public class Endpoint {
     // detection-controller service
     public static final String DETECTIONS_ENDPOINT = "/v1/detections";
     public static final String CLASSIFICATION_ENDPOINT = "/v1/detections/classification-types";
+    public static final String ZONES_ENDPOINT = "v1/zones";
 }

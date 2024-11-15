@@ -1,15 +1,15 @@
-package com.apiTests.models.detection_controller.DetectionsClassificationTypes;
+package com.apiTests.models.detection_controller.getDetections;
 
-public class DetectionsClassificationTypesResponse {
+public class Zone {
 
     private int id;
     private String name;
 
-    public DetectionsClassificationTypesResponse(){
+    public Zone(){
 
     }
 
-    public DetectionsClassificationTypesResponse(int id, String name) {
+    public Zone(int id, String name) {
         this.id = id;
         this.name = name;
     }

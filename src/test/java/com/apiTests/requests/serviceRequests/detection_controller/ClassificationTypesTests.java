@@ -1,6 +1,6 @@
 package com.apiTests.requests.serviceRequests.detection_controller;
 
-import com.apiTests.models.detection_controller.DetectionsClassificationTypes.DetectionsClassificationTypesResponse;
+import com.apiTests.models.detection_controller.detectionsClassificationTypes.DetectionsClassificationTypesResponse;
 import com.apiTests.requests.serviceRequests.BaseTest;
 import io.qameta.allure.Step;
 import io.restassured.common.mapper.TypeRef;
