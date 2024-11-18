@@ -7,6 +7,7 @@ import io.restassured.common.mapper.TypeRef;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
 
@@ -91,8 +92,12 @@ public class ZonesTests extends BaseTest {
 
             } else {
                 logger.error("No matching zone found for this index: {}.index", listElement);
-                zoneId = null;
             }
+        }
+        if(zoneId != null){
+            logger.info("Zone Id found");
+        }else {
+            Assertions.fail("No matching zone found");
         }
     }
 }

@@ -5,6 +5,7 @@ import com.apiTests.requests.serviceRequests.zone_controller.ZonesTests;
 import io.cucumber.java.en.*;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.junit.jupiter.api.Assertions;
 
 import static com.apiTests.constants.DataPath.*;
 import static com.apiTests.constants.StatusCode.*;
@@ -20,13 +21,19 @@ public class GetDetectionsSteps {
     // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(GetDetectionsSteps.class);
 
-    @And("the user need to enter {string} and {string}")
-    public void setGetDetectionClassificationType(String classificationType, String zone){
+    @And("the user need to enter classificationType: {string}")
+    public void setGetDetectionClassificationType(String classificationType){
 
         classificationTypesTests = new ClassificationTypesTests();
-        zonesTests = new ZonesTests();
 
         classificationTypeId = classificationTypesTests.ClassificationType(OK, ACCESS_TOKEN, classificationType);
+    }
+
+    @And("the user need to enter zone: {string}")
+    public void setGetZone(String zone){
+
+        zonesTests = new ZonesTests();
+
         zoneId = zonesTests.Zone(OK, ACCESS_TOKEN, zone);
     }
 
