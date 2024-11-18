@@ -6,6 +6,7 @@ import io.qameta.allure.Step;
 import io.restassured.common.mapper.TypeRef;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.*;
+import org.junit.jupiter.api.Assertions;
 
 import java.util.List;
 
@@ -96,8 +97,12 @@ public class ClassificationTypesTests extends BaseTest {
 
             } else {
                 logger.error("No matching classification type found for this index: {}.index", listElement);
-                classificationTypeId = null;
             }
+        }
+        if(classificationTypeId != null){
+            logger.info("Classification type found");
+        }else {
+            Assertions.fail("No matching classification type found");
         }
     }
 }

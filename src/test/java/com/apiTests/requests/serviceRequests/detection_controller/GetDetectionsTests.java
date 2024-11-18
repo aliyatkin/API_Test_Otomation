@@ -43,16 +43,6 @@ public class GetDetectionsTests extends BaseTest {
     @Step("Get Detections")
     public void GetDetections(int statusCode, String accessTokenPath, String page, String pageSize, boolean torf, String classificationTypeId, String zoneId) {
 
-        /*
-        // If the classificationTypeId value is 0, convert it to null to prevent it from affecting filtering
-        if (Objects.equals(classificationTypeId, "0")) {
-            classificationTypeId = null;
-        }
-        if (Objects.equals(zoneId, "0")) {
-            zoneId = null;
-        }
-        */
-
         // Load the access token from the specified file path
         String accessToken = requestBodyLoader(accessTokenPath);
 
