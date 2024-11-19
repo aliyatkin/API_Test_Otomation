@@ -9,8 +9,11 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.jupiter.api.Assertions;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
+import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import static com.apiTests.constants.ContentType.*;
 import static com.apiTests.constants.Endpoint.DETECTIONS_ENDPOINT;
@@ -25,6 +28,8 @@ public class GetDetectionsTests extends BaseTest {
     public static int responseClassificationTypeId;
     public static int responseZoneId;
     public static int listElement;
+    public static String filterStartTime;
+    public static String filterFinishTime;
     private static List<GetDetectionsResponse> detectionsList;  // Define detectionsList here for accessibility in both methods
 
     // Logger for tracking actions and output
@@ -41,7 +46,21 @@ public class GetDetectionsTests extends BaseTest {
      * @param classificationTypeId Classification type id for detection request
      */
     @Step("Get Detections")
-    public void GetDetections(int statusCode, String accessTokenPath, String page, String pageSize, boolean torf, String classificationTypeId, String zoneId) {
+    public void GetDetections(int statusCode, String accessTokenPath, String page, String pageSize, boolean torf, String classificationTypeId, String zoneId,
+                              long startTime, long finishTime) {
+
+        if (startTime == 0) {
+            filterStartTime = String.valueOf(startTime);
+            filterStartTime = null;
+        } else {
+            filterStartTime = String.valueOf(startTime);
+        }
+        if (finishTime == 0) {
+            filterFinishTime = String.valueOf(finishTime);
+            filterFinishTime = null;
+        } else {
+            filterFinishTime = String.valueOf(finishTime);
+        }
 
         // Load the access token from the specified file path
         String accessToken = requestBodyLoader(accessTokenPath);
@@ -52,6 +71,8 @@ public class GetDetectionsTests extends BaseTest {
                 .queryParam("page", page)
                 .queryParam("pageSize", pageSize)
                 .queryParam("filterByClassificationTypeId", classificationTypeId)
+                .queryParam("filterByStartTime", filterStartTime)
+                .queryParam("filterByEndTime", filterFinishTime)
                 .queryParam("filterByZoneId", zoneId)
                 .queryParam("createdByMe", torf)
                 .get(DETECTIONS_ENDPOINT);
@@ -75,8 +96,14 @@ public class GetDetectionsTests extends BaseTest {
             // Check if the list is empty. If the list is not empty, continue processing
             if (!detectionsList.isEmpty()) {
 
+                // Run the classification type filter
                 filterClassificationType(classificationTypeId);
+
+                //Run the zone filter
                 filterZone(zoneId);
+
+                // Run the start time and finish time filter
+                filterTime(filterStartTime, filterFinishTime);
 
             } else {
                 // If the list is empty, log an error message
@@ -111,12 +138,12 @@ public class GetDetectionsTests extends BaseTest {
                 // If they are not, it logs an error message that the IDs does not match
                 Assertions.assertEquals(intClassificationTypeId, responseClassificationTypeId, "The ID of the elements in the response does not match the filtered ID in the request.");
             }
-        }else{
-            logger.error("The classificationTypeId is null !");
+        } else {
+            logger.error("The classification type filter does not used!");
         }
     }
 
-    public void filterZone(String zoneId){
+    public void filterZone(String zoneId) {
 
         // Check if the zoneId is null. If it is not, continue processing
         if (zoneId != null) {
@@ -138,8 +165,120 @@ public class GetDetectionsTests extends BaseTest {
                 // If they are not, it logs an error message that the IDs does not match
                 Assertions.assertEquals(intZoneId, responseZoneId, "The ID of the elements in the response does not match the filtered ID in the request.");
             }
-        }else{
-            logger.error("The zoneId is null !");
+        } else {
+            logger.error("The zone filter does not used!");
+        }
+    }
+
+    /**
+     * Converts a human-readable date string into a timestamp in milliseconds.
+     *
+     * @param humanDate the date string in the format "yyyy-MM-dd HH:mm:ss"
+     * @return the timestamp (in milliseconds) representing the provided date,
+     *         or null if the date string is invalid or parsing fails.
+     */
+    public Long parseDateToTimestamp(String humanDate) {
+        try {
+            // Create a date format with the specified pattern
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+
+            // Parse the string into a Date object
+            Date date = dateFormat.parse(humanDate);
+
+            // Return the timestamp (milliseconds since epoch) of the parsed date
+            return date.getTime();
+        } catch (Exception e) {
+            // Log the error or handle it appropriately
+            System.err.println("Invalid date format: " + humanDate);
+            return null; // Return null if parsing fails
+        }
+    }
+
+    /**
+     * Filters a list of detections based on provided start and finish time filters.
+     *
+     * @param filterStartTime the start time filter as a string (nullable)
+     * @param filterFinishTime the finish time filter as a string (nullable)
+     */
+    public void filterTime(String filterStartTime, String filterFinishTime) {
+
+        // Case 1: Both start and finish times are provided
+        if (filterStartTime != null && filterFinishTime != null) {
+
+            // Parse start and finish times from string to long
+            long startTime = Long.parseLong(filterStartTime);
+            long finishTime = Long.parseLong(filterFinishTime);
+
+            // Iterate through the list of detections
+            for (listElement = 0; listElement < detectionsList.size(); listElement++) {
+
+                // Get the current detection from the list
+                GetDetectionsResponse detections = detectionsList.get(listElement);
+
+                // Check if detectionUpdateTime is null
+                if (detections.getDetectionUpdateTime() == null) {
+
+                    // Compare detectionCreateTime with start and finish times
+                    if (startTime < detections.getDetectionCreateTime() && detections.getDetectionCreateTime() < finishTime) {
+                        logger.info("The start and finish time filter work for: {}", listElement);
+                    } else {
+                        Assertions.fail("The start and finish time filter does not work!!!");
+                    }
+                } else {
+
+                    // Compare detectionUpdateTime with start and finish times
+                    if (startTime < detections.getDetectionUpdateTime() && detections.getDetectionUpdateTime() < finishTime) {
+                        logger.info("The start and finish time filter work for: {}", listElement);
+                    } else {
+                        Assertions.fail("The start and finish time filter does not work!!!");
+                    }
+                }
+            }
+
+            // Case 2: Only start time is provided, finish time is considered as the current time
+        } else if (filterStartTime != null && filterFinishTime == null) {
+
+            // Get the current system time in milliseconds
+            long currentTime = Instant.now().toEpochMilli();
+
+            // Parse start time from string to long
+            long startTime = Long.parseLong(filterStartTime);
+
+            // Iterate through the list of detections
+            for (listElement = 0; listElement < detectionsList.size(); listElement++) {
+
+                // Get the current detection from the list
+                GetDetectionsResponse detections = detectionsList.get(listElement);
+
+                // Check if detectionUpdateTime is null
+                if (detections.getDetectionUpdateTime() == null) {
+
+                    // Compare detectionCreateTime with start time and current time
+                    if (startTime < detections.getDetectionCreateTime() && detections.getDetectionCreateTime() < currentTime) {
+                        logger.info("The start time filter works for: {}", listElement);
+                    } else {
+                        Assertions.fail("The start time filter does not work!!!");
+                    }
+                } else {
+
+                    // Compare detectionUpdateTime with start time and current time
+                    if (startTime < detections.getDetectionUpdateTime() && detections.getDetectionUpdateTime() < currentTime) {
+                        logger.info("The start time filter work for: {}", listElement);
+                    } else {
+                        Assertions.fail("The start time filter does not work!!!");
+                    }
+                }
+            }
+
+            // Case 3: Start time is null and finish time is provided (this case is not allowed)
+        } else if (filterStartTime == null && filterFinishTime != null) {
+            // Log an error as this case is considered invalid
+            logger.error("The start time is null but the finish time is not null: This situation is not possible!");
+
+            // Case 4: Both start and finish times are null
+        } else {
+            // Log an info message as no filtering will be applied
+            logger.info("The start time and the finish time filter do not used!");
         }
     }
 }
