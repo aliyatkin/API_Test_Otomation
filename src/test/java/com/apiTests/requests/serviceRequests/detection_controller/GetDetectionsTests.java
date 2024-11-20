@@ -1,6 +1,7 @@
 package com.apiTests.requests.serviceRequests.detection_controller;
 
 import com.apiTests.models.detection_controller.getDetections.GetDetectionsResponse;
+import com.apiTests.models.user_controller.login.LoginResponse;
 import com.apiTests.requests.serviceRequests.BaseTest;
 import io.qameta.allure.Step;
 import io.restassured.common.mapper.TypeRef;
@@ -14,6 +15,7 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 import static com.apiTests.constants.ContentType.*;
 import static com.apiTests.constants.Endpoint.DETECTIONS_ENDPOINT;
@@ -32,6 +34,7 @@ public class GetDetectionsTests extends BaseTest {
     public static String filterFinishTime;
     private static List<GetDetectionsResponse> detectionsList;  // Define detectionsList here for accessibility in both methods
 
+    private static LoginResponse loginResponse;
     // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(GetDetectionsTests.class);
 
@@ -50,13 +53,13 @@ public class GetDetectionsTests extends BaseTest {
                               long startTime, long finishTime) {
 
         if (startTime == 0) {
-            filterStartTime = String.valueOf(startTime);
+            //filterStartTime = String.valueOf(startTime);
             filterStartTime = null;
         } else {
             filterStartTime = String.valueOf(startTime);
         }
         if (finishTime == 0) {
-            filterFinishTime = String.valueOf(finishTime);
+            //filterFinishTime = String.valueOf(finishTime);
             filterFinishTime = null;
         } else {
             filterFinishTime = String.valueOf(finishTime);
@@ -104,6 +107,8 @@ public class GetDetectionsTests extends BaseTest {
 
                 // Run the start time and finish time filter
                 filterTime(filterStartTime, filterFinishTime);
+
+                createdByMeCheck(torf);
 
             } else {
                 // If the list is empty, log an error message
@@ -279,6 +284,37 @@ public class GetDetectionsTests extends BaseTest {
         } else {
             // Log an info message as no filtering will be applied
             logger.info("The start time and the finish time filter do not used!");
+        }
+    }
+
+    public void createdByMeCheck(boolean createdByMe){
+
+        if (createdByMe){
+
+            for (listElement = 0; listElement < detectionsList.size(); listElement++) {
+
+                GetDetectionsResponse detections = detectionsList.get(listElement);
+
+                if (detections.getUsername() == null){
+                    logger.info(" createdByMe = true and Username is null");
+                } else {
+                    Assertions.fail("Username must be null !!");
+                }
+            }
+
+        } else {
+
+            for (listElement = 0; listElement < detectionsList.size(); listElement++) {
+
+                GetDetectionsResponse detections = detectionsList.get(listElement);
+
+                if (detections.getUsername() != null){
+
+                    logger.info(" createdByMe = false and username is not null and detections created by another user");
+                } else {
+                    Assertions.fail("username can not be null or its own username");
+                }
+            }
         }
     }
 }

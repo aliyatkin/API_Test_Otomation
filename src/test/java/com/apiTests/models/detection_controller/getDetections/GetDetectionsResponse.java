@@ -13,13 +13,14 @@ public class GetDetectionsResponse {
     private String signature;
     private String taskId;
     private String taskStatus;
+    private String username;
     private Type type;
 
     public GetDetectionsResponse(){
 
     }
 
-    public GetDetectionsResponse(String id, boolean hasImage, String description, Long detectionCreateTime, Long detectionUpdateTime, Location location, Zone zone, boolean updated, String signature, String taskId, String taskStatus, Type type) {
+    public GetDetectionsResponse(String id, boolean hasImage, String description, Long detectionCreateTime, Long detectionUpdateTime, Location location, Zone zone, boolean updated, String signature, String taskId, String taskStatus,String username, Type type) {
         this.id = id;
         this.hasImage = hasImage;
         this.description = description;
@@ -31,6 +32,7 @@ public class GetDetectionsResponse {
         this.signature = signature;
         this.taskId = taskId;
         this.taskStatus = taskStatus;
+        this.username = username;
         this.type = type;
     }
 
@@ -120,6 +122,14 @@ public class GetDetectionsResponse {
 
     public void setTaskId(String taskId) {
         this.taskId = taskId;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public Type getType() {

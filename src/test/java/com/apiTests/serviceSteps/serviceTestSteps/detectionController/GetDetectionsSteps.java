@@ -18,6 +18,7 @@ public class GetDetectionsSteps {
     private String zoneId;
     private long filterStartTime;
     private long filterFinishTime;
+    private boolean torf;
 
     // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(GetDetectionsSteps.class);
@@ -65,11 +66,17 @@ public class GetDetectionsSteps {
         filterFinishTime = getDetectionsTests.parseDateToTimestamp(finishTime);
     }
 
+    @And("the user need to enter createdByMe: {string}")
+    public void createdByMe(String createdByMe){
+
+        torf = Boolean.parseBoolean(createdByMe);
+    }
+
     @When("the user gets Detections for {string} and {string}")
     public void getDetections(String page, String pageSize) {
 
         getDetectionsTests = new GetDetectionsTests();
 
-        getDetectionsTests.GetDetections(OK, ACCESS_TOKEN, page, pageSize, true, classificationTypeId, zoneId, filterStartTime, filterFinishTime);
+        getDetectionsTests.GetDetections(OK, ACCESS_TOKEN, page, pageSize, torf, classificationTypeId, zoneId, filterStartTime, filterFinishTime);
     }
 }
