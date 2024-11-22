@@ -1,4 +1,5 @@
 Feature: Get Detections
+  As a user, I want to log into the system with different credentials and validate the responses. Then I want to GET the Detection List.
 
   Scenario Outline: Detection controller service
     Given the user tries to logs in with a valid "<username>" and "<password>"
@@ -10,7 +11,7 @@ Feature: Get Detections
       | username | password  | page | pageSize | createdByMe |
       |  aselsan | aselsan   |  0   |    10    |    true     |
 
-  Scenario Outline: Detection controller service, filter classificationTypeId
+  Scenario Outline: Detection controller service, filter classificationTyp
     Given the user tries to logs in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
@@ -32,7 +33,7 @@ Feature: Get Detections
     # For classification type parameter, you can enter these options:
     # "ACİL DURUM", "ARAÇ", "ARIZA", "DİĞER", "DOĞRU ALARM", "HAYVAN", "İNSAN", "SABOTAJ", "YETKİSİZ"
 
-  Scenario Outline: Detection controller service, filter zoneId
+  Scenario Outline: Detection controller service, filter zone
     Given the user tries to logs in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
@@ -51,7 +52,7 @@ Feature: Get Detections
       |  aselsan | aselsan   |  0   |    10    |    2119     |    true     |
       |  aselsan | aselsan   |  0   |    10    |    2111     |    true     |
 
-  Scenario Outline: Detection controller service, filter time parameter
+  Scenario Outline: Detection controller service, filter time parameters
     Given the user tries to logs in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved

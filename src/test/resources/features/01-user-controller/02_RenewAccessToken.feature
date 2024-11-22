@@ -10,7 +10,7 @@ Feature: User Renew Access Token
       | username | password |
       | aselsan  | aselsan  |
 
-  Scenario Outline: User logs into the system, then refresh the access token, verifies error response
+  Scenario Outline: User logs into the system, then tries to refresh the access token, verifies error response
     Given the user tries to logs in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved

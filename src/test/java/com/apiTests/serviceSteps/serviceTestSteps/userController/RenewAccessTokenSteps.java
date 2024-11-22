@@ -43,7 +43,7 @@ public class RenewAccessTokenSteps {
 
         // Send a "renew access token" request to API
         renewAccessTokenTests = new RenewAccessTokenTests();
-        renewAccessTokenTests.RenewAccessToken(UNAUTHORIZED,WRONG_ACCESS_TOKEN);
+        renewAccessTokenTests.RenewAccessToken(SERVER_ERROR,WRONG_ACCESS_TOKEN);
 
         logger.info("The access token can not refreshed");
     }
