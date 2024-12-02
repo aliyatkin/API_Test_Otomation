@@ -2,7 +2,7 @@ Feature: Get Detections
   As a user, I want to log into the system with different credentials and validate the responses. Then I want to GET the Detection List.
 
   Scenario Outline: Detection controller service
-    Given the user tries to logs in with a valid "<username>" and "<password>"
+    Given the user tries to log in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
     When the user need to enter createdByMe: "<createdByMe>"
@@ -12,7 +12,7 @@ Feature: Get Detections
       |  aselsan | aselsan   |  0   |    10    |    true     |
 
   Scenario Outline: Detection controller service, filter classificationTyp
-    Given the user tries to logs in with a valid "<username>" and "<password>"
+    Given the user tries to log in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
     When the user need to enter classificationType: "<classificationType>"
@@ -29,12 +29,13 @@ Feature: Get Detections
       |  aselsan | aselsan   |  0   |    10    |      İNSAN           |    true     |
       |  aselsan | aselsan   |  0   |    10    |      SABOTAJ         |    true     |
       |  aselsan | aselsan   |  0   |    10    |      YETKİSİZ        |    true     |
+      |  aselsan | aselsan   |  0   |    10    |      YETKİLİ         |    true     |
 
     # For classification type parameter, you can enter these options:
     # "ACİL DURUM", "ARAÇ", "ARIZA", "DİĞER", "DOĞRU ALARM", "HAYVAN", "İNSAN", "SABOTAJ", "YETKİSİZ"
 
   Scenario Outline: Detection controller service, filter zone
-    Given the user tries to logs in with a valid "<username>" and "<password>"
+    Given the user tries to log in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
     When the user need to enter zone: "<zone>"
@@ -53,7 +54,7 @@ Feature: Get Detections
       |  aselsan | aselsan   |  0   |    10    |    2111     |    true     |
 
   Scenario Outline: Detection controller service, filter time parameters
-    Given the user tries to logs in with a valid "<username>" and "<password>"
+    Given the user tries to log in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
     When the user need to enter start time: "<startTime>" and finish time: "<endTime>"
@@ -61,10 +62,10 @@ Feature: Get Detections
     Then the user gets Detections for "<page>" and "<pageSize>"
     Examples:
       | username | password  | page | pageSize |       startTime      |       endTime       | createdByMe |
-      |  aselsan | aselsan   |  0   |    100   |  2024-11-10 00:00:00 | 2024-11-19 00:00:00 |    true     |
+      |  aselsan | aselsan   |  0   |    10   |  2024-11-10 00:00:00 | 2024-11-19 00:00:00 |    true     |
 
   Scenario Outline: Detection controller service, filter startTime
-    Given the user tries to logs in with a valid "<username>" and "<password>"
+    Given the user tries to log in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
     When the user need to enter start time: "<startTime>"
@@ -72,10 +73,10 @@ Feature: Get Detections
     Then the user gets Detections for "<page>" and "<pageSize>"
     Examples:
       | username | password  | page | pageSize |       startTime      | createdByMe |
-      |  aselsan | aselsan   |  0   |    100   |  2024-10-01 00:00:00 |    true     |
+      |  aselsan | aselsan   |  0   |    10   |  2024-10-01 00:00:00 |    true     |
 
   Scenario Outline: Detection controller service, filter finishTime
-    Given the user tries to logs in with a valid "<username>" and "<password>"
+    Given the user tries to log in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
     When the user need to enter finish time: "<finishTime>"
@@ -83,10 +84,10 @@ Feature: Get Detections
     Then the user gets Detections for "<page>" and "<pageSize>"
     Examples:
       | username | password  | page | pageSize |      finishTime      | createdByMe |
-      |  aselsan | aselsan   |  0   |    100   |  2024-11-18 00:00:00 |    true     |
+      |  aselsan | aselsan   |  0   |    10   |  2024-11-18 00:00:00 |    true     |
 
   Scenario Outline: Detection controller service, filter createdByMe
-    Given the user tries to logs in with a valid "<username>" and "<password>"
+    Given the user tries to log in with a valid "<username>" and "<password>"
     And the system verifies the required response parameters
     And the access token is saved
     When the user need to enter createdByMe: "<createdByMe>"

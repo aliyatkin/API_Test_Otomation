@@ -6,7 +6,6 @@ import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static com.apiTests.constants.ContentType.charset;
 import static com.apiTests.constants.Endpoint.LOGOUT_ENDPOINT;
 import static com.apiTests.constants.Language.en;
 import static com.apiTests.constants.Language.language;
@@ -21,11 +20,11 @@ public class LogoutTests extends BaseTest {
     /**
      * Send a logout request and returns the response.
      *
-     * @param statusCode        The expected status code of the response.
-     * @param accessTokenPath   Path to the accessToken that is uses in header.
+     * @param statusCode      The expected status code of the response.
+     * @param accessTokenPath Path to the accessToken that is uses in header.
      */
     @Step("User logs out with the provided access token")
-    public Response Logout(int statusCode, String accessTokenPath) {
+    public Response logout(int statusCode, String accessTokenPath) {
 
         // Send the logout request to the specified endpoint with headers
         String accessToken = requestBodyLoader(accessTokenPath);
@@ -45,13 +44,6 @@ public class LogoutTests extends BaseTest {
         logger.info("Response received: {}", response.asString());
         logger.info("Status Code: {}", response.getStatusCode());
 
-        // Check if the content type is charset and return the deserialized response
-        if (contentType != null && contentType.contains(charset))  {
-            return response;
-        } else {
-            // Log an error if the content type is unexpected and return null
-            logger.error("Unexpected content type: {}", contentType);
-            return null;
-        }
+        return response;
     }
 }

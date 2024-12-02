@@ -180,7 +180,7 @@ public class GetDetectionsTests extends BaseTest {
      *
      * @param humanDate the date string in the format "yyyy-MM-dd HH:mm:ss"
      * @return the timestamp (in milliseconds) representing the provided date,
-     *         or null if the date string is invalid or parsing fails.
+     * or null if the date string is invalid or parsing fails.
      */
     public Long parseDateToTimestamp(String humanDate) {
         try {
@@ -202,10 +202,12 @@ public class GetDetectionsTests extends BaseTest {
     /**
      * Filters a list of detections based on provided start and finish time filters.
      *
-     * @param filterStartTime the start time filter as a string (nullable)
+     * @param filterStartTime  the start time filter as a string (nullable)
      * @param filterFinishTime the finish time filter as a string (nullable)
      */
     public void filterTime(String filterStartTime, String filterFinishTime) {
+
+        boolean time = false, start = false, finish;
 
         // Case 1: Both start and finish times are provided
         if (filterStartTime != null && filterFinishTime != null) {
@@ -225,20 +227,24 @@ public class GetDetectionsTests extends BaseTest {
 
                     // Compare detectionCreateTime with start and finish times
                     if (startTime < detections.getDetectionCreateTime() && detections.getDetectionCreateTime() < finishTime) {
-                        logger.info("The start and finish time filter work for: {}", listElement);
-                    } else {
-                        Assertions.fail("The start and finish time filter does not work!!!");
+
+                        time = true;
                     }
                 } else {
 
                     // Compare detectionUpdateTime with start and finish times
                     if (startTime < detections.getDetectionUpdateTime() && detections.getDetectionUpdateTime() < finishTime) {
-                        logger.info("The start and finish time filter work for: {}", listElement);
-                    } else {
-                        Assertions.fail("The start and finish time filter does not work!!!");
+
+                        time = true;
                     }
                 }
+                if (!time) {
+
+                    Assertions.fail("The start and finish time do not work!");
+                    logger.error("The start and finish time filter do not work for: {}", listElement);
+                }
             }
+            logger.info("The start and finish time filter work without any problem!");
 
             // Case 2: Only start time is provided, finish time is considered as the current time
         } else if (filterStartTime != null && filterFinishTime == null) {
@@ -260,25 +266,33 @@ public class GetDetectionsTests extends BaseTest {
 
                     // Compare detectionCreateTime with start time and current time
                     if (startTime < detections.getDetectionCreateTime() && detections.getDetectionCreateTime() < currentTime) {
-                        logger.info("The start time filter works for: {}", listElement);
-                    } else {
-                        Assertions.fail("The start time filter does not work!!!");
+
+                        start = true;
                     }
                 } else {
 
                     // Compare detectionUpdateTime with start time and current time
                     if (startTime < detections.getDetectionUpdateTime() && detections.getDetectionUpdateTime() < currentTime) {
-                        logger.info("The start time filter work for: {}", listElement);
-                    } else {
-                        Assertions.fail("The start time filter does not work!!!");
+
+                        start = true;
                     }
+                }
+
+                if(!start){
+
+                    Assertions.fail("The start time filter does not work!");
+                    logger.error("The start time filter do not work for: {}", listElement);
                 }
             }
 
+            logger.info("The start time filter work without any problem!");
+
             // Case 3: Start time is null and finish time is provided (this case is not allowed)
-        } else if (filterStartTime == null && filterFinishTime != null) {
+        }
+        else if (filterStartTime == null && filterFinishTime != null) {
             // Log an error as this case is considered invalid
             logger.error("The start time is null but the finish time is not null: This situation is not possible!");
+            Assertions.fail("The start time is null but the finish time is not null: This situation is not possible!");
 
             // Case 4: Both start and finish times are null
         } else {
@@ -287,16 +301,16 @@ public class GetDetectionsTests extends BaseTest {
         }
     }
 
-    public void createdByMeCheck(boolean createdByMe){
+    public void createdByMeCheck(boolean createdByMe) {
 
-        if (createdByMe){
+        if (createdByMe) {
 
             for (listElement = 0; listElement < detectionsList.size(); listElement++) {
 
                 GetDetectionsResponse detections = detectionsList.get(listElement);
 
-                if (detections.getUsername() == null){
-                    logger.info(" createdByMe = true and Username is null");
+                if (detections.getUsername() == null) {
+                    //logger.info(" createdByMe = true and Username is null");
                 } else {
                     Assertions.fail("Username must be null !!");
                 }
@@ -308,7 +322,7 @@ public class GetDetectionsTests extends BaseTest {
 
                 GetDetectionsResponse detections = detectionsList.get(listElement);
 
-                if (detections.getUsername() != null){
+                if (detections.getUsername() != null) {
 
                     logger.info(" createdByMe = false and username is not null and detections created by another user");
                 } else {

@@ -13,8 +13,11 @@ import static com.apiTests.constants.Endpoint.RENEW_ACCESS_TOKEN_ENDPOINT;
 import static com.apiTests.constants.Language.*;
 import static com.apiTests.requests.HelperMethod.requestBodyLoader;
 import static io.restassured.RestAssured.given;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 
 public class RenewAccessTokenTests extends BaseTest {
+
+    public static String accessToken;
 
     // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(RenewAccessTokenTests.class);
@@ -22,11 +25,11 @@ public class RenewAccessTokenTests extends BaseTest {
     /**
      * Send a renew access token request and returns the response.
      *
-     * @param statusCode        The expected status code of the response.
-     * @param accessTokenPath   Path to the accessToken that is uses in header.
+     * @param statusCode      The expected status code of the response.
+     * @param accessTokenPath Path to the accessToken that is uses in header.
      */
     @Step("the user tries to renew access token")
-    public RenewAccessTokenResponse RenewAccessToken(int statusCode, String accessTokenPath) {
+    public RenewAccessTokenResponse renewAccessToken(int statusCode, String accessTokenPath) {
 
         // Load the access token from the specified file path
         String accessToken = requestBodyLoader(accessTokenPath);
@@ -48,11 +51,12 @@ public class RenewAccessTokenTests extends BaseTest {
         logger.info("Status Code: {}", response.getStatusCode());
 
         // Check if the content type is JSON and return the deserialized response
-        if (contentType != null && contentType.contains(json))  {
+        if (contentType != null && contentType.contains(json)) {
+            response.then().assertThat().body(matchesJsonSchemaInClasspath("renewAccessTokenResponseSchema.json"));
             return response.as(RenewAccessTokenResponse.class);
         } else {
             // Log an error if the content type is unexpected and return null
-            logger.error("Unexpected content type: {}", contentType);
+            logger.info("Unexpected content type: {}", contentType);
             return null;
         }
     }

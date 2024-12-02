@@ -75,6 +75,8 @@ public class ZonesTests extends BaseTest {
 
     public void Zones(String zone) {
 
+        boolean isMatchFound = false;
+
         // Iterate through each item in the zonesList
         for (listElement = 0; listElement < zonesList.size(); listElement++) {
 
@@ -88,16 +90,15 @@ public class ZonesTests extends BaseTest {
                 // If there is a match, get the zone ID and convert it to a String
                 responseZoneId = zones.getId();
                 zoneId = String.valueOf(responseZoneId);
+                logger.info("Zone found: {}", zone);
+                isMatchFound = true;
                 break;
 
-            } else {
-                logger.error("No matching zone found for this index: {}.index", listElement);
             }
         }
-        if(zoneId != null){
-            logger.info("Zone Id found");
-        }else {
-            Assertions.fail("No matching zone found");
+        if (!isMatchFound) {
+            logger.error("No matching zone found for: {}", zone);
+            Assertions.fail("No matching zone found for: " + zone);
         }
     }
 }

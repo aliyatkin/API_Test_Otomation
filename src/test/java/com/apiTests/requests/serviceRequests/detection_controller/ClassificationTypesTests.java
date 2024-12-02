@@ -80,6 +80,8 @@ public class ClassificationTypesTests extends BaseTest {
 
     public void ClassificationType(String classificationType) {
 
+        boolean isMatchFound = false;
+
         // Iterate through each item in the classificationTypeList
         for (listElement = 0; listElement < classificationTypeList.size(); listElement++) {
 
@@ -93,16 +95,16 @@ public class ClassificationTypesTests extends BaseTest {
                 // If there is a match, get the classification ID and convert it to a String
                 responseClassificationTypeId = classification.getId();
                 classificationTypeId = String.valueOf(responseClassificationTypeId);
+                logger.info("Classification type found: {}", classificationType);
+                isMatchFound = true;
                 break;
 
-            } else {
-                logger.error("No matching classification type found for this index: {}.index", listElement);
             }
         }
-        if(classificationTypeId != null){
-            logger.info("Classification type found");
-        }else {
-            Assertions.fail("No matching classification type found");
+        // Check the match the end of the for
+        if (!isMatchFound) {
+            logger.error("No matching classification type found for: {}", classificationType);
+            Assertions.fail("No matching classification type found for: " + classificationType);
         }
     }
 }

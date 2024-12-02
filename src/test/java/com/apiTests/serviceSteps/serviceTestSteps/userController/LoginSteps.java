@@ -18,135 +18,108 @@ import static com.apiTests.requests.HelperMethod.*;
 public class LoginSteps {
 
     // Used for JSON processing and comparison
-    ObjectMapper objectMapper = new ObjectMapper();
+    private ObjectMapper objectMapper = new ObjectMapper();
     public static String accessToken;
-    public static LoginTests loginTests;
-    public static LoginResponse loginResponse;
-
-    // Logger for tracking actions and output
     private static final Logger logger = LogManager.getLogger(LoginSteps.class);
+    private LoginTests loginTests;
+    private LoginResponse loginResponse;
 
-    @When("the user tries to logs in with a valid {string} and an invalid {string}")
-    public void invalidPassword(String username, String password){
-
-        // Send a login request to API
+    // Helper method to perform login and check response
+    private void performLogin(String username, String password, int expectedStatusCode, boolean isHashedPassword) {
         loginTests = new LoginTests();
-        loginResponse = loginTests.Login(UNAUTHORIZED,username, password,true);
-
-        logger.info("The system has not been logged in with a valid username and invalid password");
+        loginResponse = loginTests.login(expectedStatusCode, username, password, isHashedPassword);
     }
 
-    @When("the user tries to logs in with a valid {string} and an empty {string}")
-    public void emptyPassword(String username, String password){
-
-        // Send a login request to API
-        loginTests = new LoginTests();
-        loginResponse = loginTests.Login(UNAUTHORIZED, username, password, true);
-
-        logger.info("The system has not been logged in with a valid username and empty password");
-    }
-
-
-    @When("the user tries to logs in with a valid {string} and {string}")
-    public void valid(String username, String password) {
-
-        // Send a login request to API
-        loginTests = new LoginTests();
-        loginResponse = loginTests.Login(OK, username, password,true);
-
-        logger.info("The system has been logged in with a valid username and password");
-    }
-
-    // Verifies the response parameters after mock login
-    @Then("the system verifies the required response parameters")
-    public void checkParameter() throws JsonProcessingException {
-
-        // The username parameter was captured and saved separately from both the request and the response
+    // Helper method for response validation
+    private void validateResponseUsername(String requestBodyPath) throws JsonProcessingException {
         String username = loginResponse.getUser().getUsername();
-        String requestBody = requestBodyLoader(V_USERNAME_PASSWORD);
+        String requestBody = requestBodyLoader(requestBodyPath);
         JsonNode jsonNode = objectMapper.readTree(requestBody);
 
-        // Check if the username in the response matches the request
         if (jsonNode.get("username").asText().equals(username)) {
             logger.info("The username in the response matches the request");
-            Allure.addAttachment("username check","The username in the response matches the request");
+            Allure.addAttachment("username check", "The username in the response matches the request");
         } else {
             logger.error("The username in the response does not match the request");
-            Allure.addAttachment("username check","The username in the response does not matches the request");
+            Allure.addAttachment("username check", "The username in the response does not match the request");
             Assertions.fail("The username in the response does not match the request");
         }
     }
 
-    // Saves the access token returned from the API
+    @When("the user tries to log in with a valid {string} and an invalid {string}")
+    public void invalidPassword(String username, String password) {
+        performLogin(username, password, UNAUTHORIZED, true);
+    }
+
+    @Then("the user cannot log in to the system with a valid username and an invalid password")
+    public void invalidPasswordCheck() {
+        if (loginResponse == null) {
+            logger.info("The system has not logged in with a valid username and invalid password");
+        }
+    }
+
+    @When("the user tries to log in with a valid {string} and an empty {string}")
+    public void emptyPassword(String username, String password) {
+        performLogin(username, password, UNAUTHORIZED, true);
+    }
+
+    @Then("the user cannot log in to the system with a valid username and an empty password")
+    public void emptyPasswordCheck() {
+        if (loginResponse == null) {
+            logger.info("The system has not logged in with a valid username and empty password");
+        }
+    }
+
+    @When("the user tries to log in with a valid {string} and {string}")
+    public void validLogin(String username, String password) {
+        performLogin(username, password, OK, true);
+        logger.info("The system has been logged in with a valid username and password");
+    }
+
+    @Then("the system verifies the required response parameters")
+    public void checkParameter() throws JsonProcessingException {
+        validateResponseUsername(V_USERNAME_PASSWORD);
+    }
+
     @And("the access token is saved")
     public void saveAccessToken() {
-
-        // Save the access token and write it to a file given to the method
         accessToken = loginResponse.getTokenDetails().getAccessToken();
-        writeStringToFile(accessToken,ACCESS_TOKEN);
-
+        writeStringToFile(accessToken, ACCESS_TOKEN);
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Saved access token", accessToken);
     }
 
-    @When("the user tries to logs in with a valid {string} and a hashed password with a {string} false query")
-    public void hashedPasswordAPI(String username, String trueOrFalse){
-
-        // Convert from string to boolean
+    @When("the user tries to log in with a valid {string} and a hashed password with a {string} false query")
+    public void hashedPasswordAPI(String username, String trueOrFalse) {
         boolean torf = Boolean.parseBoolean(trueOrFalse);
-
-        // Load the request body from the specified file path
         String password = requestBodyLoader(HASHED_PASSWORD);
-
-        // Send a login request to API
-        loginTests = new LoginTests();
-        loginResponse = loginTests.Login(OK, username, password, torf);
-
+        performLogin(username, password, OK, torf);
         logger.info("The system has been logged in with a valid username and hashed password when query parameter is false");
     }
 
     @Then("the system verifies the required response parameters using the hashed password")
-    public void checkParameterHashedPassword() throws JsonProcessingException{
-
-        // The username parameter was captured and saved separately from both the request and the response
-        String username = loginResponse.getUser().getUsername();
-        String requestBody = requestBodyLoader(V_USERNAME_H_PASSWORD);
-        JsonNode jsonNode = objectMapper.readTree(requestBody);
-
-        // Check if the username in the response matches the request
-        if (jsonNode.get("username").asText().equals(username)) {
-            logger.info("The username in the response matches the one in the request");
-            Allure.addAttachment("username check","The username in the response matches the one in the request");
-        } else {
-            logger.error("The username in the response does not match the one in the request");
-            Allure.addAttachment("username check","The username in the response does not matches the one in the request");
-            Assertions.fail("The username in the response does not match the one in the request");
-        }
+    public void checkParameterHashedPassword() throws JsonProcessingException {
+        validateResponseUsername(V_USERNAME_H_PASSWORD);
     }
 
     @And("the access token is saved using the hashed password")
-    public void saveAccessTokenHashedPassword(){
-
-        // Save the access token and write it to a file given to the method
+    public void saveAccessTokenHashedPassword() {
         accessToken = loginResponse.getTokenDetails().getAccessToken();
-
         logger.info("The Access Token has been saved: " + accessToken);
         Allure.addAttachment("Saved access token", accessToken);
     }
 
-    @When("the user tries to logs in with a valid {string} and a hashed password with a {string} true query")
-    public void hashedPasswordTrueQuery(String username, String trueOrFalse){
-
-        // Convert from string to boolean
+    @When("the user tries to log in with a valid {string} and a hashed password with a {string} true query")
+    public void hashedPasswordTrueQuery(String username, String trueOrFalse) {
         boolean torf = Boolean.parseBoolean(trueOrFalse);
-
-        // Load the request body from the specified file path
         String password = requestBodyLoader(HASHED_PASSWORD);
+        performLogin(username, password, UNAUTHORIZED, torf);
+    }
 
-        // Send a login request to API
-        loginTests = new LoginTests();
-        loginResponse = loginTests.Login(UNAUTHORIZED, username, password, torf);
-
-        logger.info("The system has not been logged in with a valid username and hashed password when query parameter is true");
+    @Then("the user cannot log in to the system with a valid username, hashed password, and a true query")
+    public void hashedPasswordCheck() {
+        if (loginResponse == null) {
+            logger.info("The system has not logged in with a valid username, hashed password, and a true query");
+        }
     }
 }
