@@ -1,0 +1,62 @@
+{
+  "user": {
+    "name": "Sistem Yöneticisi",
+    "surname": "ASELSAN",
+    "username": "aselsan",
+    "detail": {
+      "identityNumber": null,
+      "email": null,
+      "phoneNumber": null,
+      "rank": null,
+      "profilePicture": null,
+      "supervisor": {
+        "name": null,
+        "surname": null
+      }
+    },
+    "pushToken": null,
+    "userLevelId": 5,
+    "userLevelName": "Aselsan",
+    "id": 10
+  },
+  "tokenDetails": {
+    "accessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6ImFjY2VzcyIsInVzciI6IlNpc3RlbSBZw7ZuZXRpY2lzaSBBU0VMU0FOIiwiaXNzIjoiYXNlbHNhbi5rYXJkZWxlbiIsInJqdGkiOiIzMGYzZWNlNC02MGVmLTRmZGUtYjI0My03ZGY2MjM4NzZjMzciLCJleHAiOjE3MjczMzMwODUsImlhdCI6MTcyNzMzMjQ4NSwianRpIjoiMzdhOWY5M2MtYWZiNC00NTNjLTk4YTgtYTRiNjI4NTc1MWJkIn0.cJ0P2vitOPAFrWmLQN9GYYoy8CiHUyXg6lVCgwqMF9ZoSoH1XbX-f4LkjRIwsM9Zat-x713aLahrtQmq9oSTcQ",
+    "refreshToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxOSIsImF1ZCI6InJlZnJlc2giLCJpc3MiOiJhc2Vsc2FuLmthcmRlbGVuIiwiZXhwIjoxNzI3MzY4NDg1LCJpYXQiOjE3MjczMzI0ODUsImp0aSI6IjMwZjNlY2U0LTYwZWYtNGZkZS1iMjQzLTdkZjYyMzg3NmMzNyJ9.wcJDGvEfuoNV86IwIggEBZU6IEBTn0Td0iLvImXQyPI21co6FzrcCPbU961ndJQrqh0v7b40YDmGj9TTa4e7IQ"
+  },
+  "authorities": [
+    "right.detection.createdetection",
+    "right.detection.map",
+    "right.detection.detail",
+    "right.detection.detail.read",
+    "right.detection.detail.update",
+    "right.detection.filter",
+    "right.detection.sort",
+    "right.detection.sosmessage",
+    "right.task.filter",
+    "right.task.sort",
+    "right.task.detail",
+    "right.task.detail.read",
+    "right.task.detail.starttask",
+    "right.sensor.list",
+    "right.sensor.map",
+    "right.sensor.livestream",
+    "right.sensor.filter",
+    "right.sensor.sort",
+    "right.profile.read",
+    "right.profile.usergroups.authorization",
+    "right.detection",
+    "right.task",
+    "right.sensor",
+    "right.profile",
+    "right.pushnotification",
+    "right.detection.incominglist",
+    "right.task.outgoinglist",
+    "right.detection.outgoinglist",
+    "right.task.incominglist",
+    "right.task.attachments.list",
+    "right.alarm",
+    "right.alarm.list",
+    "right.alarm.map",
+    "right.alarm.filter"
+  ]
+}

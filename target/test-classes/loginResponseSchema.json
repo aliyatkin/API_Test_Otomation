@@ -1,0 +1,55 @@
+{
+  "type": "object",
+  "properties": {
+    "user": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "surname": { "type": "string" },
+        "username": { "type": "string" },
+        "detail": {
+          "type": "object",
+          "properties": {
+            "identityNumber": { "type": ["string", "null"] },
+            "email": { "type": ["string", "null"] },
+            "phoneNumber": { "type": ["string", "null"] },
+            "rank": { "type": ["string", "null"] },
+            "profilePicture": { "type": ["string", "null"] },
+            "supervisor": {
+              "type": "object",
+              "properties": {
+                "name": { "type": ["string", "null"] },
+                "surname": { "type": ["string", "null"] }
+              },
+              "required": ["name", "surname"],
+              "additionalProperties": false
+            }
+          },
+          "required": ["identityNumber", "email", "phoneNumber", "rank", "profilePicture", "supervisor"],
+          "additionalProperties": false
+        },
+        "pushToken": { "type": ["string", "null"] },
+        "userLevelId": { "type": "integer" },
+        "userLevelName": { "type": "string" },
+        "id": { "type": "integer" }
+      },
+      "required": ["name", "surname", "username", "detail", "userLevelId", "userLevelName", "id"],
+      "additionalProperties": false
+    },
+    "tokenDetails": {
+      "type": "object",
+      "properties": {
+        "accessToken": { "type": "string" },
+        "refreshToken": { "type": "string" }
+      },
+      "required": ["accessToken", "refreshToken"],
+      "additionalProperties": false
+    },
+    "authorities": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["user", "tokenDetails", "authorities"],
+  "additionalProperties": false
+}
