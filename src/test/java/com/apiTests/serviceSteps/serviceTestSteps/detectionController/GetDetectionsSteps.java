@@ -77,6 +77,7 @@ public class GetDetectionsSteps {
 
         getDetectionsTests = new GetDetectionsTests();
 
-        getDetectionsTests.GetDetections(OK, ACCESS_TOKEN, page, pageSize, torf, classificationTypeId, zoneId, filterStartTime, filterFinishTime);
+        getDetectionsTests.GetDetections(OK, ACCESS_TOKEN, page, pageSize, torf,
+                classificationTypeId, zoneId, filterStartTime, filterFinishTime);
     }
 }

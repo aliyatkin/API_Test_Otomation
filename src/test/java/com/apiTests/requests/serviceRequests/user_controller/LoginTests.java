@@ -55,7 +55,8 @@ public class LoginTests extends BaseTest {
 
         // Check if the content type is JSON and return the response
         if (contentType != null && contentType.contains(json)) {
-            response.then().assertThat().body(matchesJsonSchemaInClasspath("loginResponseSchema.json"));
+            response.then().assertThat().body(matchesJsonSchemaInClasspath(
+                    "loginResponseSchema.json"));
             return response.as(LoginResponse.class);
         } else {
             // Log an error if the content type is unexpected and return null

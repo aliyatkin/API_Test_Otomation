@@ -15,7 +15,6 @@ import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
 import java.util.List;
-import java.util.Objects;
 
 import static com.apiTests.constants.ContentType.*;
 import static com.apiTests.constants.Endpoint.DETECTIONS_ENDPOINT;

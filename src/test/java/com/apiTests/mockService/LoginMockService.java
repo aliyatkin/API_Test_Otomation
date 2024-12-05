@@ -34,7 +34,8 @@ public class LoginMockService {
      * @param mockRequestBodyPath       The path to the file containing the expected request body
      * @param torf                      A string representing "True or False" for query parameter
      */
-    public void setupLoginMock(int statusCode, String mockRequestBodyPath, String mockResponseBodyPath,  String torf) {
+    public void setupLoginMock(int statusCode, String mockRequestBodyPath, String mockResponseBodyPath,
+                               String torf) {
 
         // Load the response and request body from the specified file paths
         String mockReqBody = requestBodyLoader(mockRequestBodyPath);
