@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: com.apiTests.runner.RunCucumberTest
 -------------------------------------------------------------------------------
-Tests run: 39, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 40.474 s <<< FAILURE! - in com.apiTests.runner.RunCucumberTest
-Get Detections.Detection controller service, filter classificationTyp #10  Time elapsed: 0.658 s  <<< FAILURE!
+Tests run: 39, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 34.783 s <<< FAILURE! - in com.apiTests.runner.RunCucumberTest
+Get Detections.Detection controller service, filter classificationTyp #10  Time elapsed: 0.597 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: No matching classification type found for: YETKİLİ
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
 	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
@@ -11,7 +11,7 @@ org.opentest4j.AssertionFailedError: No matching classification type found for: 
 	at com.apiTests.serviceSteps.serviceTestSteps.detectionController.GetDetectionsSteps.setGetDetectionClassificationType(GetDetectionsSteps.java:31)
 	at ✽.the user need to enter classificationType: "YETKİLİ"(file:///C:/Users/ALIRIZA/Desktop/api-test-otomasyonu/src/test/resources/features/02-detection-controller/01_GetDetections.feature:18)
 
-Get Detections.Detection controller service, filter finishTime  Time elapsed: 1.126 s  <<< FAILURE!
+Get Detections.Detection controller service, filter finishTime  Time elapsed: 0.757 s  <<< FAILURE!
 org.opentest4j.AssertionFailedError: The start time is null but the finish time is not null: This situation is not possible!
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:38)
 	at org.junit.jupiter.api.Assertions.fail(Assertions.java:135)
