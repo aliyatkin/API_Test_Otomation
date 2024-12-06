@@ -170,9 +170,6 @@
                     <includes>
                         <include>**/RunCucumberTest.java</include>
                     </includes>
-                    <systemPropertyVariables>
-                        <allure.results.directory>target/allure-results</allure.results.directory>
-                    </systemPropertyVariables>
                 </configuration>
             </plugin>
         </plugins>
